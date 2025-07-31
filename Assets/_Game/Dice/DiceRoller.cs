@@ -45,7 +45,7 @@ public class DiceRoller : MonoBehaviour
     private void CompleteRoll()
     {
         _isRolling = false;
-        var value = _dice.GetFaceValue();
+        var value = Random.Range(1, 13);//_dice.GetFaceValue();
         Debug.Log("Dice rolled: " + value);
         OnDiceRolled?.Invoke(value);
     }
@@ -53,6 +53,8 @@ public class DiceRoller : MonoBehaviour
     public void RollDice()
     {
         //todo: record and bake animation
-        ApplyPhysics();
+        GameController.Instance.ChangeCurrentState(GameState.DiceRolling); //todo: may not be needed with instant roll
+        //ApplyPhysics();
+        CompleteRoll();
     }
 }

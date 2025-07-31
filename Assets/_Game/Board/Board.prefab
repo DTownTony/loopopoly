@@ -180,6 +180,21 @@ MonoBehaviour:
   - {fileID: 3137330994329705933}
   - {fileID: 2257113876441348781}
   - {fileID: 5980044431801684156}
+  _eventData:
+  - {fileID: 11400000, guid: 742bef772e94840bf827a9676916971a, type: 2}
+  - {fileID: 11400000, guid: a07807186aac4476ba06f37b79bc7489, type: 2}
+  - {fileID: 11400000, guid: a5208a625c9664af19ff182f2511b90e, type: 2}
+  - {fileID: 11400000, guid: 0f9df52e235114353a579c580ac2b242, type: 2}
+  - {fileID: 11400000, guid: a7d706c58a6a842f89bf09cfa17ec9a2, type: 2}
+  - {fileID: 11400000, guid: 868f6e743e180497a86ce5e59bb48d98, type: 2}
+  - {fileID: 11400000, guid: 14e30f978da144183837c7f84c8a9dee, type: 2}
+  - {fileID: 11400000, guid: 8d28cd97b0ad7498098299e44ad734af, type: 2}
+  - {fileID: 11400000, guid: 64b8fbfde028d49b6aceb86380bc7496, type: 2}
+  - {fileID: 11400000, guid: c9a11a3313bae44e4a1b2df1771077d9, type: 2}
+  _specialEventData:
+  - {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}
+  - {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}
+  - {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}
 --- !u!1001 &144509716328138204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -630,6 +645,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pos (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 3291160671239743082, guid: 047fa0de978754e79a75c2382eb2fe07, type: 3}
+      propertyPath: _event
+      value: 
+      objectReference: {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}
     - target: {fileID: 5685117615821084524, guid: 047fa0de978754e79a75c2382eb2fe07, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.3657203
