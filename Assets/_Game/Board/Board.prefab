@@ -194,7 +194,7 @@ MonoBehaviour:
   _specialEventData:
   - {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}
   - {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}
-  - {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}
+  - {fileID: 11400000, guid: 05d6fc99451904628a15995b88bb0941, type: 2}
 --- !u!1001 &144509716328138204
 PrefabInstance:
   m_ObjectHideFlags: 0

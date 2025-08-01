@@ -45,7 +45,7 @@ public class DiceRoller : MonoBehaviour
     private void CompleteRoll()
     {
         _isRolling = false;
-        var value = Random.Range(1, 13);//_dice.GetFaceValue();
+        var value = Random.Range(1, 7);//_dice.GetFaceValue();
         Debug.Log("Dice rolled: " + value);
         OnDiceRolled?.Invoke(value);
     }

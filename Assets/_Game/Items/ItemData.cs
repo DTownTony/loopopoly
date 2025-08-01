@@ -1,8 +1,12 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ItemData", menuName = "Data/ItemData")]
+[CreateAssetMenu(fileName = "ItemData", menuName = "Data/Item/ItemData")]
 public class ItemData : ScriptableObject
 {
     public string Name;
+    public string Description;
+    public Sprite Icon;
+    public int Price;
+    
     public string Key;
 }

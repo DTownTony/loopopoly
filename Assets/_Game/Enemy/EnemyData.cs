@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemyData : ScriptableObject
 {
     public string Name;
+    public bool IsBoss;
     public int Health;
     public int DamageMin;
     public int DamageMax;

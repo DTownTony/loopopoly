@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,6 +21,10 @@ public class PlayerData
     
     #region Items
     
+    public delegate void OnItemDelegate(Item item);
+    public event OnItemDelegate OnItemAdded;
+    public event OnItemDelegate OnItemRemoved;
+    
     public bool HasItem(string key)
     {
         return Items.Exists(item => item.Key == key);
@@ -29,7 +32,9 @@ public class PlayerData
     
     public void AddItem(ItemData itemData)
     {
-        Items.Add(new Item(itemData));
+        var item = new Item(itemData);
+        Items.Add(item);
+        OnItemAdded?.Invoke(item);
     }
     
     public void RemoveItem(string key)
@@ -43,9 +48,12 @@ public class PlayerData
                 break;
             }
         }
+
+        if (itemToRemove == null) 
+            return;
         
-        if (itemToRemove != null)
-            Items.Remove(itemToRemove);
+        Items.Remove(itemToRemove);
+        OnItemRemoved?.Invoke(itemToRemove);
     }
     
     #endregion
