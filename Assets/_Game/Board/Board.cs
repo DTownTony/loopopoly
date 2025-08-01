@@ -22,6 +22,10 @@ public class Board : MonoBehaviour
             var boardPosition = _boardPositions[i];
             boardPosition.SetIndex(i);
 
+            //skip starting position
+            if (i == 0)
+                continue;
+
             if (_specialEventIndexes.Contains(i))
             {
                 var boardEvent = availableSpecialEvents[Random.Range(0, availableSpecialEvents.Count)];

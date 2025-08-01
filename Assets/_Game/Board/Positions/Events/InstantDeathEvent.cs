@@ -1,4 +1,5 @@
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [CreateAssetMenu(menuName = "Data/BoardEvent/InstantDeath", fileName = "InstantDeath")]
 public class InstantDeathEvent : BoardEvent
@@ -7,16 +8,11 @@ public class InstantDeathEvent : BoardEvent
     
     public override void Trigger()
     {
-        base.Trigger();
+        var deathChance = .25f;
+        for (var i = 0; i < GameController.Instance.MaxLoops; i++)
+            deathChance += Random.Range(.05f, .1f);
         
-        var player = GameController.Instance.Player;
-        if (player.Data.HasItem(_itemNeededToStopEvent.Key))
-        {
-            player.Data.RemoveItem(_itemNeededToStopEvent.Key);
-            return;
-        }
-
-        GameController.Instance.ReloadScene();
-        Debug.Log("Instant Death Event Triggered: Player has died.");
+        GameController.Instance.EventHandler.ShowGrimReaper(
+            new GrimReaperUIArgs(_itemNeededToStopEvent, deathChance));
     }
 }

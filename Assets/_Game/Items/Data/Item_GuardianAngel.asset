@@ -15,5 +15,5 @@ MonoBehaviour:
   Name: Guardian Angel
   Description: Scare away the Grim Reaper!
   Icon: {fileID: 21300000, guid: 4d473b5aabd374450998151963848dcd, type: 3}
-  Price: 1000
+  Cost: 1000
   Key: guardian_angel

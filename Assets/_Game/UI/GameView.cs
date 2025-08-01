@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class GameView : MonoBehaviour
 {
+    public EventDetailDisplay EventDetailDisplay;
+    
     [SerializeField] private PlayerValueUI _goldUI;
     [SerializeField] private PlayerValueUI _healthUI;
     [SerializeField] private PlayerValueUI _damageUI;

@@ -5,4 +5,9 @@ using UnityEngine;
 public class ItemDatabase : ScriptableObject
 {
     public List<ItemData> Items;
+
+    public ItemData GetRandomItem()
+    {
+        return Items[Random.Range(0, Items.Count)];
+    }
 }

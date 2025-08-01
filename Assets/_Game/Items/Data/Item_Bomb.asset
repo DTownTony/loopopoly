@@ -15,5 +15,5 @@ MonoBehaviour:
   Name: Bomb
   Description: Instantly defeat a non-boss enemy
   Icon: {fileID: 21300000, guid: 27a33b90adad247a4b2cb187fa3ef658, type: 3}
-  Price: 100
+  Cost: 0
   Key: bomb

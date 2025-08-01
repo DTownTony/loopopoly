@@ -9,5 +9,6 @@ public class GoldEvent : BoardEvent
     {
         base.Trigger();
         GameController.Instance.EventHandler.AddGold(_goldAmount);
+        GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"Gold +{_goldAmount}!");
     }
 }

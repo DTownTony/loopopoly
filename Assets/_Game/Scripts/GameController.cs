@@ -13,11 +13,13 @@ public class GameController : MonoBehaviour
     
     public GameState CurrentGameState { get; private set; } = GameState.Bootstrap;
 
+    public int MaxLoops { get; private set; }
+    
     private int _loops;
-    private int _maxLoops;
 
     public Player Player;
     public EventHandler EventHandler;
+    public GameView GameView;
 
     public LoopLevelData CurrentLoopLevelData => _loopLevelData;
     [SerializeField] private LoopLevelData _loopLevelData;
@@ -25,8 +27,6 @@ public class GameController : MonoBehaviour
     [SerializeField] private DiceRoller _diceRoller;
     [SerializeField] private Board _board;
     
-    [SerializeField] private GameView _gameView;
-
     private void Awake()
     {
         Instance = this;
@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
     {
         //todo: setup random loop
         ResetLoops();
-        _gameView.SetStats(Player.Data);
+        GameView.SetStats(Player.Data);
     }
 
     private void DiceRolled(int value)
@@ -88,7 +88,7 @@ public class GameController : MonoBehaviour
     public void IncreaseGameLoop()
     {
         _loops++;
-        _maxLoops++;
+        MaxLoops++;
         OnLoopsChanged?.Invoke(_loops, _loopLevelData.MaxLoops);
     }
     
@@ -97,7 +97,7 @@ public class GameController : MonoBehaviour
         return _loops > _loopLevelData.MaxLoops;
     }
 
-    public void ReloadScene()
+    public void ReloadGame()
     {
         SceneManager.LoadScene("Game");
     }

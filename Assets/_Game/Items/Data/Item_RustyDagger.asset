@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Item_RustyDagger
   m_EditorClassIdentifier: 
   Name: Rusty Dagger
-  Description: 
+  Description: +1 Damage
   Icon: {fileID: 21300000, guid: bfe7b91a817564288910ba653f139117, type: 3}
-  Price: 25
+  Cost: 0
   Key: rusty_dagger
   StatBonuses:
   - Type: 2

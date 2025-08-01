@@ -18,7 +18,7 @@ public class BoardPosition : MonoBehaviour
 
     public void Trigger()
     {
-        Debug.Log("Landed on position: " + Index + " with event: " + _event.name);
+        Debug.Log("Landed on position: " + Index + " with event: " + _event.Name);
         _event.Trigger();
     }
 }

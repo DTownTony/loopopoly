@@ -5,6 +5,7 @@ public class EventHandler : MonoBehaviour
     [SerializeField] private GameController _gameController;
     [SerializeField] private CombatHandler _combatHandler;
     [SerializeField] private Player _player;
+    [SerializeField] private EventView _eventView;
 
     public void AddGold(int amount)
     {
@@ -13,7 +14,6 @@ public class EventHandler : MonoBehaviour
     
     public void AddItem(ItemData itemData)
     {
-        var item = new Item(itemData);
         _player.Data.AddItem(itemData);
     }
 
@@ -45,6 +45,25 @@ public class EventHandler : MonoBehaviour
     {
         _combatHandler.StartCombat(GameController.Instance.CurrentLoopLevelData.BossData);
     }
+
+    #region UI Views
+
+    public void ShowShop()
+    {
+        _eventView.ShowShop();
+    }
+
+    public void ShowGrimReaper(GrimReaperUIArgs args)
+    {
+        _eventView.ShowGrimReaper(args);
+    }
+    
+    public void ShowTreasure()
+    {
+        _eventView.ShowTreasure();
+    }
+
+    #endregion
 }
 
 public enum StatType

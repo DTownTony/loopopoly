@@ -6,7 +6,7 @@ public class CardHandler : MonoBehaviour
     [SerializeField] private ItemCard _itemCardPrefab;
     [SerializeField] private Transform _itemParent;
 
-    private List<ItemCard> _cards = new List<ItemCard>();
+    private readonly List<ItemCard> _cards = new List<ItemCard>();
 
     private void Start()
     {
@@ -18,15 +18,26 @@ public class CardHandler : MonoBehaviour
     {
         var itemCard = Instantiate(_itemCardPrefab, _itemParent);
         itemCard.SetItem(item);
+        _cards.Add(itemCard);
     }
     
     private void ItemRemoved(Item item)
     {
-        var itemCard = _cards.Find(c => c.Item == item);
-        if (itemCard != null)
+
+        ItemCard itemCardToDestroy = null;
+        foreach (var card in _cards)
         {
-            _cards.Remove(itemCard);
-            Destroy(itemCard.gameObject);
+            if (card.Item == item)
+            {
+                itemCardToDestroy = card;
+                break;
+            }
+        }
+
+        if (itemCardToDestroy != null)
+        {
+            Destroy(itemCardToDestroy.gameObject);
+            _cards.Remove(itemCardToDestroy);
         }
     }
 }
