@@ -41,42 +41,32 @@ public class CombatHandler : MonoBehaviour
                 damage = _player.Data.Damage.Value;
                 _enemy.CurrentHealth -= damage;
                 playerTurn = false;
+                GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"-{damage}", _enemy.Model.transform);
             }
             else
             {
                 damage = Random.Range(_enemy.Data.DamageMin, _enemy.Data.DamageMax);
                 _player.Data.CurrentHealth.Value -= damage;
                 playerTurn = true;
+                GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"-{damage}", _player.Model);
             }
             
             combatActive = _enemy.CurrentHealth > 0 && _player.Data.CurrentHealth.Value > 0;
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(.75f);
         }
-
-        if (_player.Data.CurrentHealth.Value <= 0)
-            CombatLose();
-        else
-            CombatWin();
         
-        yield return new WaitForSeconds(.2f);
-        
-        GameController.Instance.ChangeCurrentState(GameState.WaitingForPlayer);
-    }
-
-    private void CombatWin()
-    {
+        //player won. Loss is handled with Player
         _player.MoveOutCombat();
         _player.Data.Experience.Value += _enemy.Data.Experience;
       
         Destroy(_enemy.Model.gameObject);
         _enemy = null;
+        
+        yield return new WaitForSeconds(.2f);
+        
+        GameController.Instance.ChangeCurrentState(GameState.WaitingForPlayer);
     }
-
-    private void CombatLose()
-    {
-        GameController.Instance.ReloadScene();
-    }
-
+    
     private class Enemy
     {
         public EnemyData Data;

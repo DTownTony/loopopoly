@@ -15,5 +15,5 @@ MonoBehaviour:
   Name: Tax Voucher
   Description: Skip paying taxes
   Icon: {fileID: 21300000, guid: 69602867bb4644e46b4b56e6d42eb0ca, type: 3}
-  Price: 1000
+  Cost: 1000
   Key: tax_voucher

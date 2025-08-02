@@ -8,7 +8,6 @@ public class EnemyData : ScriptableObject
     public int Health;
     public int DamageMin;
     public int DamageMax;
-    public float Defense;
     
     public int Experience;
     
