@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e4ad7abff9b34dafb9877f3fe31a6b5, type: 3}
-  m_Name: GoldEvent_KingsTaxes
+  m_Script: {fileID: 11500000, guid: 7dae8d93060bb854da34ad5f0bb9184e, type: 3}
+  m_Name: KingsTaxesEvent
   m_EditorClassIdentifier: 
   Name: Kings Taxes
-  _goldAmount: -25
+  _stopEventItem: {fileID: 11400000, guid: 2e9ebaf3cb2ae421898854e7cb6c1690, type: 2}
