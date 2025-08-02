@@ -5,8 +5,9 @@ public class CombatHandler : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private ItemData _bombItem;
+    [SerializeField] private EnemyHealthBarUI _healthBarUI;
     
-    public const float LOOP_COMBAT_VALUE = 1.15f;
+    private const float LOOP_COMBAT_VALUE = 1.15f;
     
     private Enemy _enemy;
     
@@ -25,6 +26,8 @@ public class CombatHandler : MonoBehaviour
     {
         _player.MoveForCombat();
         yield return new WaitForSeconds(.2f);
+        
+        _healthBarUI.Show();
 
         var playerTurn = false;
         var combatActive = true;
@@ -43,6 +46,7 @@ public class CombatHandler : MonoBehaviour
             {
                 damage = _player.Data.Damage.Value;
                 _enemy.CurrentHealth -= damage;
+                _healthBarUI.SetFill(_enemy.CurrentHealth / (float)_enemy.MaxHealth);
                 playerTurn = false;
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"-{damage}", _enemy.Model.transform);
             }
@@ -71,6 +75,7 @@ public class CombatHandler : MonoBehaviour
         if(_enemy.IsBoss)
             GameController.Instance.ChangeLevelLoop();
       
+        _healthBarUI.Hide();
         Destroy(_enemy.Model.gameObject);
         _enemy = null;
         
@@ -83,6 +88,7 @@ public class CombatHandler : MonoBehaviour
     {
         public int Experience => _enemyData.Experience;
         public bool IsBoss => _enemyData.IsBoss;
+        public int MaxHealth { get; private set; }
         
         public int CurrentHealth;
         public readonly int DamageMin;
@@ -94,7 +100,8 @@ public class CombatHandler : MonoBehaviour
         public Enemy(EnemyData enemyData, int loops)
         {
             _enemyData = enemyData;
-            CurrentHealth = Mathf.RoundToInt(_enemyData.Health * Mathf.Pow(LOOP_COMBAT_VALUE, loops));
+            MaxHealth = Mathf.RoundToInt(_enemyData.Health * Mathf.Pow(LOOP_COMBAT_VALUE, loops));
+            CurrentHealth = MaxHealth;
             DamageMin = Mathf.RoundToInt(_enemyData.DamageMin * Mathf.Pow(LOOP_COMBAT_VALUE, loops));
             DamageMax = Mathf.RoundToInt(_enemyData.DamageMax * Mathf.Pow(LOOP_COMBAT_VALUE, loops));
             Debug.Log(_enemyData.DamageMin + " - " + _enemyData.DamageMax + " | " + DamageMin + " - " + DamageMax);
