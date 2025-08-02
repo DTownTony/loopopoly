@@ -20,9 +20,6 @@ public class StatEvent : BoardEvent
             case StatType.CurrentHealth:
                 type = "Health";
                 break;
-            case StatType.Defense:
-                type = "Armor";
-                break;
             case StatType.Experience:
                 type = "Exp";
                 break;

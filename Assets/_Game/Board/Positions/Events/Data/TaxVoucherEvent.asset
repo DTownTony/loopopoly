@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24d36156403b44690afd4fd0929c3b03, type: 3}
-  m_Name: GuardianAngelItemEvent
+  m_Name: TaxVoucherEvent
   m_EditorClassIdentifier: 
-  Name: Guardian Angel
+  Name: Tax Voucher
   BoardPiece:
   - {fileID: 5055539213916576850, guid: 153159e02b3dec348b2dda3bc3d4c1ff, type: 3}
-  _itemToAdd: {fileID: 11400000, guid: 6cbc10311ab684e49af1f1434a050587, type: 2}
+  _itemToAdd: {fileID: 11400000, guid: 2e9ebaf3cb2ae421898854e7cb6c1690, type: 2}
