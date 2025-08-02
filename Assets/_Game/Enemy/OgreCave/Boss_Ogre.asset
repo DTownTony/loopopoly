@@ -18,4 +18,4 @@ MonoBehaviour:
   DamageMin: 5
   DamageMax: 10
   Experience: 50
-  Prefab: {fileID: 6435103050494515356, guid: 1cb3ae018a58249efb8132afecd5f439, type: 3}
+  Prefab: {fileID: 6435103050494515356, guid: 4c0ef4413bed681419f5d212e91e41b6, type: 3}

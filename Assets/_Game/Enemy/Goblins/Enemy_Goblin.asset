@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179102ebf53f14662948129aa7280ac1, type: 3}
   m_Name: Enemy_Goblin
   m_EditorClassIdentifier: 
-  Name: Enemy_Troll
+  Name: Goblin
   IsBoss: 0
   Health: 10
   DamageMin: 2

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179102ebf53f14662948129aa7280ac1, type: 3}
   m_Name: Boss_Goblin
   m_EditorClassIdentifier: 
-  Name: OgreGiant
+  Name: Goblin Lord
   IsBoss: 0
   Health: 55
   DamageMin: 5
   DamageMax: 10
   Experience: 50
-  Prefab: {fileID: 6435103050494515356, guid: 1cb3ae018a58249efb8132afecd5f439, type: 3}
+  Prefab: {fileID: 6435103050494515356, guid: 572a636cd843ac549bcfa9eb8e90a1d2, type: 3}
