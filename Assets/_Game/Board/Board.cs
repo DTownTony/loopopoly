@@ -13,7 +13,7 @@ public class Board : MonoBehaviour
         10, 20, 30
     };
 
-    private void Awake()
+    public void BuildBoard()
     {
         var availableSpecialEvents = new List<BoardEvent>(_specialEventData);
         //initialize board positions

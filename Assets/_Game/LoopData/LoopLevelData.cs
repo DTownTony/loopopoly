@@ -5,4 +5,5 @@ public class LoopLevelData : ScriptableObject
 {
     public int MaxLoops;
     public EnemyData BossData;
+    public EnemyData EnemyData;
 }

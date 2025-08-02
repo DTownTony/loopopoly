@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179102ebf53f14662948129aa7280ac1, type: 3}
   m_Name: Boss_Slime
   m_EditorClassIdentifier: 
-  Name: SlimeKing
-  IsBoss: 0
+  Name: Slime King
+  IsBoss: 1
   Health: 55
-  DamageMin: 5
-  DamageMax: 10
+  DamageMin: 0
+  DamageMax: 0
   Experience: 50
   Prefab: {fileID: 6435103050494515356, guid: db4df0508e034d94084b470469be05e6, type: 3}

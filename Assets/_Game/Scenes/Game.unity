@@ -2764,7 +2764,10 @@ MonoBehaviour:
   Player: {fileID: 1235802843925263133}
   EventHandler: {fileID: 1475891081}
   GameView: {fileID: 219472188}
-  _loopLevelData: {fileID: 11400000, guid: 1613a3e94ede24562884b5a254ded3ff, type: 2}
+  _loopsLevels:
+  - {fileID: 11400000, guid: 1613a3e94ede24562884b5a254ded3ff, type: 2}
+  - {fileID: 11400000, guid: 5e8ff256c2b57874aaabef8166519420, type: 2}
+  - {fileID: 11400000, guid: fc5defd0aa4304c4680902ae947387d8, type: 2}
   _diceRoller: {fileID: 1083093415}
   _board: {fileID: 4821692450844621743}
 --- !u!4 &598989631

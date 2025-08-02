@@ -21,8 +21,9 @@ public class GameController : MonoBehaviour
     public EventHandler EventHandler;
     public GameView GameView;
 
-    public LoopLevelData CurrentLoopLevelData => _loopLevelData;
-    [SerializeField] private LoopLevelData _loopLevelData;
+    public LoopLevelData CurrentLoopLevelData { get; private set; }
+    [SerializeField] private LoopLevelData[] _loopsLevels;
+    private int _currentLevelLoop;
     
     [SerializeField] private DiceRoller _diceRoller;
     [SerializeField] private Board _board;
@@ -30,12 +31,13 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        CurrentLoopLevelData = _loopsLevels[_currentLevelLoop];
+        _board.BuildBoard();
         ChangeCurrentState(GameState.WaitingForPlayer);
     }
 
     private void Start()
     {
-        //todo: setup random loop
         ResetLoops();
         GameView.SetStats(Player.Data);
     }
@@ -82,19 +84,31 @@ public class GameController : MonoBehaviour
     private void ResetLoops()
     {
         _loops = 0;
-        OnLoopsChanged?.Invoke(_loops, _loopLevelData.MaxLoops);
+        OnLoopsChanged?.Invoke(_loops, CurrentLoopLevelData.MaxLoops);
     }
 
     public void IncreaseGameLoop()
     {
         _loops++;
         MaxLoops++;
-        OnLoopsChanged?.Invoke(_loops, _loopLevelData.MaxLoops);
+        OnLoopsChanged?.Invoke(_loops, CurrentLoopLevelData.MaxLoops);
     }
     
     public bool BossFightAvailable()
     {
-        return _loops > _loopLevelData.MaxLoops;
+        return _loops > CurrentLoopLevelData.MaxLoops;
+    }
+
+    public void ChangeLevelLoop()
+    {
+        _currentLevelLoop++;
+        if (_currentLevelLoop >= _loopsLevels.Length)
+            _currentLevelLoop = 0;
+
+        CurrentLoopLevelData = _loopsLevels[_currentLevelLoop];
+        _board.BuildBoard();
+        
+        OnLoopsChanged?.Invoke(_loops, CurrentLoopLevelData.MaxLoops);
     }
 
     public void ReloadGame()
