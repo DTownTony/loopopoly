@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Goblin
   IsBoss: 0
-  Health: 10
-  DamageMin: 2
-  DamageMax: 8
-  Experience: 25
+  Health: 15
+  DamageMin: 4
+  DamageMax: 10
+  Experience: 35
   Prefab: {fileID: 6435103050494515356, guid: ddfe3d1370a7b834bac7c7eb8cdf5261, type: 3}

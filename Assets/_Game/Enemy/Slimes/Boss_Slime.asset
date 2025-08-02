@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Slime King
   IsBoss: 1
-  Health: 5
-  DamageMin: 0
-  DamageMax: 0
+  Health: 75
+  DamageMin: 5
+  DamageMax: 12
   Experience: 50
   Prefab: {fileID: 6435103050494515356, guid: db4df0508e034d94084b470469be05e6, type: 3}

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Ogre Giant
   IsBoss: 1
-  Health: 55
-  DamageMin: 5
-  DamageMax: 10
-  Experience: 50
+  Health: 150
+  DamageMin: 10
+  DamageMax: 20
+  Experience: 100
   Prefab: {fileID: 6435103050494515356, guid: 4c0ef4413bed681419f5d212e91e41b6, type: 3}

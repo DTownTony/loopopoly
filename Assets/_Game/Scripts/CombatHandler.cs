@@ -6,7 +6,7 @@ public class CombatHandler : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private ItemData _bombItem;
     
-    public const float LOOP_COMBAT_VALUE = 1.25f;
+    public const float LOOP_COMBAT_VALUE = 1.15f;
     
     private Enemy _enemy;
     
@@ -30,9 +30,8 @@ public class CombatHandler : MonoBehaviour
         var combatActive = true;
         
         //todo: bomb effect
-        if (_player.Data.HasItem(_bombItem.Key))
+        if (!_enemy.IsBoss && _player.Data.HasItem(_bombItem.Key))
         {
-            Debug.Log("Use bomb!");
             combatActive = false;
             _player.Data.RemoveItem(_bombItem.Key);
         }
@@ -63,6 +62,7 @@ public class CombatHandler : MonoBehaviour
         //player won. Loss is handled with Player
         _player.MoveOutCombat();
         _player.Data.Experience.Value += _enemy.Experience;
+        _player.Data.Gold.Value += 25 + (25 * GameController.Instance.MaxLoops);
         
         if(_enemy.IsBoss)
             GameController.Instance.ChangeLevelLoop();
@@ -94,6 +94,7 @@ public class CombatHandler : MonoBehaviour
             DamageMin = Mathf.RoundToInt(_enemyData.DamageMin * Mathf.Pow(LOOP_COMBAT_VALUE, loops));
             DamageMax = Mathf.RoundToInt(_enemyData.DamageMax * Mathf.Pow(LOOP_COMBAT_VALUE, loops));
             Debug.Log(_enemyData.DamageMin + " - " + _enemyData.DamageMax + " | " + DamageMin + " - " + DamageMax);
+            Debug.Log(_enemyData.Health + " - " + CurrentHealth);
         }
     }
 }

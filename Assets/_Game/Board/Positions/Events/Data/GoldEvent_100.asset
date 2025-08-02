@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e4ad7abff9b34dafb9877f3fe31a6b5, type: 3}
-  m_Name: GoldEvent_25
+  m_Name: GoldEvent_100
   m_EditorClassIdentifier: 
-  Name: Gold +25
+  Name: Gold +100
   BoardPiece:
   - {fileID: 2165125963539365166, guid: c1963109e095f5c458e64850192df9be, type: 3}
-  _goldAmount: 25
+  _goldAmount: 100

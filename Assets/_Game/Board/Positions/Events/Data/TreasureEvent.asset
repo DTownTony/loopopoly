@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Treasure Chest
   BoardPiece:
-  - {fileID: 2165125963539365166, guid: c1963109e095f5c458e64850192df9be, type: 3}
+  - {fileID: 5055539213916576850, guid: 153159e02b3dec348b2dda3bc3d4c1ff, type: 3}

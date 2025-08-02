@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
                 }
                 
                 //loop gold
-                var goldAmount = 100 * controller.MaxLoops;
+                var goldAmount = 100 + (50 * controller.MaxLoops);
                 Data.Gold.Value += goldAmount;
                 controller.GameView.EventDetailDisplay.ShowMessage($"Loop {GameController.Instance.MaxLoops}\nGold +{goldAmount}!");
             }
