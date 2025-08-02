@@ -6,6 +6,7 @@ public class EventView : MonoBehaviour
     [SerializeField] private ShopUI _shop;
     [SerializeField] private GrimReaperUI _grimReaper;
     [SerializeField] private TreasureUI _treasureUI;
+    [SerializeField] private KingsTaxesUI _kingsTaxesUI;
 
     //todo: make base class for all event views
     
@@ -25,6 +26,12 @@ public class EventView : MonoBehaviour
     {
         _canvas.enabled = true;
         _treasureUI.Show();
+    }
+    
+    public void ShowKingsTaxes(KingsTaxesUIArgs args)
+    {
+        _canvas.enabled = true;
+        _kingsTaxesUI.Show(args);
     }
 
     public void Hide()

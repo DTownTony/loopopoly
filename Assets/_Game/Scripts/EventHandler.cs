@@ -58,6 +58,11 @@ public class EventHandler : MonoBehaviour
         _eventView.ShowGrimReaper(args);
     }
     
+    public void ShowKingsTaxes(KingsTaxesUIArgs args)
+    {
+        _eventView.ShowKingsTaxes(args);
+    }
+    
     public void ShowTreasure()
     {
         _eventView.ShowTreasure();
