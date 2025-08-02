@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 863f74896c107994099a76e79e3d6cdd, type: 3}
+  m_Name: ArmorerEvent
+  m_EditorClassIdentifier: 
+  Name: Armorer
+  _items:
+  - {fileID: 11400000, guid: feb51605570d9c74ab25d679c1e0145e, type: 2}
+  - {fileID: 11400000, guid: cc34ec55343537d469bdf4f7665fadd6, type: 2}
+  - {fileID: 11400000, guid: c852961492793194ebc2009ba0daf7a3, type: 2}

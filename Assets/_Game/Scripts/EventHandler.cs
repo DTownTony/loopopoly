@@ -68,6 +68,11 @@ public class EventHandler : MonoBehaviour
         _eventView.ShowTreasure();
     }
 
+    public void ShowBasicEvent(EventUIArgs args)
+    {
+        _eventView.ShowBasicEvent(args);
+    }
+
     #endregion
 }
 

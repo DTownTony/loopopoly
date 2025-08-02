@@ -24,7 +24,7 @@ public class KingsTaxesUI : MonoBehaviour
         _currentArgs = args;
         _skipButton.interactable = GameController.Instance.Player.Data.HasItem(args.StopEventItem.Key);
         
-        _descriptionText.SetText($"The king has demanded taxes be paid. You owe {_currentArgs.Amount}!");
+        _descriptionText.SetText($"The king has demanded taxes be paid. You owe {_currentArgs.Amount} gold!");
     }
 
     private void PayButtonPressed()
