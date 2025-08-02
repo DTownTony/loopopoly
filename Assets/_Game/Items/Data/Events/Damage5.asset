@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Blacksmiths Boon
   Description: Damage +5
   Icon: {fileID: 21300000, guid: bfe7b91a817564288910ba653f139117, type: 3}
-  Cost: 0
+  Cost: 750
   IgnoreInventory: 1
   Key: blacksmith_boon
   StatBonuses:

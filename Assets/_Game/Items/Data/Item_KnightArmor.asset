@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3a780ac62df24eac9e0e294108e5bf2, type: 3}
-  m_Name: Healing3
+  m_Name: Item_KnightArmor
   m_EditorClassIdentifier: 
-  Name: Surgery
-  Description: Heal 100%
-  Icon: {fileID: 21300000, guid: abbc8425994ea4591a88d95346c710f9, type: 3}
-  Cost: 500
-  IgnoreInventory: 1
-  Key: surgery
+  Name: Knights Armor
+  Description: +4 Armor
+  Icon: {fileID: 21300000, guid: 2936d6d4ed8f76f45b2619c420cb977e, type: 3}
+  Cost: 650
+  IgnoreInventory: 0
+  Key: knight_armor
   StatBonuses:
-  - Type: 2
-    Amount: 100
+  - Type: 4
+    Amount: 4

@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Bandage
   Description: +10 Health
   Icon: {fileID: 21300000, guid: abbc8425994ea4591a88d95346c710f9, type: 3}
-  Cost: 0
+  Cost: 100
   IgnoreInventory: 1
   Key: bandage
   StatBonuses:
