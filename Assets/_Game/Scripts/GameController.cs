@@ -101,6 +101,7 @@ public class GameController : MonoBehaviour
 
     public void ChangeLevelLoop()
     {
+        _loops = 0;
         _currentLevelLoop++;
         if (_currentLevelLoop >= _loopsLevels.Length)
             _currentLevelLoop = 0;
