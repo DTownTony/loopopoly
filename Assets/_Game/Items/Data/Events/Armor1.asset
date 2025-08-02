@@ -19,5 +19,5 @@ MonoBehaviour:
   IgnoreInventory: 1
   Key: armorer_favor
   StatBonuses:
-  - Type: 3
+  - Type: 4
     Amount: 1

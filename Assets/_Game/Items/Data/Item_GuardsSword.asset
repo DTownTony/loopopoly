@@ -16,7 +16,8 @@ MonoBehaviour:
   Description: +3 Damage
   Icon: {fileID: 21300000, guid: 569ae82fbd6dda6499fce830310dae93, type: 3}
   Cost: 250
+  IgnoreInventory: 0
   Key: guard_sword
   StatBonuses:
-  - Type: 2
+  - Type: 3
     Amount: 3

@@ -48,7 +48,7 @@ public class CombatHandler : MonoBehaviour
             else
             {
                 damage = Random.Range(_enemy.DamageMin, _enemy.DamageMax);
-                damage = Mathf.Min(0, damage - _player.Data.Defense.Value);
+                damage = Mathf.Max(0, damage - _player.Data.Defense.Value);
                 _player.Data.CurrentHealth.Value -= damage;
                 playerTurn = true;
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"-{damage}", _player.Model);
