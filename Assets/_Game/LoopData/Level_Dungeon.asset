@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 179102ebf53f14662948129aa7280ac1, type: 3}
-  m_Name: Boss_Goblin
+  m_Script: {fileID: 11500000, guid: b6cd41f3a836c4cdca067246f73f88b8, type: 3}
+  m_Name: Level_Dungeon
   m_EditorClassIdentifier: 
-  Name: Goblin Lord
-  IsBoss: 1
-  Health: 55
-  DamageMin: 0
-  DamageMax: 0
-  Experience: 50
-  Prefab: {fileID: 6435103050494515356, guid: 572a636cd843ac549bcfa9eb8e90a1d2, type: 3}
+  MaxLoops: 0
+  BossData: {fileID: 11400000, guid: 9519d2bf661546c4ea924eab28f60970, type: 2}
+  EnemyData: {fileID: 11400000, guid: 0cafc086cc109194aba0e1e9fca44986, type: 2}

@@ -35,15 +35,15 @@ public class EventHandler : MonoBehaviour
                 break;
         }
     }
-
-    public void SetupCombat(CombatEvent combatEvent)
-    {
-        _combatHandler.StartCombat(combatEvent);
-    }
-
+    
     public void SetupBossCombat()
     {
         _combatHandler.StartCombat(GameController.Instance.CurrentLoopLevelData.BossData);
+    }
+    
+    public void SetupCombat()
+    {
+        _combatHandler.StartCombat(GameController.Instance.CurrentLoopLevelData.EnemyData);
     }
 
     #region UI Views

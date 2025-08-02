@@ -6,11 +6,6 @@ public class CombatHandler : MonoBehaviour
     [SerializeField] private Player _player;
     private Enemy _enemy;
     
-    public void StartCombat(CombatEvent combatEvent)
-    {
-        StartCombat(combatEvent.EnemyData);
-    }
-
     public void StartCombat(EnemyData enemyData)
     {
         GameController.Instance.ChangeCurrentState(GameState.Combat);
@@ -58,6 +53,9 @@ public class CombatHandler : MonoBehaviour
         //player won. Loss is handled with Player
         _player.MoveOutCombat();
         _player.Data.Experience.Value += _enemy.Data.Experience;
+        
+        if(_enemy.Data.IsBoss)
+            GameController.Instance.ChangeLevelLoop();
       
         Destroy(_enemy.Model.gameObject);
         _enemy = null;

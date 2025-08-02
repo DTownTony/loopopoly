@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179102ebf53f14662948129aa7280ac1, type: 3}
   m_Name: Boss_Ogre
   m_EditorClassIdentifier: 
-  Name: OgreGiant
-  IsBoss: 0
+  Name: Ogre Giant
+  IsBoss: 1
   Health: 55
   DamageMin: 5
   DamageMax: 10
