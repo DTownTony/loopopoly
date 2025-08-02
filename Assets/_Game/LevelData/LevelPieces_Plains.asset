@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea03a728593cce47b35267719f2807a, type: 3}
+  m_Name: LevelPieces_Plains
+  m_EditorClassIdentifier: 
+  Name: Plains
+  CornerPieces:
+  - {fileID: 5209276345633551725, guid: dfdbebf310fd5664d9f22fec89f3e029, type: 3}
+  - {fileID: 8479348985966430461, guid: c6dd0f270f77e0f46819b6d3303a9244, type: 3}
+  - {fileID: 5349692307392679744, guid: 865259e914d953c499c69dff6c4efe4e, type: 3}
+  - {fileID: 3265149439940323988, guid: ae37ca34f8fbbbe4494b790245f0a525, type: 3}
+  BoardPieces:
+  - {fileID: 8648219623341365116, guid: ccacb8cc1d5fc194a85056a5b7eb87e3, type: 3}
+  - {fileID: 1040496207580856724, guid: 1c25795c75974d14987f7b327247454a, type: 3}
+  - {fileID: 1662759552905544874, guid: 1a5493c1015445542942726305c43ee9, type: 3}
+  - {fileID: 3853932179907342318, guid: 9d51d7fb89cc33a4ab1138c7177d657c, type: 3}
+  BattlePiece: {fileID: 1584741293693512915, guid: 7b8e810c1b6025c4b8680bb96169e8d1, type: 3}
+  BossBattlePiece: {fileID: 3104018674206952394, guid: cbdf1fa2dbab7b143b4372dfbd1b0aea, type: 3}
+  ShopPiece: {fileID: 915585209983047097, guid: 0b54d1d1efd07e748817e007dde05933, type: 3}
+  StatsIncrease: {fileID: 5055539213916576850, guid: bb1b53139d6626e43b767c5deb4265f3, type: 3}
+  Coins: {fileID: 2165125963539365166, guid: c1963109e095f5c458e64850192df9be, type: 3}
+  Death: {fileID: 586086506508223839, guid: 92a724d0673d719429d3299f3f98b852, type: 3}
