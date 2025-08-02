@@ -16,6 +16,7 @@ MonoBehaviour:
   Description: Armor +2
   Icon: {fileID: 21300000, guid: 89e35e44f20910e4580f3858b0a2af4e, type: 3}
   Cost: 0
+  IgnoreInventory: 1
   Key: armorer_gift
   StatBonuses:
   - Type: 3

@@ -42,6 +42,9 @@ public class PlayerData
                 case StatType.Defense:
                     Defense.Value += value;
                     break;
+                case StatType.Experience:
+                    Experience.Value += value;
+                    break;
             }
         }
     }
@@ -59,6 +62,13 @@ public class PlayerData
     
     public void AddItem(ItemData itemData)
     {
+        if (itemData.IgnoreInventory)
+        {
+            //only process bonuses
+            ProcessItemBonuses(itemData, true);
+            return;
+        }
+
         var item = new Item(itemData);
         Items.Add(item);
         ProcessItemBonuses(itemData, true);

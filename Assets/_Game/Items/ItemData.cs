@@ -7,6 +7,8 @@ public class ItemData : ScriptableObject
     public string Description;
     public Sprite Icon;
     public int Cost;
+
+    public bool IgnoreInventory;
     
     public string Key;
 }

@@ -82,4 +82,5 @@ public enum StatType
     CurrentHealth,
     Damage,
     Defense,
+    Experience
 }

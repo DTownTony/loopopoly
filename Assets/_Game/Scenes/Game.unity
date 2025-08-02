@@ -8087,6 +8087,14 @@ PrefabInstance:
       propertyPath: _event
       value: 
       objectReference: {fileID: 11400000, guid: 05d6fc99451904628a15995b88bb0941, type: 2}
+    - target: {fileID: 5296250805347664085, guid: 6f94eae1d94f942c2a15727d8b4e012d, type: 3}
+      propertyPath: _eventData.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296250805347664085, guid: 6f94eae1d94f942c2a15727d8b4e012d, type: 3}
+      propertyPath: '_eventData.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8ea9d8c366b4ff44fa21cae75551fe6e, type: 2}
     - target: {fileID: 5681819513699103549, guid: 6f94eae1d94f942c2a15727d8b4e012d, type: 3}
       propertyPath: m_Name
       value: Board
