@@ -34,8 +34,7 @@ public class GrimReaperUI : MonoBehaviour
         }
         else
         {
-            //todo: gameover screen
-            GameController.Instance.ReloadGame();
+            GameController.Instance.ChangeCurrentState(GameState.Death);
         }
     }
 

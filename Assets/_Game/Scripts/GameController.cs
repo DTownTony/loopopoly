@@ -69,7 +69,7 @@ public class GameController : MonoBehaviour
     private void PlayerMove(int value)
     {
         ChangeCurrentState(GameState.PlayerMoving);
-        var boardPosition = _board.GetBoardPositions(Player.CurrentIndex, value);
+        var boardPosition = _board.GetBoardPositions(Player.CurrentPositionIndex, value);
         var finalPosition = boardPosition[^1];
         Player.Move(boardPosition, () =>
         {
@@ -103,6 +103,8 @@ public class GameController : MonoBehaviour
 
     public void ChangeLevelLoop()
     {
+        Player.Data.BossDefeated++;
+        
         _loops = 0;
         _currentLevelLoop++;
         if (_currentLevelLoop >= _loopsLevels.Length)
@@ -113,11 +115,6 @@ public class GameController : MonoBehaviour
         
         OnLoopsChanged?.Invoke(_loops, LevelData.MaxLoops);
     }
-
-    public void ReloadGame()
-    {
-        SceneManager.LoadScene("Game");
-    }
 }
 
 public enum GameState
@@ -127,5 +124,6 @@ public enum GameState
     DiceRolling,
     PlayerMoving,
     PositionEvent,
-    Combat
+    Combat,
+    Death
 }

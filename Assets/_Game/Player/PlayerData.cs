@@ -13,6 +13,8 @@ public class PlayerData
     public PlayerValue CurrentHealth;
     public PlayerValue Damage;
     public PlayerValue Defense;
+
+    public int BossDefeated;
     
     public void UpdateMaxHealth(int amount)
     {

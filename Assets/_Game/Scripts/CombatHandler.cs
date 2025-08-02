@@ -58,6 +58,10 @@ public class CombatHandler : MonoBehaviour
             combatActive = _enemy.CurrentHealth > 0 && _player.Data.CurrentHealth.Value > 0;
             yield return new WaitForSeconds(.75f);
         }
+
+        //player lost
+        if (_player.Data.CurrentHealth.Value <= 0)
+            yield break;
         
         //player won. Loss is handled with Player
         _player.MoveOutCombat();

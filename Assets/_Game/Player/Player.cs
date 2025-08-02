@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
     public const int EXP_NEXT_LEVEL = 100;
     
-    public int CurrentIndex { get; private set; }
+    public int CurrentPositionIndex { get; private set; }
     public Transform Model;
 
     public readonly PlayerData Data = new PlayerData
@@ -56,8 +56,7 @@ public class Player : MonoBehaviour
         if (newValue > 0)
             return;
         
-        //todo: death screen
-        GameController.Instance.ReloadGame();
+        GameController.Instance.ChangeCurrentState(GameState.Death);
     }
     
     public void Move(List<BoardPosition> positions, Action onComplete)
@@ -85,10 +84,10 @@ public class Player : MonoBehaviour
             transform.DOMove(position.transform.position, moveDuration);
             Model.DOLocalMoveY(endY, moveDuration * .5f).SetLoops(2, LoopType.Yoyo);
             yield return new WaitForSeconds(moveDuration);
-            CurrentIndex = position.Index;
+            CurrentPositionIndex = position.Index;
 
             //loop completed
-            if (CurrentIndex == 0)
+            if (CurrentPositionIndex == 0)
             {
                 var controller = GameController.Instance;
                 controller.IncreaseGameLoop();

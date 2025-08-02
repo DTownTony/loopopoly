@@ -12,6 +12,7 @@ public class GameView : MonoBehaviour
     [SerializeField] private PlayerValueUI _defenseUI;
     [SerializeField] private PlayerValueUI _levelUI;
     [SerializeField] private PlayerValueUI _experienceUI;
+    [SerializeField] private DeathView _deathView;
 
     [SerializeField] private TMP_Text _bossLoopsText;
 
@@ -26,6 +27,9 @@ public class GameView : MonoBehaviour
     private void GameStateChanged(GameState newState)
     {
         _rollButton.interactable = newState == GameState.WaitingForPlayer;
+
+        if (newState == GameState.Death)
+            _deathView.Show();
     }
     
     private void LoopsChanged(int loops, int maxLoops)
