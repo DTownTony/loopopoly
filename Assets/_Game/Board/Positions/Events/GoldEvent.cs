@@ -8,10 +8,7 @@ public class GoldEvent : BoardEvent
     public override void Trigger()
     {
         base.Trigger();
-        var finalAmount =
-            Mathf.RoundToInt(_goldAmount * Mathf.Pow(GameController.LOOP_EXPONENTIAL_VALUE, GameController.Instance.MaxLoops));
-        
-        GameController.Instance.EventHandler.AddGold(finalAmount);
-        GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"Gold +{finalAmount}!");
+        GameController.Instance.EventHandler.AddGold(_goldAmount);
+        GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"Gold +{_goldAmount}!");
     }
 }

@@ -9,12 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d2df82e042d14e3bb51989139410456, type: 3}
-  m_Name: Item_Bomb
+  m_Script: {fileID: 11500000, guid: c3a780ac62df24eac9e0e294108e5bf2, type: 3}
+  m_Name: Item_BucketHat
   m_EditorClassIdentifier: 
-  Name: Bomb
-  Description: Instantly defeat a non-boss enemy
-  Icon: {fileID: 21300000, guid: 27a33b90adad247a4b2cb187fa3ef658, type: 3}
-  Cost: 100
+  Name: Bucket Hat
+  Description: +1 Armor
+  Icon: {fileID: 21300000, guid: 947cd30ac61cc9342a80dae19eac1998, type: 3}
+  Cost: 200
   IgnoreInventory: 0
-  Key: bomb
+  Key: bucket_hat
+  StatBonuses:
+  - Type: 4
+    Amount: 1

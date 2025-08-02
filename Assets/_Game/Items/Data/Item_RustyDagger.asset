@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Rusty Dagger
   Description: +1 Damage
   Icon: {fileID: 21300000, guid: bfe7b91a817564288910ba653f139117, type: 3}
-  Cost: 50
+  Cost: 100
   IgnoreInventory: 0
   Key: rusty_dagger
   StatBonuses:

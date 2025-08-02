@@ -9,12 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d2df82e042d14e3bb51989139410456, type: 3}
-  m_Name: Item_Bomb
+  m_Script: {fileID: 11500000, guid: c3a780ac62df24eac9e0e294108e5bf2, type: 3}
+  m_Name: Item_KnightArmor
   m_EditorClassIdentifier: 
-  Name: Bomb
-  Description: Instantly defeat a non-boss enemy
-  Icon: {fileID: 21300000, guid: 27a33b90adad247a4b2cb187fa3ef658, type: 3}
-  Cost: 100
+  Name: Knights Armor
+  Description: +4 Armor
+  Icon: {fileID: 21300000, guid: 2936d6d4ed8f76f45b2619c420cb977e, type: 3}
+  Cost: 650
   IgnoreInventory: 0
-  Key: bomb
+  Key: knight_armor
+  StatBonuses:
+  - Type: 4
+    Amount: 4

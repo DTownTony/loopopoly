@@ -9,6 +9,8 @@ public class ShopItemCard : ItemCard
     
     [SerializeField] private TMP_Text _costText;
     [SerializeField] private Button _buyButton;
+    
+    private int _cost;
 
     private void Awake()
     {
@@ -18,14 +20,16 @@ public class ShopItemCard : ItemCard
     public override void SetItem(Item item)
     {
         base.SetItem(item);
-        _costText.SetText(item.Data.Cost.ToString());
+        
+        _cost = Mathf.RoundToInt(item.Data.Cost * Mathf.Pow(GameController.LOOP_EXPONENTIAL_VALUE, GameController.Instance.MaxLoops));
+        _costText.SetText(_cost.ToString());
     }
     
     private void BuyButtonPressed()
     {
-        if (GameController.Instance.Player.Data.Gold.Value >= Item.Data.Cost)
+        if (GameController.Instance.Player.Data.Gold.Value >= _cost)
         {
-            GameController.Instance.Player.Data.Gold.Value -= Item.Data.Cost;
+            GameController.Instance.Player.Data.Gold.Value -= _cost;
             GameController.Instance.Player.Data.AddItem(Item.Data);
             OnPurchase?.Invoke();
             Destroy(gameObject);

@@ -6,6 +6,8 @@ public class CombatHandler : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private ItemData _bombItem;
     
+    public const float LOOP_COMBAT_VALUE = 1.25f;
+    
     private Enemy _enemy;
     
     public void StartCombat(EnemyData enemyData)
@@ -88,10 +90,10 @@ public class CombatHandler : MonoBehaviour
         public Enemy(EnemyData enemyData, int loops)
         {
             _enemyData = enemyData;
-            CurrentHealth = Mathf.RoundToInt(_enemyData.Health * Mathf.Pow(GameController.LOOP_COMBAT_VALUE, loops));
-            DamageMin = Mathf.RoundToInt(_enemyData.DamageMin * Mathf.Pow(GameController.LOOP_COMBAT_VALUE, loops));
-            DamageMax = Mathf.RoundToInt(_enemyData.DamageMax * Mathf.Pow(GameController.LOOP_COMBAT_VALUE, loops));
-            Debug.Log("Base: " + _enemyData.DamageMin + " - " + _enemyData.DamageMax + " | " + DamageMin + " - " + DamageMax);
+            CurrentHealth = Mathf.RoundToInt(_enemyData.Health * Mathf.Pow(LOOP_COMBAT_VALUE, loops));
+            DamageMin = Mathf.RoundToInt(_enemyData.DamageMin * Mathf.Pow(LOOP_COMBAT_VALUE, loops));
+            DamageMax = Mathf.RoundToInt(_enemyData.DamageMax * Mathf.Pow(LOOP_COMBAT_VALUE, loops));
+            Debug.Log(_enemyData.DamageMin + " - " + _enemyData.DamageMax + " | " + DamageMin + " - " + DamageMax);
         }
     }
 }
