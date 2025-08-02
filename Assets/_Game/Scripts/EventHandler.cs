@@ -80,6 +80,7 @@ public enum StatType
 {
     MaxHealth,
     CurrentHealth,
+    CurrentHealthPercent,
     Damage,
     Defense,
     Experience

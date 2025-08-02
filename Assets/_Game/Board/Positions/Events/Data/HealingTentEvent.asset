@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c6d9e829e2f956458811978e6e8f27d, type: 3}
-  m_Name: TrainingEvent
+  m_Script: {fileID: 11500000, guid: 3249d0dc570ddf44f8cbdcb74ebe82a7, type: 3}
+  m_Name: HealingTentEvent
   m_EditorClassIdentifier: 
-  Name: Training
+  Name: Healing Tent
   BoardPiece:
   - {fileID: 5055539213916576850, guid: 153159e02b3dec348b2dda3bc3d4c1ff, type: 3}
   _items:
-  - {fileID: 11400000, guid: 342e21f4323577047aaf81d09e41e44e, type: 2}
-  - {fileID: 11400000, guid: 536c5ebbe7f54a842af9311142653e0d, type: 2}
-  - {fileID: 11400000, guid: 5d46f397ce9ceb0408671b7c6e32bee3, type: 2}
+  - {fileID: 11400000, guid: 8ce9b7b35d26d81429a14117e76f26fa, type: 2}
+  - {fileID: 11400000, guid: 02af541c11ed9e245baec6d5608c0f9a, type: 2}
+  - {fileID: 11400000, guid: c3370e4d8357f5347ba25dbb3839b310, type: 2}

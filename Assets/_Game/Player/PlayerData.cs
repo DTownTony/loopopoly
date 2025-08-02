@@ -45,6 +45,11 @@ public class PlayerData
                 case StatType.Experience:
                     Experience.Value += value;
                     break;
+                case StatType.CurrentHealthPercent:
+                    var percent = bonus.Amount / 100f;
+                    var total = Mathf.RoundToInt(MaxHealth * percent);
+                    CurrentHealth.Value += total;
+                    break;
             }
         }
     }

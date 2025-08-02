@@ -35,6 +35,12 @@ public class EventView : MonoBehaviour
         _kingsTaxesUI.Show(args);
     }
 
+    public void ShowHealingTent()
+    {
+        _canvas.enabled = true;
+        
+    }
+
     public void ShowBasicEvent(EventUIArgs args)
     {
         _canvas.enabled = true;

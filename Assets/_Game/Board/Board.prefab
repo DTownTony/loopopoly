@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7903637625483133275}
-  - component: {fileID: 975131022638392808}
-  - component: {fileID: 3643270113684123278}
   - component: {fileID: 5296250805347664085}
   m_Layer: 0
   m_Name: Board
@@ -74,59 +72,6 @@ Transform:
   - {fileID: 3581619351456342458}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &975131022638392808
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681819513699103549}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3643270113684123278
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681819513699103549}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a86585121e2a042b08c40bb3d9991d2a, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &5296250805347664085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,16 +133,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 868f6e743e180497a86ce5e59bb48d98, type: 2}
   - {fileID: 11400000, guid: 14e30f978da144183837c7f84c8a9dee, type: 2}
   - {fileID: 11400000, guid: 8d28cd97b0ad7498098299e44ad734af, type: 2}
-  - {fileID: 11400000, guid: 64b8fbfde028d49b6aceb86380bc7496, type: 2}
-  - {fileID: 11400000, guid: c9a11a3313bae44e4a1b2df1771077d9, type: 2}
+  - {fileID: 11400000, guid: 8d28cd97b0ad7498098299e44ad734af, type: 2}
+  - {fileID: 11400000, guid: 8d28cd97b0ad7498098299e44ad734af, type: 2}
+  - {fileID: 11400000, guid: 8d28cd97b0ad7498098299e44ad734af, type: 2}
   - {fileID: 11400000, guid: 3e6f7a05ff21043e69962b7efb9266d1, type: 2}
   - {fileID: 11400000, guid: 607d9dd98b0724a498147c02147a86c8, type: 2}
+  - {fileID: 11400000, guid: 8ea9d8c366b4ff44fa21cae75551fe6e, type: 2}
+  - {fileID: 11400000, guid: c149af1d5f8ec3e4e816dae050a8999f, type: 2}
+  - {fileID: 11400000, guid: f7aaec9a12f493443a2f20985beed90c, type: 2}
   - {fileID: 11400000, guid: 8ea9d8c366b4ff44fa21cae75551fe6e, type: 2}
   - {fileID: 11400000, guid: c149af1d5f8ec3e4e816dae050a8999f, type: 2}
   - {fileID: 11400000, guid: 05d6fc99451904628a15995b88bb0941, type: 2}
   - {fileID: 11400000, guid: 05d6fc99451904628a15995b88bb0941, type: 2}
   - {fileID: 11400000, guid: 05d6fc99451904628a15995b88bb0941, type: 2}
-  - {fileID: 11400000, guid: 05d6fc99451904628a15995b88bb0941, type: 2}
+  - {fileID: 11400000, guid: 9fd8a243e04e4b543a9786db3d279da4, type: 2}
   _specialEventData:
   - {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}
   - {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}
@@ -506,6 +455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pos (0)
       objectReference: {fileID: 0}
+    - target: {fileID: 3291160671239743082, guid: 047fa0de978754e79a75c2382eb2fe07, type: 3}
+      propertyPath: _event
+      value: 
+      objectReference: {fileID: 11400000, guid: 05d6fc99451904628a15995b88bb0941, type: 2}
     - target: {fileID: 5685117615821084524, guid: 047fa0de978754e79a75c2382eb2fe07, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.25
