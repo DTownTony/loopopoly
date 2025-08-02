@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private DiceRoller _diceRoller;
     [SerializeField] private Board _board;
 
+    public const float LOOP_COMBAT_VALUE = 1.25f;
     public const float LOOP_EXPONENTIAL_VALUE = 1.05f;
     
     private void Awake()

@@ -4,6 +4,8 @@ using UnityEngine;
 public class CombatHandler : MonoBehaviour
 {
     [SerializeField] private Player _player;
+    [SerializeField] private ItemData _bombItem;
+    
     private Enemy _enemy;
     
     public void StartCombat(EnemyData enemyData)
@@ -24,6 +26,15 @@ public class CombatHandler : MonoBehaviour
 
         var playerTurn = false;
         var combatActive = true;
+        
+        //todo: bomb effect
+        if (_player.Data.HasItem(_bombItem.Key))
+        {
+            Debug.Log("Use bomb!");
+            combatActive = false;
+            _player.Data.RemoveItem(_bombItem.Key);
+        }
+        
         while (combatActive)
         {
             int damage;
@@ -37,6 +48,7 @@ public class CombatHandler : MonoBehaviour
             else
             {
                 damage = Random.Range(_enemy.DamageMin, _enemy.DamageMax);
+                damage = Mathf.Min(0, damage - _player.Data.Defense.Value);
                 _player.Data.CurrentHealth.Value -= damage;
                 playerTurn = true;
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"-{damage}", _player.Model);
@@ -76,9 +88,9 @@ public class CombatHandler : MonoBehaviour
         public Enemy(EnemyData enemyData, int loops)
         {
             _enemyData = enemyData;
-            CurrentHealth = Mathf.RoundToInt(_enemyData.Health * Mathf.Pow(GameController.LOOP_EXPONENTIAL_VALUE, loops));
-            DamageMin = Mathf.RoundToInt(_enemyData.DamageMin * Mathf.Pow(GameController.LOOP_EXPONENTIAL_VALUE, loops));
-            DamageMax = Mathf.RoundToInt(_enemyData.DamageMax * Mathf.Pow(GameController.LOOP_EXPONENTIAL_VALUE, loops));
+            CurrentHealth = Mathf.RoundToInt(_enemyData.Health * Mathf.Pow(GameController.LOOP_COMBAT_VALUE, loops));
+            DamageMin = Mathf.RoundToInt(_enemyData.DamageMin * Mathf.Pow(GameController.LOOP_COMBAT_VALUE, loops));
+            DamageMax = Mathf.RoundToInt(_enemyData.DamageMax * Mathf.Pow(GameController.LOOP_COMBAT_VALUE, loops));
             Debug.Log("Base: " + _enemyData.DamageMin + " - " + _enemyData.DamageMax + " | " + DamageMin + " - " + DamageMax);
         }
     }
