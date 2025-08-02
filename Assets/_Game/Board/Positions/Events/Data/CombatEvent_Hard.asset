@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: CombatEvent_Hard
   m_EditorClassIdentifier: 
   Name: Hard
-  EnemyData: {fileID: 11400000, guid: 3f4fd55948abe4c38822f9e951d9ac00, type: 2}
+  BoardPiece:
+  - {fileID: 1584741293693512915, guid: 7b8e810c1b6025c4b8680bb96169e8d1, type: 3}

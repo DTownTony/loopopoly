@@ -29,12 +29,15 @@ public class Board : MonoBehaviour
             if (_specialEventIndexes.Contains(i))
             {
                 var boardEvent = availableSpecialEvents[Random.Range(0, availableSpecialEvents.Count)];
-                boardPosition.SetEvent(boardEvent);
+                var piece = boardEvent.BoardPiece[Random.Range(0, boardEvent.BoardPiece.Length)];
+                boardPosition.SetEvent(boardEvent, piece);
                 availableSpecialEvents.Remove(boardEvent);
             }
             else
-            {
-                boardPosition.SetEvent(_eventData[Random.Range(0, _eventData.Length)]);
+            {  
+                var boardEvent = _eventData[Random.Range(0, _eventData.Length)];
+                var piece = boardEvent.BoardPiece[Random.Range(0, boardEvent.BoardPiece.Length)];
+                boardPosition.SetEvent(boardEvent, piece);
             }
         }
     }

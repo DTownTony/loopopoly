@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: TreasureEvent
   m_EditorClassIdentifier: 
   Name: Treasure Chest
+  BoardPiece:
+  - {fileID: 2165125963539365166, guid: c1963109e095f5c458e64850192df9be, type: 3}

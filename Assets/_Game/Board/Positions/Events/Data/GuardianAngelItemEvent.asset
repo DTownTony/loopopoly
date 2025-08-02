@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: GuardianAngelItemEvent
   m_EditorClassIdentifier: 
   Name: Guardian Angel
+  BoardPiece:
+  - {fileID: 5055539213916576850, guid: 153159e02b3dec348b2dda3bc3d4c1ff, type: 3}
   ItemToAdd: {fileID: 11400000, guid: 6cbc10311ab684e49af1f1434a050587, type: 2}

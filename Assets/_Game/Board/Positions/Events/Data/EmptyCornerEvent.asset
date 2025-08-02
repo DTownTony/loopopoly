@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a101733dc7b424f0f913aae544aa90c1, type: 3}
-  m_Name: EmptyEvent
+  m_Name: EmptyCornerEvent
   m_EditorClassIdentifier: 
   Name: Tavern Chillin'
   BoardPiece:
-  - {fileID: 8648219623341365116, guid: ccacb8cc1d5fc194a85056a5b7eb87e3, type: 3}
-  - {fileID: 1040496207580856724, guid: 1c25795c75974d14987f7b327247454a, type: 3}
-  - {fileID: 1662759552905544874, guid: 1a5493c1015445542942726305c43ee9, type: 3}
-  - {fileID: 3853932179907342318, guid: 9d51d7fb89cc33a4ab1138c7177d657c, type: 3}
+  - {fileID: 5209276345633551725, guid: dfdbebf310fd5664d9f22fec89f3e029, type: 3}
+  - {fileID: 8479348985966430461, guid: c6dd0f270f77e0f46819b6d3303a9244, type: 3}
+  - {fileID: 5349692307392679744, guid: 865259e914d953c499c69dff6c4efe4e, type: 3}
+  - {fileID: 3265149439940323988, guid: ae37ca34f8fbbbe4494b790245f0a525, type: 3}

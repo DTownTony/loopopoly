@@ -4,6 +4,7 @@ using UnityEngine;
 public class BoardEvent : ScriptableObject
 {
     public string Name;
+    public GameObject[] BoardPiece;
     
     public virtual void Trigger()
     {

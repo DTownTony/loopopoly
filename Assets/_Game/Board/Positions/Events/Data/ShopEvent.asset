@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: ShopEvent
   m_EditorClassIdentifier: 
   Name: Ye Olde Shop
+  BoardPiece:
+  - {fileID: 915585209983047097, guid: 0b54d1d1efd07e748817e007dde05933, type: 3}

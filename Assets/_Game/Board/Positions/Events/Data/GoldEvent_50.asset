@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: GoldEvent_50
   m_EditorClassIdentifier: 
   Name: Gold +50
+  BoardPiece:
+  - {fileID: 2165125963539365166, guid: c1963109e095f5c458e64850192df9be, type: 3}
   _goldAmount: 50
