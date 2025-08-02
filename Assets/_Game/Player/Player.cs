@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     {
         Level = new PlayerValue(0),
         Experience = new PlayerValue(0, 0, EXP_NEXT_LEVEL),
-        Gold = new PlayerValue(0),
+        Gold = new PlayerValue(100),
         MaxHealth = 50,
         CurrentHealth = new PlayerValue(50, 0, 50),
         Damage = new PlayerValue(5, 1),
