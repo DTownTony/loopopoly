@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Slime King
   IsBoss: 1
-  Health: 50
+  Health: 35
   DamageMin: 4
   DamageMax: 10
   Experience: 50

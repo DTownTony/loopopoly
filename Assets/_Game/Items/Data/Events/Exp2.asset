@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Hard Training
   Description: Exp +50
   Icon: {fileID: 21300000, guid: 2936d6d4ed8f76f45b2619c420cb977e, type: 3}
-  Cost: 250
+  Cost: 150
   IgnoreInventory: 1
   Key: hard_training
   StatBonuses:

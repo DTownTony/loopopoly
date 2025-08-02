@@ -1,10 +1,14 @@
 using System.Collections;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class CombatHandler : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private ItemData _bombItem;
+    [SerializeField] private CinemachineImpulseSource _impulseSource;
+    [SerializeField] private ParticleSystem _slashAttack;
+    [SerializeField] private ParticleSystem _bombAttackPrefab;
     [SerializeField] private EnemyHealthBarUI _healthBarUI;
     
     private const float LOOP_COMBAT_VALUE = 1.15f;
@@ -32,9 +36,9 @@ public class CombatHandler : MonoBehaviour
         var playerTurn = false;
         var combatActive = true;
         
-        //todo: bomb effect
         if (!_enemy.IsBoss && _player.Data.HasItem(_bombItem.Key))
         {
+            Instantiate(_bombAttackPrefab, _enemy.Model.transform.position, Quaternion.identity);
             combatActive = false;
             _player.Data.RemoveItem(_bombItem.Key);
         }
@@ -48,6 +52,8 @@ public class CombatHandler : MonoBehaviour
                 _enemy.CurrentHealth -= damage;
                 _healthBarUI.SetFill(_enemy.CurrentHealth / (float)_enemy.MaxHealth);
                 playerTurn = false;
+
+                PlaySlashAttack(_enemy.Model.transform);
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"-{damage}", _enemy.Model.transform);
             }
             else
@@ -56,11 +62,15 @@ public class CombatHandler : MonoBehaviour
                 damage = Mathf.Max(0, damage - _player.Data.Defense.Value);
                 _player.Data.CurrentHealth.Value -= damage;
                 playerTurn = true;
+                
+                _impulseSource.GenerateImpulse(.05f);
+                PlaySlashAttack(_player.Model);
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"-{damage}", _player.Model);
             }
             
             combatActive = _enemy.CurrentHealth > 0 && _player.Data.CurrentHealth.Value > 0;
-            yield return new WaitForSeconds(.75f);
+            
+            yield return new WaitForSeconds(combatActive ? .75f : .2f);
         }
 
         //player lost
@@ -82,6 +92,14 @@ public class CombatHandler : MonoBehaviour
         yield return new WaitForSeconds(.2f);
         
         GameController.Instance.ChangeCurrentState(GameState.WaitingForPlayer);
+    }
+
+    private void PlaySlashAttack(Transform target)
+    {
+        var position = target.position;
+        position.y += .5f;
+        _slashAttack.transform.position = position;
+        _slashAttack.Play();
     }
     
     private class Enemy
