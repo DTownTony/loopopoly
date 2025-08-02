@@ -9,14 +9,10 @@ public class CombatHandler : MonoBehaviour
     public void StartCombat(EnemyData enemyData)
     {
         GameController.Instance.ChangeCurrentState(GameState.Combat);
-        _enemy = new Enemy()
-        {
-            Data = enemyData,
-            CurrentHealth = enemyData.Health
-        };
+        _enemy = new Enemy(enemyData, GameController.Instance.MaxLoops);
         
         var position = _player.transform.position;
-        _enemy.Model = Instantiate(_enemy.Data.Prefab, position, Quaternion.identity);
+        _enemy.Model = Instantiate(enemyData.Prefab, position, Quaternion.identity);
 
         StartCoroutine(CombatSequence());
     }
@@ -40,7 +36,7 @@ public class CombatHandler : MonoBehaviour
             }
             else
             {
-                damage = Random.Range(_enemy.Data.DamageMin, _enemy.Data.DamageMax);
+                damage = Random.Range(_enemy.DamageMin, _enemy.DamageMax);
                 _player.Data.CurrentHealth.Value -= damage;
                 playerTurn = true;
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"-{damage}", _player.Model);
@@ -52,9 +48,9 @@ public class CombatHandler : MonoBehaviour
         
         //player won. Loss is handled with Player
         _player.MoveOutCombat();
-        _player.Data.Experience.Value += _enemy.Data.Experience;
+        _player.Data.Experience.Value += _enemy.Experience;
         
-        if(_enemy.Data.IsBoss)
+        if(_enemy.IsBoss)
             GameController.Instance.ChangeLevelLoop();
       
         Destroy(_enemy.Model.gameObject);
@@ -67,8 +63,23 @@ public class CombatHandler : MonoBehaviour
     
     private class Enemy
     {
-        public EnemyData Data;
+        public int Experience => _enemyData.Experience;
+        public bool IsBoss => _enemyData.IsBoss;
+        
         public int CurrentHealth;
+        public int DamageMin;
+        public int DamageMax;
         public GameObject Model;
+
+        private EnemyData _enemyData;
+        
+        public Enemy(EnemyData enemyData, int loops)
+        {
+            _enemyData = enemyData;
+            CurrentHealth = Mathf.RoundToInt(_enemyData.Health * Mathf.Pow(GameController.LOOP_EXPONENTIAL_VALUE, loops));
+            DamageMin = Mathf.RoundToInt(_enemyData.DamageMin * Mathf.Pow(GameController.LOOP_EXPONENTIAL_VALUE, loops));
+            DamageMax = Mathf.RoundToInt(_enemyData.DamageMax * Mathf.Pow(GameController.LOOP_EXPONENTIAL_VALUE, loops));
+            Debug.Log("Base: " + _enemyData.DamageMin + " - " + _enemyData.DamageMax + " | " + DamageMin + " - " + DamageMax);
+        }
     }
 }

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6cd41f3a836c4cdca067246f73f88b8, type: 3}
   m_Name: Level_Forest
   m_EditorClassIdentifier: 
-  MaxLoops: 0
+  MaxLoops: 3
   BossData: {fileID: 11400000, guid: cd669856d43b3b542b329f07cf5a106c, type: 2}
   EnemyData: {fileID: 11400000, guid: 24017ee9aeb66f147bf9654877b80fb9, type: 2}

@@ -4357,7 +4357,7 @@ GameObject:
   - component: {fileID: 1083093416}
   - component: {fileID: 1083093415}
   m_Layer: 0
-  m_Name: DiceThrower
+  m_Name: DiceRoller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4376,6 +4376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dice: {fileID: 1934744718460969722}
+  _diceText: {fileID: 1274876074}
 --- !u!4 &1083093416
 Transform:
   m_ObjectHideFlags: 0

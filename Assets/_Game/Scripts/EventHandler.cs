@@ -38,12 +38,12 @@ public class EventHandler : MonoBehaviour
     
     public void SetupBossCombat()
     {
-        _combatHandler.StartCombat(GameController.Instance.CurrentLoopLevelData.BossData);
+        _combatHandler.StartCombat(GameController.Instance.LevelData.BossData);
     }
     
     public void SetupCombat()
     {
-        _combatHandler.StartCombat(GameController.Instance.CurrentLoopLevelData.EnemyData);
+        _combatHandler.StartCombat(GameController.Instance.LevelData.EnemyData);
     }
 
     #region UI Views
