@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 179102ebf53f14662948129aa7280ac1, type: 3}
-  m_Name: Enemy_Slime
+  m_Name: Enemy_Troll
   m_EditorClassIdentifier: 
-  Name: Goblin
+  Name: Enemy_Troll
   IsBoss: 0
   Health: 10
   DamageMin: 2
   DamageMax: 8
   Experience: 25
-  Prefab: {fileID: 6435103050494515356, guid: 1cb3ae018a58249efb8132afecd5f439, type: 3}
+  Prefab: {fileID: 6435103050494515356, guid: 0aa93d5ecc24c0444ab3461c98b2bd48, type: 3}

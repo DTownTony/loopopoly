@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 179102ebf53f14662948129aa7280ac1, type: 3}
-  m_Name: Boss_Slime
+  m_Name: Enemy_Goblin
   m_EditorClassIdentifier: 
-  Name: SlimeKing
+  Name: Enemy_Troll
   IsBoss: 0
-  Health: 55
-  DamageMin: 5
-  DamageMax: 10
-  Experience: 50
-  Prefab: {fileID: 6435103050494515356, guid: db4df0508e034d94084b470469be05e6, type: 3}
+  Health: 10
+  DamageMin: 2
+  DamageMax: 8
+  Experience: 25
+  Prefab: {fileID: 6435103050494515356, guid: ddfe3d1370a7b834bac7c7eb8cdf5261, type: 3}
