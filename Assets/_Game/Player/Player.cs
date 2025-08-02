@@ -6,9 +6,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public delegate void OnMovedSpaceDelegate(int movesLeft); //todo: use this for events 
+    public event OnMovedSpaceDelegate OnMovedSpace;
+    
     public const int EXP_NEXT_LEVEL = 100;
     
     public int CurrentPositionIndex { get; private set; }
+    public int MovesLeft { get; private set; }
     public Transform Model;
 
     public readonly PlayerData Data = new PlayerData
@@ -61,6 +65,7 @@ public class Player : MonoBehaviour
     
     public void Move(List<BoardPosition> positions, Action onComplete)
     {
+        MovesLeft = positions.Count;
         StartCoroutine(MoveSequence(positions, onComplete));
     }
     
@@ -84,6 +89,9 @@ public class Player : MonoBehaviour
             transform.DOMove(position.transform.position, moveDuration);
             Model.DOLocalMoveY(endY, moveDuration * .5f).SetLoops(2, LoopType.Yoyo);
             yield return new WaitForSeconds(moveDuration);
+
+            MovesLeft--;
+            OnMovedSpace?.Invoke(MovesLeft);
             CurrentPositionIndex = position.Index;
 
             //loop completed

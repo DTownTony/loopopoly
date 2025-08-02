@@ -8,7 +8,6 @@ public class DiceRoller : MonoBehaviour
     public event DiceRolledDelegate OnDiceRolled;
     
     [SerializeField] private Dice _dice;
-    [SerializeField] private TMP_Text _diceText;
 
     private bool _isRolling;
 
@@ -48,7 +47,6 @@ public class DiceRoller : MonoBehaviour
     {
         _isRolling = false;
         var value = Random.Range(1, 7);//_dice.GetFaceValue();
-        _diceText.SetText($"Roll! ({value})");
         OnDiceRolled?.Invoke(value);
     }
 
