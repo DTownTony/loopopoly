@@ -15,5 +15,5 @@ MonoBehaviour:
   Name: Damage +1
   BoardPiece:
   - {fileID: 5055539213916576850, guid: bb1b53139d6626e43b767c5deb4265f3, type: 3}
-  _type: 2
+  _type: 3
   _amount: 1

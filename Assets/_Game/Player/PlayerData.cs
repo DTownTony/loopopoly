@@ -39,7 +39,7 @@ public class PlayerData
                 case StatType.Damage:
                     Damage.Value += value;
                     break;
-                case StatType.Defense:
+                case StatType.Armor:
                     Defense.Value += value;
                     break;
                 case StatType.Experience:

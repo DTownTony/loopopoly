@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3a780ac62df24eac9e0e294108e5bf2, type: 3}
-  m_Name: Item_GuardsSword
+  m_Name: Item_MagicCloak
   m_EditorClassIdentifier: 
-  Name: Guards Sword
-  Description: +3 Damage
-  Icon: {fileID: 21300000, guid: 569ae82fbd6dda6499fce830310dae93, type: 3}
-  Cost: 250
+  Name: Magic Cloak
+  Description: +10 Max Health
+  Icon: {fileID: 21300000, guid: 556b24b1bdde9bb49b46ac56a96b6bb4, type: 3}
+  Cost: 350
   IgnoreInventory: 0
-  Key: guard_sword
+  Key: magic_cloak
   StatBonuses:
-  - Type: 3
-    Amount: 3
+  - Type: 0
+    Amount: 10

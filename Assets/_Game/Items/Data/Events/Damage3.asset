@@ -19,5 +19,5 @@ MonoBehaviour:
   IgnoreInventory: 1
   Key: blacksmith_gift
   StatBonuses:
-  - Type: 2
+  - Type: 3
     Amount: 3

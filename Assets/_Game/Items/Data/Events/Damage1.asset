@@ -19,5 +19,5 @@ MonoBehaviour:
   IgnoreInventory: 1
   Key: blacksmooth_favor
   StatBonuses:
-  - Type: 2
+  - Type: 3
     Amount: 1

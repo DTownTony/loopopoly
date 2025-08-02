@@ -19,5 +19,5 @@ MonoBehaviour:
   IgnoreInventory: 1
   Key: simple_training
   StatBonuses:
-  - Type: 4
+  - Type: 5
     Amount: 25
