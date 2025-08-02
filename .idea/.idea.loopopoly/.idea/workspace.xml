@@ -6,20 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ee11fd1e-09a8-42fe-8861-c8038be924cc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Dice/DiceRoller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Dice/DiceRoller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/LoopData.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/LoopData/Level_Dungeon.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/LoopData/Level_Dungeon.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/LoopData/Level_Forest.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/LoopData/Level_Forest.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/LoopData/Level_Plains.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/LoopData/Level_Plains.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/LoopData/LoopLevelData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/LoopData/LoopLevelData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Player/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Player/PlayerData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/CombatHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/CombatHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/EventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/EventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/GameController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1754155457481</updated>
       <workItem from="1754155459801" duration="339000" />
-      <workItem from="1754155871548" duration="345000" />
+      <workItem from="1754155871548" duration="1808000" />
     </task>
     <servers />
   </component>

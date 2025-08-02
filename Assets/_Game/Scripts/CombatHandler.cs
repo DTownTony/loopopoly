@@ -67,11 +67,11 @@ public class CombatHandler : MonoBehaviour
         public bool IsBoss => _enemyData.IsBoss;
         
         public int CurrentHealth;
-        public int DamageMin;
-        public int DamageMax;
+        public readonly int DamageMin;
+        public readonly int DamageMax;
         public GameObject Model;
 
-        private EnemyData _enemyData;
+        private readonly EnemyData _enemyData;
         
         public Enemy(EnemyData enemyData, int loops)
         {

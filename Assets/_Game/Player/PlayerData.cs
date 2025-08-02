@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,6 +19,32 @@ public class PlayerData
         MaxHealth += amount;
         CurrentHealth.SetMaxValue(MaxHealth);
     }
+
+    private void ProcessItemBonuses(ItemData itemData, bool add)
+    {
+        if (itemData is not StatItemData statItemData)
+            return;
+
+        foreach (var bonus in statItemData.StatBonuses)
+        {
+            var value = add ? bonus.Amount : -bonus.Amount;
+            switch (bonus.Type)
+            {
+                case StatType.MaxHealth:
+                    UpdateMaxHealth(value);
+                    break;
+                case StatType.CurrentHealth:
+                    CurrentHealth.Value += value;
+                    break;
+                case StatType.Damage:
+                    Damage.Value += value;
+                    break;
+                case StatType.Defense:
+                    Defense.Value += value;
+                    break;
+            }
+        }
+    }
     
     #region Items
     
@@ -34,6 +61,7 @@ public class PlayerData
     {
         var item = new Item(itemData);
         Items.Add(item);
+        ProcessItemBonuses(itemData, true);
         OnItemAdded?.Invoke(item);
     }
     
@@ -53,6 +81,7 @@ public class PlayerData
             return;
         
         Items.Remove(itemToRemove);
+        ProcessItemBonuses(itemToRemove.Data, false);
         OnItemRemoved?.Invoke(itemToRemove);
     }
     
