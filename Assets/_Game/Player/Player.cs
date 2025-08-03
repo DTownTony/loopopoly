@@ -128,6 +128,6 @@ public class Player : MonoBehaviour
 
     public int GetExperienceNeededForLevel()
     {
-        return 100 + Mathf.RoundToInt(Data.Level.Value * 25f);
+        return 50 + Mathf.RoundToInt(Data.Level.Value * 25f);
     }
 }

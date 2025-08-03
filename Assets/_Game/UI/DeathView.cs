@@ -10,6 +10,7 @@ public class DeathView : MonoBehaviour
     [SerializeField] private TMP_Text _statsText;
 
     [Header("Audio")] 
+    [SerializeField] private AudioSource _musicSource;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _loseSound;
     
@@ -25,6 +26,7 @@ public class DeathView : MonoBehaviour
                            $"Bosses Defeated: {GameController.Instance.Player.Data.BossDefeated}\n" +
                            $"Total Dice Rolls: {GameController.Instance.Player.Data.TotalMoves}");
         
+        _musicSource.Stop();
         _audioSource.PlayOneShot(_loseSound, .5f);
     }
 
