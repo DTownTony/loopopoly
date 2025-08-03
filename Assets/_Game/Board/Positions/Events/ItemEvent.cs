@@ -9,7 +9,7 @@ public class ItemEvent : BoardEvent
     {
         base.Trigger();
         GameController.Instance.EventHandler.AddItem(_itemToAdd);
-        var col1 = new Color(52, 155, 242);
+        var col1 = new Color32(52, 155, 242,255);
         GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"+{_itemToAdd.Name}", col:col1);
     }
 }

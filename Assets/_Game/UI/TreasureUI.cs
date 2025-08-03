@@ -46,21 +46,21 @@ public class TreasureUI : MonoBehaviour
             case TreasureType.Gold:
                 var goldAmount = Random.Range(10, 25) * 10;
                 GameController.Instance.Player.Data.Gold.Value += goldAmount;
-                var col = new Color(255, 172, 0);
+                var col = new Color32(255, 220, 0,255);
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"+{goldAmount} Gold!", col: col);
                 _audioSource.PlayOneShot(_goldSound, 1f);
                 break;
             case TreasureType.Item:
                 var item = _itemDatabase.GetRandomItem();
                 GameController.Instance.Player.Data.AddItem(item);
-                var col1 = new Color(52, 155, 242);
+                var col1 = new Color32(52, 155, 242,255);
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"+{item.Name}", col: col1);
                 _audioSource.PlayOneShot(_itemSound, 1f);
                 break;
             case TreasureType.Trap:
                 var healthDamage = Mathf.RoundToInt(GameController.Instance.Player.Data.CurrentHealth.Value * .25f);
                 GameController.Instance.Player.Data.CurrentHealth.Value -= healthDamage;
-                var col2 = new Color(232, 25, 34);
+                var col2 = new Color32(232, 25, 34,255);
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"Trap! -{healthDamage} Health",col:col2);
                 _audioSource.PlayOneShot(_trapSound, 1f);
                 break;

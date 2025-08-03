@@ -17,7 +17,7 @@ public class EventDetailDisplay : MonoBehaviour
         _startingPosition = _rect.anchoredPosition;
     }
 
-    public void ShowMessage(string message, Transform target = null, Color col = default)
+    public void ShowMessage(string message, Transform target = null, Color32 col = default)
     {
         _rect.anchoredPosition = _startingPosition;
         _detailText.text = message;

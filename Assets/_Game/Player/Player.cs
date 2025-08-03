@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
         Data.CurrentHealth.Value = Data.MaxHealth;
         
         _audioSource.PlayOneShot(_levelUpSound, .5f);
-        var col1 = new Color(52, 155, 242);
+        var col1 = new Color32(52, 155, 242,255);
         GameController.Instance.GameView.EventDetailDisplay.ShowMessage("Level Up!", col:col1);
     }
 
@@ -119,7 +119,7 @@ public class Player : MonoBehaviour
                 //loop gold
                 var goldAmount = 100 + (50 * controller.MaxLoops);
                 Data.Gold.Value += goldAmount;
-                var col = new Color(255, 172, 0);
+                var col = new Color32(255, 220, 0,255);
                 controller.GameView.EventDetailDisplay.ShowMessage($"Loop {GameController.Instance.MaxLoops}\nGold +{goldAmount}!",col:col);
                 _audioSource.PlayOneShot(_loopSound, .5f);
             }
