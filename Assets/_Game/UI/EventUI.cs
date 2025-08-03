@@ -12,6 +12,10 @@ public class EventUI : MonoBehaviour
     
     [SerializeField] private ShopItemCard _itemCardPrefab;
     
+    [Header("Audio")] 
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _goldSound;
+    
     private readonly List<ShopItemCard> _items = new List<ShopItemCard>();
 
     private void Awake()
@@ -28,13 +32,19 @@ public class EventUI : MonoBehaviour
         {
             var itemCard = Instantiate(_itemCardPrefab, _container);
             itemCard.SetItem(new Item(args.Items[i]));
-            itemCard.OnPurchase += Hide;
+            itemCard.OnPurchase += Purchased;
             _items.Add(itemCard);
         }
     }
     
     private void SkipButtonPressed()
     {
+        Hide();
+    }
+
+    private void Purchased()
+    {
+        _audioSource.PlayOneShot(_goldSound, 1f);
         Hide();
     }
     

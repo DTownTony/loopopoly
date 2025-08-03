@@ -10,6 +10,10 @@ public class KingsTaxesUI : MonoBehaviour
 
     [SerializeField] private TMP_Text _descriptionText;
     
+    [Header("Audio")] 
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _goldSound;
+    
     private KingsTaxesUIArgs _currentArgs;
 
     private void Awake()
@@ -30,6 +34,7 @@ public class KingsTaxesUI : MonoBehaviour
     private void PayButtonPressed()
     {
         GameController.Instance.Player.Data.Gold.Value -= _currentArgs.Amount;
+        _audioSource.PlayOneShot(_goldSound, 1f);
         Hide();
     }
 

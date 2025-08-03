@@ -9,6 +9,10 @@ public class ShopUI : MonoBehaviour
     [SerializeField] private Transform _itemContainer;
     [SerializeField] private ItemDatabase _itemDatabase;
     [SerializeField] private Button _closeButton;
+    
+    [Header("Audio")] 
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _goldSound;
 
     private readonly List<ShopItemCard> _items = new List<ShopItemCard>();
     
@@ -28,9 +32,15 @@ public class ShopUI : MonoBehaviour
             var randomItemData = _itemDatabase.GetRandomItem();
             var itemCard = Instantiate(_shopItemCardPrefab, _itemContainer);
             itemCard.SetItem(new Item(randomItemData));
-            itemCard.OnPurchase += Hide;
+            itemCard.OnPurchase += Purchased;
             _items.Add(itemCard);
         }
+    }
+    
+    private void Purchased()
+    {
+        _audioSource.PlayOneShot(_goldSound, 1f);
+        Hide();
     }
     
     private void CloseButtonPressed()

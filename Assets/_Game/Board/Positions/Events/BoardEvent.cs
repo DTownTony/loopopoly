@@ -5,6 +5,7 @@ public class BoardEvent : ScriptableObject
 {
     public string Name;
     public GameObject[] BoardPiece;
+    public bool SpawnOneTime;
     
     public virtual void Trigger()
     {

@@ -330,7 +330,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2725b1a955d14604c92687decd73d10a, type: 3}
   - {fileID: 8300000, guid: cfb1ac8682b9b604989dd7052b9b0377, type: 3}
   _missSound: {fileID: 8300000, guid: 500dd7d83e9f02f419018ed6a36a3b4f, type: 3}
-  _bossDefeatSound: {fileID: 0}
+  _bossDefeatSound: {fileID: 8300000, guid: dfe8eafe1ef312b49acfc8ce9b68c453, type: 3}
 --- !u!114 &54051818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,6 +767,8 @@ MonoBehaviour:
   _payButton: {fileID: 639835486}
   _skipButton: {fileID: 340241954}
   _descriptionText: {fileID: 725473169}
+  _audioSource: {fileID: 1453556318}
+  _goldSound: {fileID: 8300000, guid: f71ebdc716940c14ca1dfd0145312a43, type: 3}
 --- !u!1 &207621180
 GameObject:
   m_ObjectHideFlags: 0
@@ -5047,6 +5049,10 @@ MonoBehaviour:
   - {fileID: 742249757}
   - {fileID: 982319269}
   _itemDatabase: {fileID: 11400000, guid: 681629a476a19428089a3b074c223f89, type: 2}
+  _audioSource: {fileID: 1453556318}
+  _trapSound: {fileID: 8300000, guid: 2725b1a955d14604c92687decd73d10a, type: 3}
+  _goldSound: {fileID: 8300000, guid: f71ebdc716940c14ca1dfd0145312a43, type: 3}
+  _itemSound: {fileID: 8300000, guid: 0c502ee6de8cb5c4cad4969306602393, type: 3}
 --- !u!1 &833241567
 GameObject:
   m_ObjectHideFlags: 0
@@ -8361,6 +8367,8 @@ MonoBehaviour:
   _container: {fileID: 1556452826}
   _skipButton: {fileID: 545126374}
   _itemCardPrefab: {fileID: 414549475597608740, guid: efb4f70261dbc4b6fa5b58b1373ba96e, type: 3}
+  _audioSource: {fileID: 1453556318}
+  _goldSound: {fileID: 8300000, guid: f71ebdc716940c14ca1dfd0145312a43, type: 3}
 --- !u!1001 &1785263138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9400,6 +9408,8 @@ MonoBehaviour:
   _itemContainer: {fileID: 613765008}
   _itemDatabase: {fileID: 11400000, guid: 681629a476a19428089a3b074c223f89, type: 2}
   _closeButton: {fileID: 55852934}
+  _audioSource: {fileID: 1453556318}
+  _goldSound: {fileID: 8300000, guid: f71ebdc716940c14ca1dfd0145312a43, type: 3}
 --- !u!1 &2098435690
 GameObject:
   m_ObjectHideFlags: 0

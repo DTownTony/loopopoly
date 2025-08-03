@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +8,12 @@ public class TreasureUI : MonoBehaviour
     [SerializeField] private EventView _eventView;
     [SerializeField] private Button[] _treasureButtons;
     [SerializeField] private ItemDatabase _itemDatabase;
+
+    [Header("Audio")] 
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _trapSound;
+    [SerializeField] private AudioClip _goldSound;
+    [SerializeField] private AudioClip _itemSound;
     
     public void Show()
     {
@@ -42,16 +47,19 @@ public class TreasureUI : MonoBehaviour
                 var goldAmount = Random.Range(10, 25) * 10;
                 GameController.Instance.Player.Data.Gold.Value += goldAmount;
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"+{goldAmount} Gold!");
+                _audioSource.PlayOneShot(_goldSound, 1f);
                 break;
             case TreasureType.Item:
                 var item = _itemDatabase.GetRandomItem();
                 GameController.Instance.Player.Data.AddItem(item);
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"+{item.Name}");
+                _audioSource.PlayOneShot(_itemSound, 1f);
                 break;
             case TreasureType.Trap:
                 var healthDamage = Mathf.RoundToInt(GameController.Instance.Player.Data.CurrentHealth.Value * .25f);
                 GameController.Instance.Player.Data.CurrentHealth.Value -= healthDamage;
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"Trap! -{healthDamage} Health");
+                _audioSource.PlayOneShot(_trapSound, 1f);
                 break;
         }
         

@@ -16,6 +16,8 @@ public class Board : MonoBehaviour
     public void BuildBoard()
     {
         var availableSpecialEvents = new List<BoardEvent>(_specialEventData);
+        var availableEvents = new List<BoardEvent>(_eventData);
+        
         //initialize board positions
         for (var i = 0; i < _boardPositions.Length; i++)
         {
@@ -40,7 +42,10 @@ public class Board : MonoBehaviour
             }
             else
             {  
-                var boardEvent = _eventData[Random.Range(0, _eventData.Length)];
+                var boardEvent = availableEvents[Random.Range(0, availableEvents.Count)];
+                if (boardEvent.SpawnOneTime)
+                    availableEvents.Remove(boardEvent);
+                
                 var piece = boardEvent.BoardPiece[Random.Range(0, boardEvent.BoardPiece.Length)];
                 boardPosition.SetEvent(boardEvent, piece);
             }

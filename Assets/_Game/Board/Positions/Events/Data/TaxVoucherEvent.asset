@@ -15,4 +15,5 @@ MonoBehaviour:
   Name: Tax Voucher
   BoardPiece:
   - {fileID: 5055539213916576850, guid: 153159e02b3dec348b2dda3bc3d4c1ff, type: 3}
+  SpawnOneTime: 1
   _itemToAdd: {fileID: 11400000, guid: 2e9ebaf3cb2ae421898854e7cb6c1690, type: 2}
