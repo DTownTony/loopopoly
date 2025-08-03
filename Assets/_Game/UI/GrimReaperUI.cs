@@ -29,7 +29,7 @@ public class GrimReaperUI : MonoBehaviour
     private void TryButtonPressed()
     {
         if (Random.value >= _currentArgs.DeathChance)
-            GameController.Instance.GameView.EventDetailDisplay.ShowMessage("Lucky!");
+            GameController.Instance.GameView.EventDetailDisplay.ShowMessage("Lucky!", col:new Color(52, 155, 242));
         else
             GameController.Instance.ChangeCurrentState(GameState.Death);
         

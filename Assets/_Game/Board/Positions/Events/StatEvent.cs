@@ -24,7 +24,7 @@ public class StatEvent : BoardEvent
                 type = "Exp";
                 break;
         }
-        
-        GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"+{_amount} {type}");
+        var col1 = new Color(52, 155, 242);
+        GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"+{_amount} {type}", col:col1);
     }
 }

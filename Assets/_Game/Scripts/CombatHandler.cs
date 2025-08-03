@@ -59,7 +59,8 @@ public class CombatHandler : MonoBehaviour
                 playerTurn = false;
 
                 PlaySlashAttack(_enemy.Model.transform);
-                GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"-{damage}", _enemy.Model.transform);
+                var col = new Color(232, 25, 34);
+                GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"-{damage}", _enemy.Model.transform, col:col);
             }
             else
             {
@@ -69,7 +70,8 @@ public class CombatHandler : MonoBehaviour
                 if (_player.Data.CurrentHealth.Value - damage <= 0 && _player.Data.HasItem(_reviveItem.Key))
                 {
                     _player.Data.RemoveItem(_reviveItem.Key);
-                    GameController.Instance.GameView.EventDetailDisplay.ShowMessage("Guardian Angel!");
+                    var col1 = new Color(52, 155, 242);
+                    GameController.Instance.GameView.EventDetailDisplay.ShowMessage("Guardian Angel!", col: col1);
                     var heal = Mathf.RoundToInt(_player.Data.MaxHealth * .5f);
                     _player.Data.CurrentHealth.Value += heal;
                 }
@@ -84,8 +86,8 @@ public class CombatHandler : MonoBehaviour
                     message = "Miss!";
                 else
                     _impulseSource.GenerateImpulse(.05f);
-               
-                GameController.Instance.GameView.EventDetailDisplay.ShowMessage(message, _player.Model);
+                var col = new Color(232, 25, 34);
+                GameController.Instance.GameView.EventDetailDisplay.ShowMessage(message, _player.Model,col:col);
             }
             
             _audioSource.PlayOneShot(damage > 0 ? _hitSounds[Random.Range(0, _hitSounds.Length)] : _missSound, .35f);

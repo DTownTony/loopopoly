@@ -17,10 +17,11 @@ public class EventDetailDisplay : MonoBehaviour
         _startingPosition = _rect.anchoredPosition;
     }
 
-    public void ShowMessage(string message, Transform target = null)
+    public void ShowMessage(string message, Transform target = null, Color col = default)
     {
         _rect.anchoredPosition = _startingPosition;
         _detailText.text = message;
+        _detailText.color = col;
         _detailText.alpha = 1;
         
         gameObject.SetActive(true);
