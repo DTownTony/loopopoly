@@ -330,6 +330,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2725b1a955d14604c92687decd73d10a, type: 3}
   - {fileID: 8300000, guid: cfb1ac8682b9b604989dd7052b9b0377, type: 3}
   _missSound: {fileID: 8300000, guid: 500dd7d83e9f02f419018ed6a36a3b4f, type: 3}
+  _bossDefeatSound: {fileID: 0}
 --- !u!114 &54051818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9769,6 +9770,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _menuButton: {fileID: 1657492913}
   _statsText: {fileID: 363445796}
+  _audioSource: {fileID: 1453556318}
+  _loseSound: {fileID: 8300000, guid: 01ff339da110cd041a880b5cc92e9f6c, type: 3}
 --- !u!1001 &1235802843925263131
 PrefabInstance:
   m_ObjectHideFlags: 0

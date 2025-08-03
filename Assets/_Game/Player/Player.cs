@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _moveSound;
+    [SerializeField] private AudioClip _levelUpSound;
     
     public readonly PlayerData Data = new PlayerData
     {
@@ -53,6 +54,7 @@ public class Player : MonoBehaviour
         Data.Damage.Value++;
         Data.CurrentHealth.Value = Data.MaxHealth;
         
+        _audioSource.PlayOneShot(_levelUpSound, .5f);
         GameController.Instance.GameView.EventDetailDisplay.ShowMessage("Level Up!");
     }
 

@@ -16,6 +16,7 @@ public class CombatHandler : MonoBehaviour
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip[] _hitSounds;
     [SerializeField] private AudioClip _missSound;
+    [SerializeField] private AudioClip _bossDefeatSound;
     
     private Enemy _enemy;
     
@@ -76,10 +77,15 @@ public class CombatHandler : MonoBehaviour
                 _player.Data.CurrentHealth.Value -= damage;
                 playerTurn = true;
                 
-                _impulseSource.GenerateImpulse(.05f);
+               
                 PlaySlashAttack(_player.Model);
 
-                var message = damage > 0 ? $"-{damage}" : "Miss!";
+                var message = $"-{damage}";
+                if (damage > 0)
+                    message = "Miss!";
+                else
+                    _impulseSource.GenerateImpulse(.05f);
+               
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage(message, _player.Model);
             }
             
@@ -97,10 +103,13 @@ public class CombatHandler : MonoBehaviour
         _player.MoveOutCombat();
         _player.Data.Experience.Value += _enemy.Experience;
         _player.Data.Gold.Value += 25 + (25 * GameController.Instance.MaxLoops);
-        
-        if(_enemy.IsBoss)
+
+        if (_enemy.IsBoss)
+        {
+            _audioSource.PlayOneShot(_bossDefeatSound, .5f);
             GameController.Instance.ChangeLevelLoop();
-      
+        }
+
         _healthBarUI.Hide();
         Destroy(_enemy.Model.gameObject);
         _enemy = null;

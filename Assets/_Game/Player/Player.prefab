@@ -48,6 +48,7 @@ MonoBehaviour:
   Model: {fileID: 6160833545975243476}
   _audioSource: {fileID: 0}
   _moveSound: {fileID: 8300000, guid: 6f7c1c509df3de542b7bcd77aa679269, type: 3}
+  _levelUpSound: {fileID: 8300000, guid: 87b9a1637cbf5c040b37131f9fe635c0, type: 3}
 --- !u!1 &961283291567828877
 GameObject:
   m_ObjectHideFlags: 0
