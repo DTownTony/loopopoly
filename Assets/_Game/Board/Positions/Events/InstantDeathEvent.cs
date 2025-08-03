@@ -8,9 +8,9 @@ public class InstantDeathEvent : BoardEvent
     
     public override void Trigger()
     {
-        var deathChance = .25f;
+        var deathChance = .2f;
         for (var i = 0; i < GameController.Instance.MaxLoops; i++)
-            deathChance += Random.Range(.05f, .1f);
+            deathChance += Random.Range(.01f, .05f);
         
         GameController.Instance.EventHandler.ShowGrimReaper(
             new GrimReaperUIArgs(_itemNeededToStopEvent, deathChance));
