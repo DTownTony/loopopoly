@@ -148,8 +148,8 @@ public class CombatHandler : MonoBehaviour
             CurrentHealth = MaxHealth;
             DamageMin = Mathf.RoundToInt(_enemyData.DamageMin * Mathf.Pow(GameController.Instance.CombatExponentialValue, loops));
             DamageMax = Mathf.RoundToInt(_enemyData.DamageMax * Mathf.Pow(GameController.Instance.CombatExponentialValue, loops));
-            Debug.Log(_enemyData.DamageMin + " - " + _enemyData.DamageMax + " | " + DamageMin + " - " + DamageMax);
-            Debug.Log(_enemyData.Health + " - " + CurrentHealth);
+            //Debug.Log(_enemyData.DamageMin + " - " + _enemyData.DamageMax + " | " + DamageMin + " - " + DamageMax);
+            //Debug.Log(_enemyData.Health + " - " + CurrentHealth);
         }
     }
 }
