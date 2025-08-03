@@ -532,7 +532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _event: {fileID: 11400000, guid: 05d6fc99451904628a15995b88bb0941, type: 2}
-  _bossTile: {fileID: 3104018674206952394, guid: cbdf1fa2dbab7b143b4372dfbd1b0aea, type: 3}
+  _bossTile: {fileID: 5349692307392679744, guid: 0ee553a7ff89b14479ffbd41a9bcdb35, type: 3}
 --- !u!4 &4721317324284012874 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5685117615821084524, guid: 047fa0de978754e79a75c2382eb2fe07, type: 3}
