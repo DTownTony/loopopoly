@@ -16,8 +16,6 @@ public class CombatHandler : MonoBehaviour
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip[] _hitSounds;
     
-    private const float LOOP_COMBAT_VALUE = 1.15f;
-    
     private Enemy _enemy;
     
     public void StartCombat(EnemyData enemyData)
@@ -133,10 +131,10 @@ public class CombatHandler : MonoBehaviour
         public Enemy(EnemyData enemyData, int loops)
         {
             _enemyData = enemyData;
-            MaxHealth = Mathf.RoundToInt(_enemyData.Health * Mathf.Pow(LOOP_COMBAT_VALUE, loops));
+            MaxHealth = Mathf.RoundToInt(_enemyData.Health * Mathf.Pow(GameController.Instance.CombatExponentialValue, loops));
             CurrentHealth = MaxHealth;
-            DamageMin = Mathf.RoundToInt(_enemyData.DamageMin * Mathf.Pow(LOOP_COMBAT_VALUE, loops));
-            DamageMax = Mathf.RoundToInt(_enemyData.DamageMax * Mathf.Pow(LOOP_COMBAT_VALUE, loops));
+            DamageMin = Mathf.RoundToInt(_enemyData.DamageMin * Mathf.Pow(GameController.Instance.CombatExponentialValue, loops));
+            DamageMax = Mathf.RoundToInt(_enemyData.DamageMax * Mathf.Pow(GameController.Instance.CombatExponentialValue, loops));
             Debug.Log(_enemyData.DamageMin + " - " + _enemyData.DamageMax + " | " + DamageMin + " - " + DamageMax);
             Debug.Log(_enemyData.Health + " - " + CurrentHealth);
         }

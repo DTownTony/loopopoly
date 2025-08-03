@@ -21,7 +21,7 @@ public class ShopItemCard : ItemCard
     {
         base.SetItem(item);
         
-        _cost = Mathf.RoundToInt(item.Data.Cost * Mathf.Pow(GameController.LOOP_EXPONENTIAL_VALUE, GameController.Instance.MaxLoops));
+        _cost = Mathf.RoundToInt(item.Data.Cost * Mathf.Pow(GameController.Instance.LoopExponentialValue, GameController.Instance.MaxLoops));
         _costText.SetText(_cost.ToString());
     }
     

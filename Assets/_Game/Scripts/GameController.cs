@@ -28,7 +28,8 @@ public class GameController : MonoBehaviour
     [SerializeField] private DiceRoller _diceRoller;
     [SerializeField] private Board _board;
     
-    public const float LOOP_EXPONENTIAL_VALUE = 1.05f;
+    public float LoopExponentialValue = 1.05f;
+    public float CombatExponentialValue = 1.15f;
     
     private void Awake()
     {
@@ -108,7 +109,11 @@ public class GameController : MonoBehaviour
         _loops = 0;
         _currentLevelLoop++;
         if (_currentLevelLoop >= _loopsLevels.Length)
+        {
+            LoopExponentialValue += .05f;
+            CombatExponentialValue += .1f;
             _currentLevelLoop = 0;
+        }
 
         LevelData = _loopsLevels[_currentLevelLoop];
         _board.BuildBoard();
