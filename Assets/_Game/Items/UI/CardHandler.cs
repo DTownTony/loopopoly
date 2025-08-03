@@ -17,6 +17,7 @@ public class CardHandler : MonoBehaviour
     private void ItemAdded(Item item)
     {
         var itemCard = Instantiate(_itemCardPrefab, _itemParent);
+        itemCard.transform.SetAsFirstSibling();
         itemCard.SetItem(item);
         _cards.Add(itemCard);
     }

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Goblin Lord
   IsBoss: 1
-  Health: 100
-  DamageMin: 7
-  DamageMax: 15
+  Health: 50
+  DamageMin: 5
+  DamageMax: 11
   Experience: 75
   Prefab: {fileID: 6435103050494515356, guid: 572a636cd843ac549bcfa9eb8e90a1d2, type: 3}

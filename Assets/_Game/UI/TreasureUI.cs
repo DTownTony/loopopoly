@@ -51,7 +51,7 @@ public class TreasureUI : MonoBehaviour
             case TreasureType.Trap:
                 var healthDamage = Mathf.RoundToInt(GameController.Instance.Player.Data.CurrentHealth.Value * .25f);
                 GameController.Instance.Player.Data.CurrentHealth.Value -= healthDamage;
-                GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"Trap! -{healthDamage} Health;");
+                GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"Trap! -{healthDamage} Health");
                 break;
         }
         

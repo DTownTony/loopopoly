@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Enemy_Troll
   IsBoss: 0
-  Health: 25
-  DamageMin: 6
-  DamageMax: 14
+  Health: 30
+  DamageMin: 3
+  DamageMax: 9
   Experience: 45
   Prefab: {fileID: 6435103050494515356, guid: 0aa93d5ecc24c0444ab3461c98b2bd48, type: 3}

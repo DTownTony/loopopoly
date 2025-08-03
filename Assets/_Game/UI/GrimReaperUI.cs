@@ -29,13 +29,11 @@ public class GrimReaperUI : MonoBehaviour
     private void TryButtonPressed()
     {
         if (Random.value >= _currentArgs.DeathChance)
-        {
-            Hide();
-        }
+            GameController.Instance.GameView.EventDetailDisplay.ShowMessage("Lucky!");
         else
-        {
             GameController.Instance.ChangeCurrentState(GameState.Death);
-        }
+        
+        Hide();
     }
 
     private void GuardianAngelButtonPressed()

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Goblin
   IsBoss: 0
-  Health: 15
+  Health: 20
   DamageMin: 4
   DamageMax: 10
   Experience: 35
