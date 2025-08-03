@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         Data.Experience.Value = 0;
         Data.UpdateMaxHealth(5);
         Data.Experience.SetMaxValue(GetExperienceNeededForLevel());
-        Data.Damage.Value++;
+        Data.Damage.Value += 2;
         Data.CurrentHealth.Value = Data.MaxHealth;
         
         _audioSource.PlayOneShot(_levelUpSound, .5f);
@@ -121,7 +121,7 @@ public class Player : MonoBehaviour
                 Data.Gold.Value += goldAmount;
                 var col = new Color32(255, 220, 0,255);
                 controller.GameView.EventDetailDisplay.ShowMessage($"Loop {GameController.Instance.MaxLoops}\nGold +{goldAmount}!",col:col);
-                _audioSource.PlayOneShot(_loopSound, .5f);
+                _audioSource.PlayOneShot(_loopSound, 1f);
             }
         }
         
