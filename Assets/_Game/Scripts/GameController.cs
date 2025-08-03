@@ -133,7 +133,7 @@ public class GameController : MonoBehaviour
         _musicSource.Stop();
         _musicSource.clip = LevelData.Music;
  
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(3.5f);
         _musicSource.Play();
     }
 }
