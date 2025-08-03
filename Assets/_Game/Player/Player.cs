@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _moveSound;
+    [SerializeField] private AudioClip _loopSound;
     [SerializeField] private AudioClip _levelUpSound;
     
     public readonly PlayerData Data = new PlayerData
@@ -109,6 +110,8 @@ public class Player : MonoBehaviour
                 if (controller.BossFightAvailable())
                 {
                     controller.EventHandler.SetupBossCombat();
+                    MovesLeft--;
+                    OnMovedSpace?.Invoke(MovesLeft);
                     yield break;
                 }
                 
@@ -116,6 +119,7 @@ public class Player : MonoBehaviour
                 var goldAmount = 100 + (50 * controller.MaxLoops);
                 Data.Gold.Value += goldAmount;
                 controller.GameView.EventDetailDisplay.ShowMessage($"Loop {GameController.Instance.MaxLoops}\nGold +{goldAmount}!");
+                _audioSource.PlayOneShot(_loopSound, .5f);
             }
         }
         
