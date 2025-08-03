@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Surgery
   Description: Heal 100%
-  Icon: {fileID: 21300000, guid: abbc8425994ea4591a88d95346c710f9, type: 3}
+  Icon: {fileID: 21300000, guid: 00c24937c0d4ab34a9ad02d7a6853805, type: 3}
   Cost: 350
   IgnoreInventory: 1
   Key: surgery

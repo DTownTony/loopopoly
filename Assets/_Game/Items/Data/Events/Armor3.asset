@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Armorer Boon
   Description: Armor +3
-  Icon: {fileID: 21300000, guid: 89e35e44f20910e4580f3858b0a2af4e, type: 3}
+  Icon: {fileID: 21300000, guid: 1c1b9666850cbca4d9981b686f2e31e3, type: 3}
   Cost: 650
   IgnoreInventory: 1
   Key: armorer_boon

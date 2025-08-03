@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Magic Necklace
   Description: +25 Max Health
-  Icon: {fileID: 21300000, guid: fd62dc309fbfeed489dd42fbb24c5756, type: 3}
+  Icon: {fileID: 21300000, guid: 634674f08fe805e4b999d8623303d03b, type: 3}
   Cost: 600
   IgnoreInventory: 0
   Key: magic_cloak

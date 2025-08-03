@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Guards Sword
   Description: +3 Damage
-  Icon: {fileID: 21300000, guid: 569ae82fbd6dda6499fce830310dae93, type: 3}
+  Icon: {fileID: 21300000, guid: 313782ae0de4ec74fa29ffa5b4a98823, type: 3}
   Cost: 250
   IgnoreInventory: 0
   Key: guard_sword

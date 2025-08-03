@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Healing Herbs
   Description: Heal 50% Max Health
-  Icon: {fileID: 21300000, guid: abbc8425994ea4591a88d95346c710f9, type: 3}
+  Icon: {fileID: 21300000, guid: 176add27ef8e96b4494821b66956f6b3, type: 3}
   Cost: 150
   IgnoreInventory: 1
   Key: healing_herbs

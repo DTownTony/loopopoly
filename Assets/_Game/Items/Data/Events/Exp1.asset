@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Simple Training
   Description: Exp +25
-  Icon: {fileID: 21300000, guid: 2936d6d4ed8f76f45b2619c420cb977e, type: 3}
+  Icon: {fileID: 21300000, guid: 2c0aab18581ca8b43b3f28bf96448fcf, type: 3}
   Cost: 50
   IgnoreInventory: 1
   Key: simple_training

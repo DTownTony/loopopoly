@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Battle Axe
   Description: +5 Damage
-  Icon: {fileID: 21300000, guid: 6d8e45cd8d3bf9847b4ae8f6dcb46aec, type: 3}
+  Icon: {fileID: 21300000, guid: e9abc12f175c3a541b87fca52ba5e1fb, type: 3}
   Cost: 450
   IgnoreInventory: 0
   Key: battle_axe

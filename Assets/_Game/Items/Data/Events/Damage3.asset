@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Blacksmiths Gift
   Description: Damage +3
-  Icon: {fileID: 21300000, guid: bfe7b91a817564288910ba653f139117, type: 3}
+  Icon: {fileID: 21300000, guid: 3f766c51c5a198e46b1ce6ab14ae024b, type: 3}
   Cost: 250
   IgnoreInventory: 1
   Key: blacksmith_gift

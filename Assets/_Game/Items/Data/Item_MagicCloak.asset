@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Magic Cloak
   Description: +10 Max Health
-  Icon: {fileID: 21300000, guid: 556b24b1bdde9bb49b46ac56a96b6bb4, type: 3}
+  Icon: {fileID: 21300000, guid: 9b444b943fd70774e84a56c31dcf5095, type: 3}
   Cost: 350
   IgnoreInventory: 0
   Key: magic_cloak

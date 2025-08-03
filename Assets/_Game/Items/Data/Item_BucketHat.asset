@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Bucket Hat
   Description: +1 Armor
-  Icon: {fileID: 21300000, guid: 947cd30ac61cc9342a80dae19eac1998, type: 3}
+  Icon: {fileID: 21300000, guid: 2488b0befecde6f4cb43cd4fe9d0406e, type: 3}
   Cost: 200
   IgnoreInventory: 0
   Key: bucket_hat

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Leather Armor
   Description: +2 Armor
-  Icon: {fileID: 21300000, guid: 5e5465e65aac51b4caddb6776cfad283, type: 3}
+  Icon: {fileID: 21300000, guid: 9f00dd8019b7d6449a6e8cf37a8c8e42, type: 3}
   Cost: 350
   IgnoreInventory: 0
   Key: leather_armor

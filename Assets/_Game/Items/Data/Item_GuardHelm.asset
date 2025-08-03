@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Guard Helm
   Description: +3 Armor
-  Icon: {fileID: 21300000, guid: 50c4f7349955da244b022dded7d5536c, type: 3}
+  Icon: {fileID: 21300000, guid: ab621b212daede24f973322ec1038361, type: 3}
   Cost: 500
   IgnoreInventory: 0
   Key: guard_helm

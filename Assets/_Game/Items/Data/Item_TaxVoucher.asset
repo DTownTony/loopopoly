@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Tax Voucher
   Description: Skip paying taxes
-  Icon: {fileID: 21300000, guid: 69602867bb4644e46b4b56e6d42eb0ca, type: 3}
+  Icon: {fileID: 21300000, guid: dc56e2c13eeb44c4cb489f7faa8f266f, type: 3}
   Cost: 0
   IgnoreInventory: 0
   Key: tax_voucher

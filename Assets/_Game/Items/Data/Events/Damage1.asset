@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Blacksmiths Favor
   Description: Damge +1
-  Icon: {fileID: 21300000, guid: bfe7b91a817564288910ba653f139117, type: 3}
+  Icon: {fileID: 21300000, guid: 59d18573f5d86b44cabe88dcf422d8d6, type: 3}
   Cost: 50
   IgnoreInventory: 1
   Key: blacksmooth_favor
