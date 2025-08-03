@@ -842,8 +842,8 @@ MonoBehaviour:
   _payButton: {fileID: 639835486}
   _skipButton: {fileID: 340241954}
   _descriptionText: {fileID: 725473169}
-  _audioSource: {fileID: 0}
-  _goldSound: {fileID: 0}
+  _audioSource: {fileID: 1453556318}
+  _goldSound: {fileID: 8300000, guid: f71ebdc716940c14ca1dfd0145312a43, type: 3}
 --- !u!1 &207621180
 GameObject:
   m_ObjectHideFlags: 0
@@ -5275,10 +5275,10 @@ MonoBehaviour:
   - {fileID: 742249757}
   - {fileID: 982319269}
   _itemDatabase: {fileID: 11400000, guid: 681629a476a19428089a3b074c223f89, type: 2}
-  _audioSource: {fileID: 0}
-  _trapSound: {fileID: 0}
-  _goldSound: {fileID: 0}
-  _itemSound: {fileID: 0}
+  _audioSource: {fileID: 1453556318}
+  _trapSound: {fileID: 8300000, guid: cfb1ac8682b9b604989dd7052b9b0377, type: 3}
+  _goldSound: {fileID: 8300000, guid: f71ebdc716940c14ca1dfd0145312a43, type: 3}
+  _itemSound: {fileID: 8300000, guid: 0c502ee6de8cb5c4cad4969306602393, type: 3}
 --- !u!1 &833241567
 GameObject:
   m_ObjectHideFlags: 0
@@ -8595,8 +8595,8 @@ MonoBehaviour:
   _container: {fileID: 1556452826}
   _skipButton: {fileID: 545126374}
   _itemCardPrefab: {fileID: 414549475597608740, guid: efb4f70261dbc4b6fa5b58b1373ba96e, type: 3}
-  _audioSource: {fileID: 0}
-  _goldSound: {fileID: 0}
+  _audioSource: {fileID: 1453556318}
+  _goldSound: {fileID: 8300000, guid: f71ebdc716940c14ca1dfd0145312a43, type: 3}
 --- !u!1001 &1785263138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9711,8 +9711,8 @@ MonoBehaviour:
   _itemContainer: {fileID: 613765008}
   _itemDatabase: {fileID: 11400000, guid: 681629a476a19428089a3b074c223f89, type: 2}
   _closeButton: {fileID: 55852934}
-  _audioSource: {fileID: 0}
-  _goldSound: {fileID: 0}
+  _audioSource: {fileID: 1453556318}
+  _goldSound: {fileID: 8300000, guid: f71ebdc716940c14ca1dfd0145312a43, type: 3}
 --- !u!1 &2098435690
 GameObject:
   m_ObjectHideFlags: 0
@@ -10083,9 +10083,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _menuButton: {fileID: 1657492913}
   _statsText: {fileID: 363445796}
-  _musicSource: {fileID: 0}
-  _audioSource: {fileID: 0}
-  _loseSound: {fileID: 0}
+  _musicSource: {fileID: 2039254375}
+  _audioSource: {fileID: 1453556318}
+  _loseSound: {fileID: 8300000, guid: 01ff339da110cd041a880b5cc92e9f6c, type: 3}
 --- !u!1001 &1235802843925263131
 PrefabInstance:
   m_ObjectHideFlags: 0
