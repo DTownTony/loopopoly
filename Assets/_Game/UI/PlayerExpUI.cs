@@ -7,9 +7,10 @@ public class PlayerExpUI : PlayerValueUI
 
     protected override void Set(int amount)
     {
-        _amountText.SetText(amount + "/" + Player.EXP_NEXT_LEVEL);
+        var expNeededForLevel = GameController.Instance.Player.GetExperienceNeededForLevel();
+        _amountText.SetText(amount + "/" + expNeededForLevel);
         
-        var percent = (float)amount / Player.EXP_NEXT_LEVEL;
+        var percent = (float)amount / expNeededForLevel;
         _expFill.fillAmount = percent;
     }
 }

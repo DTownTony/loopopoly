@@ -9,8 +9,6 @@ public class Player : MonoBehaviour
     public delegate void OnMovedSpaceDelegate(int movesLeft); //todo: use this for events 
     public event OnMovedSpaceDelegate OnMovedSpace;
     
-    public const int EXP_NEXT_LEVEL = 100;
-    
     public int CurrentPositionIndex { get; private set; }
     public int MovesLeft { get; private set; }
     public Transform Model;
@@ -22,7 +20,7 @@ public class Player : MonoBehaviour
     public readonly PlayerData Data = new PlayerData
     {
         Level = new PlayerValue(0),
-        Experience = new PlayerValue(0, 0, EXP_NEXT_LEVEL),
+        Experience = new PlayerValue(0, 0, 100),
         Gold = new PlayerValue(100),
         MaxHealth = 50,
         CurrentHealth = new PlayerValue(50, 0, 50),
@@ -40,7 +38,7 @@ public class Player : MonoBehaviour
     
     private void ExperienceChanged(int newValue)
     {
-        if (newValue < EXP_NEXT_LEVEL) 
+        if (newValue < GetExperienceNeededForLevel()) 
             return;
         
         LevelUp();
@@ -51,6 +49,7 @@ public class Player : MonoBehaviour
         Data.Level.Value++;
         Data.Experience.Value = 0;
         Data.UpdateMaxHealth(5);
+        Data.Experience.SetMaxValue(GetExperienceNeededForLevel());
         Data.Damage.Value++;
         Data.CurrentHealth.Value = Data.MaxHealth;
         
@@ -119,5 +118,10 @@ public class Player : MonoBehaviour
         }
         
         onComplete?.Invoke();
+    }
+
+    public int GetExperienceNeededForLevel()
+    {
+        return 100 + Mathf.RoundToInt(Data.Level.Value * 25f);
     }
 }
