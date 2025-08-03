@@ -33,7 +33,6 @@ public class TreasureUI : MonoBehaviour
 
     private void SelectTreasureType(TreasureType treasureType)
     {
-        //todo: animate cards
         foreach (var button in _treasureButtons)
             button.enabled = false;
         
@@ -42,17 +41,19 @@ public class TreasureUI : MonoBehaviour
             case TreasureType.Gold:
                 var goldAmount = Random.Range(10, 25) * 10;
                 GameController.Instance.Player.Data.Gold.Value += goldAmount;
+                GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"+{goldAmount} Gold!");
                 break;
             case TreasureType.Item:
                 var item = _itemDatabase.GetRandomItem();
                 GameController.Instance.Player.Data.AddItem(item);
+                GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"+{item.Name}");
                 break;
             case TreasureType.Trap:
-                GameController.Instance.Player.Data.CurrentHealth.Value -= Random.Range(1, 3) * 10;
+                var healthDamage = Mathf.RoundToInt(GameController.Instance.Player.Data.CurrentHealth.Value * .25f);
+                GameController.Instance.Player.Data.CurrentHealth.Value -= healthDamage;
+                GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"Trap! -{healthDamage} Health;");
                 break;
         }
-        
-        Debug.Log("Selected treasure type: " + treasureType);
         
         Hide();
     }
