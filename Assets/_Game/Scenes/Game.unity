@@ -9780,6 +9780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _menuButton: {fileID: 1657492913}
   _statsText: {fileID: 363445796}
+  _musicSource: {fileID: 2039254375}
   _audioSource: {fileID: 1453556318}
   _loseSound: {fileID: 8300000, guid: 01ff339da110cd041a880b5cc92e9f6c, type: 3}
 --- !u!1001 &1235802843925263131

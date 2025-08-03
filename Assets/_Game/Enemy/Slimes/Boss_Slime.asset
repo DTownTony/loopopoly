@@ -16,6 +16,6 @@ MonoBehaviour:
   IsBoss: 1
   Health: 35
   DamageMin: 4
-  DamageMax: 10
+  DamageMax: 9
   Experience: 50
   Prefab: {fileID: 6435103050494515356, guid: db4df0508e034d94084b470469be05e6, type: 3}

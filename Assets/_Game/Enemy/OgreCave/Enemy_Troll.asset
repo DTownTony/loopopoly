@@ -17,5 +17,5 @@ MonoBehaviour:
   Health: 30
   DamageMin: 3
   DamageMax: 9
-  Experience: 45
+  Experience: 75
   Prefab: {fileID: 6435103050494515356, guid: 0aa93d5ecc24c0444ab3461c98b2bd48, type: 3}
