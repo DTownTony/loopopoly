@@ -77,11 +77,10 @@ public class CombatHandler : MonoBehaviour
                 _player.Data.CurrentHealth.Value -= damage;
                 playerTurn = true;
                 
-               
                 PlaySlashAttack(_player.Model);
 
                 var message = $"-{damage}";
-                if (damage > 0)
+                if (damage <= 0)
                     message = "Miss!";
                 else
                     _impulseSource.GenerateImpulse(.05f);
