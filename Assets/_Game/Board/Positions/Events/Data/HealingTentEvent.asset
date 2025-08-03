@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Healing Tent
   BoardPiece:
-  - {fileID: 5055539213916576850, guid: 153159e02b3dec348b2dda3bc3d4c1ff, type: 3}
+  - {fileID: 915585209983047097, guid: c629764f6e208d147a2d261b02c03f30, type: 3}
+  SpawnOneTime: 0
   _items:
   - {fileID: 11400000, guid: 8ce9b7b35d26d81429a14117e76f26fa, type: 2}
   - {fileID: 11400000, guid: 02af541c11ed9e245baec6d5608c0f9a, type: 2}

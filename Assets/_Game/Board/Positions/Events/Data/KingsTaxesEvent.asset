@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Kings Taxes
   BoardPiece:
-  - {fileID: 5055539213916576850, guid: 153159e02b3dec348b2dda3bc3d4c1ff, type: 3}
+  - {fileID: 5349692307392679744, guid: 71ef10897b9f3f248932cd9fc1dfe47a, type: 3}
   SpawnOneTime: 0
   _stopEventItem: {fileID: 11400000, guid: 2e9ebaf3cb2ae421898854e7cb6c1690, type: 2}

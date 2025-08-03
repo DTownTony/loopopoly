@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Blacksmith
   BoardPiece:
-  - {fileID: 5055539213916576850, guid: 153159e02b3dec348b2dda3bc3d4c1ff, type: 3}
+  - {fileID: 915585209983047097, guid: 100b629d008e233429cfd72e99f7a848, type: 3}
+  SpawnOneTime: 0
   _items:
   - {fileID: 11400000, guid: 0acc48dfe9db19f4682d1532986f5274, type: 2}
   - {fileID: 11400000, guid: be0abdd0dc2ecec489dd6429923309aa, type: 2}

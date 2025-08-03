@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Training
   BoardPiece:
-  - {fileID: 5055539213916576850, guid: 153159e02b3dec348b2dda3bc3d4c1ff, type: 3}
+  - {fileID: 915585209983047097, guid: 1a85e8c3314228441b3b8cacb7891c47, type: 3}
+  SpawnOneTime: 0
   _items:
   - {fileID: 11400000, guid: 342e21f4323577047aaf81d09e41e44e, type: 2}
   - {fileID: 11400000, guid: 536c5ebbe7f54a842af9311142653e0d, type: 2}

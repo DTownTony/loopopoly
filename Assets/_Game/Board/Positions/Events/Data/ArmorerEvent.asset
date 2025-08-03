@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Armorer
   BoardPiece:
-  - {fileID: 5055539213916576850, guid: 153159e02b3dec348b2dda3bc3d4c1ff, type: 3}
+  - {fileID: 915585209983047097, guid: fd3ec3460c6dd284588382403729cf0b, type: 3}
+  SpawnOneTime: 0
   _items:
   - {fileID: 11400000, guid: feb51605570d9c74ab25d679c1e0145e, type: 2}
   - {fileID: 11400000, guid: cc34ec55343537d469bdf4f7665fadd6, type: 2}
