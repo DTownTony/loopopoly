@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -121,11 +122,19 @@ public class GameController : MonoBehaviour
         }
 
         LevelData = _loopsLevels[_currentLevelLoop];
-        _musicSource.clip = LevelData.Music;
-        _musicSource.Play();
         _board.BuildBoard();
+        StartCoroutine(DelayNextMusic());
         
         OnLoopsChanged?.Invoke(_loops, LevelData.MaxLoops);
+    }
+
+    private IEnumerator DelayNextMusic()
+    {
+        _musicSource.Stop();
+        _musicSource.clip = LevelData.Music;
+ 
+        yield return new WaitForSeconds(3);
+        _musicSource.Play();
     }
 }
 

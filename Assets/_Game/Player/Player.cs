@@ -110,7 +110,7 @@ public class Player : MonoBehaviour
                 if (controller.BossFightAvailable())
                 {
                     controller.EventHandler.SetupBossCombat();
-                    MovesLeft--;
+                    MovesLeft = 0;
                     OnMovedSpace?.Invoke(MovesLeft);
                     yield break;
                 }
