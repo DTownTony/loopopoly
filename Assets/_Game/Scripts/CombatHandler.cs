@@ -6,6 +6,7 @@ public class CombatHandler : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private ItemData _bombItem;
+    [SerializeField] private ItemData _reviveItem;
     [SerializeField] private CinemachineImpulseSource _impulseSource;
     [SerializeField] private ParticleSystem _slashAttack;
     [SerializeField] private ParticleSystem _bombAttackPrefab;
@@ -60,6 +61,15 @@ public class CombatHandler : MonoBehaviour
             {
                 damage = Random.Range(_enemy.DamageMin, _enemy.DamageMax);
                 damage = Mathf.Max(0, damage - _player.Data.Defense.Value);
+
+                if (_player.Data.CurrentHealth.Value - damage <= 0 && _player.Data.HasItem(_reviveItem.Key))
+                {
+                    _player.Data.RemoveItem(_reviveItem.Key);
+                    GameController.Instance.GameView.EventDetailDisplay.ShowMessage("Guardian Angel!");
+                    var heal = Mathf.RoundToInt(_player.Data.MaxHealth * .5f);
+                    _player.Data.CurrentHealth.Value += heal;
+                }
+                
                 _player.Data.CurrentHealth.Value -= damage;
                 playerTurn = true;
                 

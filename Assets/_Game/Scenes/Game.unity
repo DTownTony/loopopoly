@@ -319,6 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1235802843925263133}
   _bombItem: {fileID: 11400000, guid: 845313918b5cf4cdf89054d3863ef2fe, type: 2}
+  _reviveItem: {fileID: 11400000, guid: 6cbc10311ab684e49af1f1434a050587, type: 2}
   _impulseSource: {fileID: 54051818}
   _slashAttack: {fileID: 1785263141}
   _bombAttackPrefab: {fileID: 19848870, guid: a7c694f0877ea874fa57e033221095c3, type: 3}
