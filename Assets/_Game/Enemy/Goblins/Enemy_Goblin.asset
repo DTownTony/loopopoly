@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Enemy_Goblin
   m_EditorClassIdentifier: 
   Name: Goblin
+  HealthBarYOffset: 1.15
   IsBoss: 0
   Health: 20
   DamageMin: 4

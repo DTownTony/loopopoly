@@ -37,7 +37,7 @@ public class CombatHandler : MonoBehaviour
         _player.MoveForCombat();
         yield return new WaitForSeconds(.2f);
         
-        _healthBarUI.Show();
+        _healthBarUI.Show(_enemy.Model.transform, _enemy.HealthBarYOffset);
 
         var playerTurn = false;
         var combatActive = true;
@@ -132,6 +132,7 @@ public class CombatHandler : MonoBehaviour
     {
         public int Experience => _enemyData.Experience;
         public bool IsBoss => _enemyData.IsBoss;
+        public float HealthBarYOffset => _enemyData.HealthBarYOffset;
         public int MaxHealth { get; private set; }
         
         public int CurrentHealth;

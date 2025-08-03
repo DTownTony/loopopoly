@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Enemy_Slime
   m_EditorClassIdentifier: 
   Name: Slime
+  HealthBarYOffset: 1.25
   IsBoss: 0
   Health: 10
   DamageMin: 2

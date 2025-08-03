@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Boss_Goblin
   m_EditorClassIdentifier: 
   Name: Goblin Lord
+  HealthBarYOffset: 1.76
   IsBoss: 1
   Health: 50
   DamageMin: 5

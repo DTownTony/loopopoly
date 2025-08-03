@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Boss_Slime
   m_EditorClassIdentifier: 
   Name: Slime King
+  HealthBarYOffset: 1.76
   IsBoss: 1
   Health: 35
   DamageMin: 4

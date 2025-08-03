@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Boss_Ogre
   m_EditorClassIdentifier: 
   Name: Ogre Giant
+  HealthBarYOffset: 1.76
   IsBoss: 1
   Health: 65
   DamageMin: 6

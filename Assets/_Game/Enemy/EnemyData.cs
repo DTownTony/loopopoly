@@ -11,5 +11,7 @@ public class EnemyData : ScriptableObject
     
     public int Experience;
     
+    public float HealthBarYOffset;
+    
     public GameObject Prefab;
 }
