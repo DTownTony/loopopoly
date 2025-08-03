@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerData
 {
+    public event Action<int> OnMaxHealthUpdated;
+    
     public int MaxHealth;
     public List<Item> Items = new List<Item>();
     
@@ -20,6 +22,7 @@ public class PlayerData
     {
         MaxHealth += amount;
         CurrentHealth.SetMaxValue(MaxHealth);
+        OnMaxHealthUpdated?.Invoke(MaxHealth);
     }
 
     private void ProcessItemBonuses(ItemData itemData, bool add)
