@@ -36,6 +36,9 @@ public class DiceRollUI : MonoBehaviour
 
     private void RefreshText(int value)
     {
-        _rollText.SetText($"Roll!\n({value})");
+        if(value == 0)
+            _rollText.SetText($"ROLL");
+        else
+            _rollText.SetText($"{value}");
     }
 }

@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee11fd1e-09a8-42fe-8861-c8038be924cc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/bomb.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/Items/bomb.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/coupon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/Items/coupon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/dagger.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/Items/dagger.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Board/Board.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Board/Board.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_RustyDagger.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_RustyDagger.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/_ItemDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Items/Data/_ItemDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/CombatHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/CombatHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/EventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/EventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/UI/EventView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/UI/EventView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/UI/KingsTaxesUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/UI/KingsTaxesUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/UI/DiceRollUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/UI/DiceRollUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
