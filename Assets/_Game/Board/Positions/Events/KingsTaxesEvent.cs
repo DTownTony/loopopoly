@@ -7,7 +7,7 @@ public class KingsTaxesEvent : BoardEvent
     
     public override void Trigger()
     {
-        var amount = Mathf.RoundToInt(GameController.Instance.Player.Data.Gold.Value * .25f);
+        var amount = Mathf.RoundToInt(GameController.Instance.Player.Data.Gold.Value * .5f);
         GameController.Instance.EventHandler.ShowKingsTaxes(new KingsTaxesUIArgs(_stopEventItem, amount));
     }
 }

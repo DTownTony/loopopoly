@@ -329,6 +329,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9b1a732a00388004ea2fde20bedb74d3, type: 3}
   - {fileID: 8300000, guid: 2725b1a955d14604c92687decd73d10a, type: 3}
   - {fileID: 8300000, guid: cfb1ac8682b9b604989dd7052b9b0377, type: 3}
+  _missSound: {fileID: 8300000, guid: 500dd7d83e9f02f419018ed6a36a3b4f, type: 3}
 --- !u!114 &54051818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3770,6 +3771,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fc5defd0aa4304c4680902ae947387d8, type: 2}
   _diceRoller: {fileID: 1083093415}
   _board: {fileID: 4821692450844621743}
+  LoopExponentialValue: 1.05
+  CombatExponentialValue: 1.15
 --- !u!4 &598989631
 Transform:
   m_ObjectHideFlags: 0
