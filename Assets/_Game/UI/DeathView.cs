@@ -18,7 +18,8 @@ public class DeathView : MonoBehaviour
     {
         gameObject.SetActive(true);
         _statsText.SetText($"Total Loops {GameController.Instance.MaxLoops}\n" +
-                           $"Bosses Defeated: {GameController.Instance.Player.Data.BossDefeated}");
+                           $"Bosses Defeated: {GameController.Instance.Player.Data.BossDefeated}\n" +
+                           $"Total Dice Rolls: {GameController.Instance.Player.Data.TotalMoves}");
     }
 
     private void MenuButtonPressed()

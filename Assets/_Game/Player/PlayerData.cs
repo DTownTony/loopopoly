@@ -16,7 +16,9 @@ public class PlayerData
     public PlayerValue Damage;
     public PlayerValue Defense;
 
+    //stats
     public int BossDefeated;
+    public int TotalMoves;
     
     public void UpdateMaxHealth(int amount)
     {

@@ -65,6 +65,7 @@ public class Player : MonoBehaviour
     
     public void Move(List<BoardPosition> positions, Action onComplete)
     {
+        Data.TotalMoves++;
         MovesLeft = positions.Count;
         StartCoroutine(MoveSequence(positions, onComplete));
     }
