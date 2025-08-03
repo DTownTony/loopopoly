@@ -5,7 +5,7 @@ public class BoardPosition : MonoBehaviour
     public int Index { get; private set; }
 
     [SerializeField] private BoardEvent _event;
-    private GameObject _boardPiece;
+    protected GameObject _boardPiece;
     
     public void SetIndex(int index)
     {
@@ -16,10 +16,9 @@ public class BoardPosition : MonoBehaviour
     {
         _event = boardEvent;
         
-        if(_boardPiece != null)
-        {
+        if (_boardPiece != null)
             Destroy(_boardPiece);
-        }
+        
         var position = transform.position;
         position.y += (Random.Range(0, 3) * 0.05f);
         _boardPiece = Instantiate(boardPiece, position, transform.rotation, transform);
@@ -27,7 +26,7 @@ public class BoardPosition : MonoBehaviour
 
     public void Trigger()
     {
-        Debug.Log("Landed on position: " + Index + " with event: " + _event.Name);
+        //Debug.Log("Landed on position: " + Index + " with event: " + _event.Name);
         _event.Trigger();
     }
 }
