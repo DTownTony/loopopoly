@@ -49,6 +49,7 @@ public class GrimReaperUI : MonoBehaviour
     private void GuardianAngelButtonPressed()
     {
         GameController.Instance.Player.Data.RemoveItem(_currentArgs.StopEventItem.Key);
+        _audioSource.PlayOneShot(_skipSound, 1f);
         Hide();
     }
 
