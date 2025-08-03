@@ -28,13 +28,18 @@ public class GameController : MonoBehaviour
     [SerializeField] private DiceRoller _diceRoller;
     [SerializeField] private Board _board;
     
-    public float LoopExponentialValue = 1.05f;
-    public float CombatExponentialValue = 1.15f;
+    public float LoopExponentialValue { get; private set; }= 1.05f;
+    public float CombatExponentialValue { get; private set; } = 1.15f;
+
+    [SerializeField] private AudioSource _musicSource;
     
     private void Awake()
     {
         Instance = this;
         LevelData = _loopsLevels[_currentLevelLoop];
+        _musicSource.clip = LevelData.Music;
+        _musicSource.Play();
+        
         _board.BuildBoard();
         ChangeCurrentState(GameState.WaitingForPlayer);
     }
@@ -116,6 +121,8 @@ public class GameController : MonoBehaviour
         }
 
         LevelData = _loopsLevels[_currentLevelLoop];
+        _musicSource.clip = LevelData.Music;
+        _musicSource.Play();
         _board.BuildBoard();
         
         OnLoopsChanged?.Invoke(_loops, LevelData.MaxLoops);

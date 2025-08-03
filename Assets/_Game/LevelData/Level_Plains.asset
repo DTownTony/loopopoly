@@ -15,3 +15,4 @@ MonoBehaviour:
   MaxLoops: 2
   BossData: {fileID: 11400000, guid: 422f99ef5bfb74ece8dffff72fca26d5, type: 2}
   EnemyData: {fileID: 11400000, guid: 3f4fd55948abe4c38822f9e951d9ac00, type: 2}
+  Music: {fileID: 8300000, guid: 4c7e7bb61e789f449a800b54cbdeaa68, type: 3}
