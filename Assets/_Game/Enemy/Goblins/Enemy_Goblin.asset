@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Enemy_Goblin
   m_EditorClassIdentifier: 
   Name: Goblin
-  HealthBarYOffset: 1.15
   IsBoss: 0
   Health: 20
   DamageMin: 4
   DamageMax: 10
   Experience: 45
+  HealthBarYOffset: 1.4
   Prefab: {fileID: 6435103050494515356, guid: ddfe3d1370a7b834bac7c7eb8cdf5261, type: 3}
