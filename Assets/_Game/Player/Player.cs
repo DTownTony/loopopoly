@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         Data.Experience.Value = 0;
         Data.UpdateMaxHealth(5);
         Data.Experience.SetMaxValue(GetExperienceNeededForLevel());
-        Data.Damage.Value += 2;
+        Data.Damage.Value++;
         Data.CurrentHealth.Value = Data.MaxHealth;
         
         _audioSource.PlayOneShot(_levelUpSound, .5f);

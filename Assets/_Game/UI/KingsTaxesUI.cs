@@ -13,6 +13,7 @@ public class KingsTaxesUI : MonoBehaviour
     [Header("Audio")] 
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _goldSound;
+    [SerializeField] private AudioClip _skipSound;
     
     private KingsTaxesUIArgs _currentArgs;
 
@@ -41,6 +42,7 @@ public class KingsTaxesUI : MonoBehaviour
     private void SkipButtonPressed()
     {
         GameController.Instance.Player.Data.RemoveItem(_currentArgs.StopEventItem.Key);
+        _audioSource.PlayOneShot(_skipSound, 1f);
         Hide();
     }
 

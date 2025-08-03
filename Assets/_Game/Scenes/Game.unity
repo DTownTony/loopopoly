@@ -331,6 +331,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cfb1ac8682b9b604989dd7052b9b0377, type: 3}
   _missSound: {fileID: 8300000, guid: 500dd7d83e9f02f419018ed6a36a3b4f, type: 3}
   _bossDefeatSound: {fileID: 8300000, guid: dfe8eafe1ef312b49acfc8ce9b68c453, type: 3}
+  _reviveSound: {fileID: 8300000, guid: b7ea5af25e731e54eb8a50a37485b681, type: 3}
 --- !u!114 &54051818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -844,6 +845,7 @@ MonoBehaviour:
   _descriptionText: {fileID: 725473169}
   _audioSource: {fileID: 1453556318}
   _goldSound: {fileID: 8300000, guid: f71ebdc716940c14ca1dfd0145312a43, type: 3}
+  _skipSound: {fileID: 8300000, guid: b7ea5af25e731e54eb8a50a37485b681, type: 3}
 --- !u!1 &207621180
 GameObject:
   m_ObjectHideFlags: 0
@@ -8978,6 +8980,8 @@ MonoBehaviour:
   _tryButton: {fileID: 1218695062}
   _guardianAngelButton: {fileID: 865730879}
   _deathChanceText: {fileID: 728029088}
+  _audioSource: {fileID: 1453556318}
+  _skipSound: {fileID: 8300000, guid: b7ea5af25e731e54eb8a50a37485b681, type: 3}
 --- !u!1 &1925567581
 GameObject:
   m_ObjectHideFlags: 0

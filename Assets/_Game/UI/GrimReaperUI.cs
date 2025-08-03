@@ -10,6 +10,10 @@ public class GrimReaperUI : MonoBehaviour
     [SerializeField] private Button _guardianAngelButton;
     [SerializeField] private TMP_Text _deathChanceText;
     
+    [Header("Audio")] 
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _skipSound;
+    
     private GrimReaperUIArgs _currentArgs;
 
     private void Awake()
@@ -29,10 +33,16 @@ public class GrimReaperUI : MonoBehaviour
     private void TryButtonPressed()
     {
         if (Random.value >= _currentArgs.DeathChance)
-            GameController.Instance.GameView.EventDetailDisplay.ShowMessage("Lucky!", col:new Color32(52, 155, 242,255));
+        {
+            GameController.Instance.GameView.EventDetailDisplay.ShowMessage("Lucky!",
+                col: new Color32(52, 155, 242, 255));
+            _audioSource.PlayOneShot(_skipSound, 1f);
+        }
         else
+        {
             GameController.Instance.ChangeCurrentState(GameState.Death);
-        
+        }
+
         Hide();
     }
 

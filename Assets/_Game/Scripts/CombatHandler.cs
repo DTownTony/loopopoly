@@ -17,6 +17,7 @@ public class CombatHandler : MonoBehaviour
     [SerializeField] private AudioClip[] _hitSounds;
     [SerializeField] private AudioClip _missSound;
     [SerializeField] private AudioClip _bossDefeatSound;
+    [SerializeField] private AudioClip _reviveSound;
     
     private Enemy _enemy;
     
@@ -70,8 +71,7 @@ public class CombatHandler : MonoBehaviour
                 if (_player.Data.CurrentHealth.Value - damage <= 0 && _player.Data.HasItem(_reviveItem.Key))
                 {
                     _player.Data.RemoveItem(_reviveItem.Key);
-                    var col1 = new Color32(52, 155, 242,255);
-                    GameController.Instance.GameView.EventDetailDisplay.ShowMessage("Guardian Angel!", col: col1);
+                    _audioSource.PlayOneShot(_reviveSound, 1f);
                     var heal = Mathf.RoundToInt(_player.Data.MaxHealth * .5f);
                     _player.Data.CurrentHealth.Value += heal;
                 }
