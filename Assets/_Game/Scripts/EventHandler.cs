@@ -21,7 +21,7 @@ public class EventHandler : MonoBehaviour
     public void AddItem(ItemData itemData)
     {
         _player.Data.AddItem(itemData);
-        _audioSource.PlayOneShot(_bonusSound, .35f);
+        _audioSource.PlayOneShot(_bonusSound, .4f);
     }
 
     public void StatUpdate(StatType type, int amount)
@@ -42,7 +42,7 @@ public class EventHandler : MonoBehaviour
                 break;
         }
         
-        _audioSource.PlayOneShot(_bonusSound, .35f);
+        _audioSource.PlayOneShot(_bonusSound, .4f);
     }
     
     public void SetupBossCombat()
