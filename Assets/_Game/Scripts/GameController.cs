@@ -116,8 +116,8 @@ public class GameController : MonoBehaviour
         _currentLevelLoop++;
         if (_currentLevelLoop >= _loopsLevels.Length)
         {
-            LoopExponentialValue += .05f;
-            CombatExponentialValue += .1f;
+            LoopExponentialValue += .0025f;
+            CombatExponentialValue += .0025f;
             _currentLevelLoop = 0;
         }
 
