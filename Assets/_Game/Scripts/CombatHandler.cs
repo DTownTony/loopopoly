@@ -12,6 +12,10 @@ public class CombatHandler : MonoBehaviour
     [SerializeField] private ParticleSystem _bombAttackPrefab;
     [SerializeField] private EnemyHealthBarUI _healthBarUI;
     
+    [Header("Audio")]
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip[] _hitSounds;
+    
     private const float LOOP_COMBAT_VALUE = 1.15f;
     
     private Enemy _enemy;
@@ -78,8 +82,9 @@ public class CombatHandler : MonoBehaviour
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"-{damage}", _player.Model);
             }
             
-            combatActive = _enemy.CurrentHealth > 0 && _player.Data.CurrentHealth.Value > 0;
+            _audioSource.PlayOneShot(_hitSounds[Random.Range(0, _hitSounds.Length)], .35f);
             
+            combatActive = _enemy.CurrentHealth > 0 && _player.Data.CurrentHealth.Value > 0;
             yield return new WaitForSeconds(combatActive ? .75f : .2f);
         }
 

@@ -7,14 +7,21 @@ public class EventHandler : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private EventView _eventView;
 
+    [Header("Audio")] 
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private  AudioClip _goldSound;
+    [SerializeField] private  AudioClip _bonusSound;
+
     public void AddGold(int amount)
     {
         _player.Data.Gold.Value += amount;
+        _audioSource.PlayOneShot(_goldSound, 1f);
     }
     
     public void AddItem(ItemData itemData)
     {
         _player.Data.AddItem(itemData);
+        _audioSource.PlayOneShot(_bonusSound, .35f);
     }
 
     public void StatUpdate(StatType type, int amount)
@@ -34,6 +41,8 @@ public class EventHandler : MonoBehaviour
                 _player.Data.Defense.Value += amount;
                 break;
         }
+        
+        _audioSource.PlayOneShot(_bonusSound, .35f);
     }
     
     public void SetupBossCombat()

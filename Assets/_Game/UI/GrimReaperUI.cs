@@ -23,7 +23,7 @@ public class GrimReaperUI : MonoBehaviour
         gameObject.SetActive(true);
         _currentArgs = args;
         _guardianAngelButton.interactable = GameController.Instance.Player.Data.HasItem(args.StopEventItem.Key);
-        _deathChanceText.SetText("Try My Luck: " + (args.DeathChance * 100).ToString("F2") + "%");
+        _deathChanceText.SetText("Try My Luck: " + (args.DeathChance * 100).ToString("F2") + "% chance of death");
     }
 
     private void TryButtonPressed()

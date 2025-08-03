@@ -324,6 +324,11 @@ MonoBehaviour:
   _slashAttack: {fileID: 1785263141}
   _bombAttackPrefab: {fileID: 19848870, guid: a7c694f0877ea874fa57e033221095c3, type: 3}
   _healthBarUI: {fileID: 1044721167}
+  _audioSource: {fileID: 1453556318}
+  _hitSounds:
+  - {fileID: 8300000, guid: 9b1a732a00388004ea2fde20bedb74d3, type: 3}
+  - {fileID: 8300000, guid: 2725b1a955d14604c92687decd73d10a, type: 3}
+  - {fileID: 8300000, guid: cfb1ac8682b9b604989dd7052b9b0377, type: 3}
 --- !u!114 &54051818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2950,7 +2955,10 @@ MonoBehaviour:
   _player: {fileID: 1235802843925263133}
   _rollText: {fileID: 1274876074}
   _audioSource: {fileID: 1453556318}
-  _rollSound: {fileID: 8300000, guid: ba94d4c59659ab04bb9eb82880145581, type: 3}
+  _rollSound:
+  - {fileID: 8300000, guid: ba94d4c59659ab04bb9eb82880145581, type: 3}
+  - {fileID: 8300000, guid: 8dcdea3a3b9a7084cb9ca7c973c8ab56, type: 3}
+  - {fileID: 8300000, guid: e7724e946e7e11b44bd6f2c9b2b7fab7, type: 3}
 --- !u!1 &501969633
 GameObject:
   m_ObjectHideFlags: 0
@@ -7119,6 +7127,9 @@ MonoBehaviour:
   _combatHandler: {fileID: 54051817}
   _player: {fileID: 1235802843925263133}
   _eventView: {fileID: 1399171554}
+  _audioSource: {fileID: 1453556318}
+  _goldSound: {fileID: 8300000, guid: f71ebdc716940c14ca1dfd0145312a43, type: 3}
+  _bonusSound: {fileID: 8300000, guid: 0c502ee6de8cb5c4cad4969306602393, type: 3}
 --- !u!1 &1519159927
 GameObject:
   m_ObjectHideFlags: 0
@@ -9639,18 +9650,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5981032216745559647, guid: 1bd806fc91afe4800a68b4c423fb09ef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.123
-      objectReference: {fileID: 0}
-    - target: {fileID: 8085838012133541609, guid: 1bd806fc91afe4800a68b4c423fb09ef, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 8085838012133541609, guid: 1bd806fc91afe4800a68b4c423fb09ef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 4425467758516113208, guid: 1bd806fc91afe4800a68b4c423fb09ef, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1453556318}
     - target: {fileID: 8631349608669383999, guid: 1bd806fc91afe4800a68b4c423fb09ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.16572239

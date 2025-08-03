@@ -14,7 +14,11 @@ public class Player : MonoBehaviour
     public int CurrentPositionIndex { get; private set; }
     public int MovesLeft { get; private set; }
     public Transform Model;
-
+    
+    [Header("Audio")]
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _moveSound;
+    
     public readonly PlayerData Data = new PlayerData
     {
         Level = new PlayerValue(0),
@@ -91,6 +95,7 @@ public class Player : MonoBehaviour
             Model.DOLocalMoveY(endY, moveDuration * .5f).SetLoops(2, LoopType.Yoyo);
             yield return new WaitForSeconds(moveDuration);
 
+            _audioSource.PlayOneShot(_moveSound, .35f);
             MovesLeft--;
             OnMovedSpace?.Invoke(MovesLeft);
             CurrentPositionIndex = position.Index;

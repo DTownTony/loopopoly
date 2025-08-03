@@ -133,7 +133,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c149af1d5f8ec3e4e816dae050a8999f, type: 2}
   - {fileID: 11400000, guid: a7d706c58a6a842f89bf09cfa17ec9a2, type: 2}
   - {fileID: 11400000, guid: 9fd8a243e04e4b543a9786db3d279da4, type: 2}
-  - {fileID: 11400000, guid: 607d9dd98b0724a498147c02147a86c8, type: 2}
   - {fileID: 11400000, guid: 3e6f7a05ff21043e69962b7efb9266d1, type: 2}
   - {fileID: 11400000, guid: 868f6e743e180497a86ce5e59bb48d98, type: 2}
   - {fileID: 11400000, guid: 14e30f978da144183837c7f84c8a9dee, type: 2}
@@ -152,7 +151,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 74454ec84797ea447bb2438889471238, type: 2}
   _specialEventData:
   - {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}
-  - {fileID: 11400000, guid: ff93558b31a965b44a13bb6c90f41e27, type: 2}
+  - {fileID: 11400000, guid: 607d9dd98b0724a498147c02147a86c8, type: 2}
   - {fileID: 11400000, guid: ff93558b31a965b44a13bb6c90f41e27, type: 2}
 --- !u!1001 &144509716328138204
 PrefabInstance:

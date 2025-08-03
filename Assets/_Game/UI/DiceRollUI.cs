@@ -12,7 +12,7 @@ public class DiceRollUI : MonoBehaviour
     
     [Header("Audio")]
     [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private AudioClip _rollSound;
+    [SerializeField] private AudioClip[] _rollSound;
     
     private void Awake()
     {
@@ -29,8 +29,8 @@ public class DiceRollUI : MonoBehaviour
 
     private IEnumerator DelayRoll()
     {
-        _audioSource.PlayOneShot(_rollSound);
-        yield return new WaitForSeconds(.15f);
+        _audioSource.PlayOneShot(_rollSound[Random.Range(0, _rollSound.Length)], .35f);
+        yield return new WaitForSeconds(.1f);
         _diceRoller.RollDice();
     }
 
