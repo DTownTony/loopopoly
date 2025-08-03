@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38.531, y: -114.06}
+  m_AnchoredPosition: {x: -50.4, y: -114.06}
   m_SizeDelta: {x: 43.0889, y: 43.0889}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &450776850824867365
@@ -109,7 +109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40.307, y: -114.06}
+  m_AnchoredPosition: {x: 33.4, y: -114.06}
   m_SizeDelta: {x: 114.59, y: 43.086}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &979285776471245999
@@ -142,8 +142,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 9999
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 878c4d79da0e7e947bcc3d1882025bb9, type: 2}
+  m_sharedMaterial: {fileID: 8505213239222083227, guid: 878c4d79da0e7e947bcc3d1882025bb9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -167,8 +167,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -245,11 +245,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3851452007870458915, guid: 0f265d8eb775e4ff0ae43241ae77a932, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 204.8
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 3851452007870458915, guid: 0f265d8eb775e4ff0ae43241ae77a932, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 285.04
+      value: 380
       objectReference: {fileID: 0}
     - target: {fileID: 3851452007870458915, guid: 0f265d8eb775e4ff0ae43241ae77a932, type: 3}
       propertyPath: m_LocalPosition.x
@@ -306,6 +306,14 @@ PrefabInstance:
     - target: {fileID: 8487574799105077556, guid: 0f265d8eb775e4ff0ae43241ae77a932, type: 3}
       propertyPath: m_Name
       value: ShopItemCard Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022612001673915402, guid: 0f265d8eb775e4ff0ae43241ae77a932, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022612001673915402, guid: 0f265d8eb775e4ff0ae43241ae77a932, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 141
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
