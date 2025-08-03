@@ -61,7 +61,7 @@ public class TreasureUI : MonoBehaviour
                 var healthDamage = Mathf.RoundToInt(GameController.Instance.Player.Data.CurrentHealth.Value * .25f);
                 GameController.Instance.Player.Data.CurrentHealth.Value -= healthDamage;
                 var col2 = new Color32(232, 25, 34,255);
-                GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"Trap! -{healthDamage} Health",col:col2);
+                GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"Trap!\n-{healthDamage} Health",col:col2);
                 _audioSource.PlayOneShot(_trapSound, 1f);
                 break;
         }
