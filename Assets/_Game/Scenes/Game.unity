@@ -319,7 +319,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1235802843925263133}
   _bombItem: {fileID: 11400000, guid: 845313918b5cf4cdf89054d3863ef2fe, type: 2}
-  _reviveItem: {fileID: 11400000, guid: 6cbc10311ab684e49af1f1434a050587, type: 2}
   _impulseSource: {fileID: 54051818}
   _slashAttack: {fileID: 1785263141}
   _bombAttackPrefab: {fileID: 19848870, guid: a7c694f0877ea874fa57e033221095c3, type: 3}
@@ -331,7 +330,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cfb1ac8682b9b604989dd7052b9b0377, type: 3}
   _missSound: {fileID: 8300000, guid: 500dd7d83e9f02f419018ed6a36a3b4f, type: 3}
   _bossDefeatSound: {fileID: 8300000, guid: dfe8eafe1ef312b49acfc8ce9b68c453, type: 3}
-  _reviveSound: {fileID: 8300000, guid: b7ea5af25e731e54eb8a50a37485b681, type: 3}
 --- !u!114 &54051818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7928,7 +7926,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The grim reaper has come. They will instant kill you if you don't succeed.
+  m_text: The grim reaper has come. Are you lucky enough to scare him off?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 878c4d79da0e7e947bcc3d1882025bb9, type: 2}
   m_sharedMaterial: {fileID: 8505213239222083227, guid: 878c4d79da0e7e947bcc3d1882025bb9, type: 2}
@@ -8983,6 +8981,7 @@ MonoBehaviour:
   _deathChanceText: {fileID: 728029088}
   _audioSource: {fileID: 1453556318}
   _skipSound: {fileID: 8300000, guid: b7ea5af25e731e54eb8a50a37485b681, type: 3}
+  _hurtSound: {fileID: 0}
 --- !u!1 &1925567581
 GameObject:
   m_ObjectHideFlags: 0
