@@ -46,7 +46,7 @@ public class GameView : MonoBehaviour
         _goldUI.SetPlayerValue(data.Gold);
         _healthUI.SetPlayerValue(data.CurrentHealth);
         _damageUI.SetPlayerValue(data.Damage);
-        _defenseUI.SetPlayerValue(data.Defense);
+        _defenseUI.SetPlayerValue(data.Protection);
         _levelUI.SetPlayerValue(data.Level);
         _experienceUI.SetPlayerValue(data.Experience);
     }

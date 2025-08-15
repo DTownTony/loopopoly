@@ -37,8 +37,8 @@ public class EventHandler : MonoBehaviour
             case StatType.Damage:
                 _player.Data.Damage.Value += amount;
                 break;
-            case StatType.Armor:
-                _player.Data.Defense.Value += amount;
+            case StatType.Protection:
+                _player.Data.Protection.Value += amount;
                 break;
         }
         
@@ -91,6 +91,6 @@ public enum StatType
     CurrentHealth,
     CurrentHealthPercent,
     Damage,
-    Armor,
+    Protection,
     Experience
 }

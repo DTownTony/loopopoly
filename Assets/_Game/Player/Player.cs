@@ -27,7 +27,10 @@ public class Player : MonoBehaviour
         MaxHealth = 50,
         CurrentHealth = new PlayerValue(50, 0, 50),
         Damage = new PlayerValue(5, 1),
-        Defense = new PlayerValue(0),
+        CriticalChance = new PlayerValue(5),
+        CriticalDamage = new PlayerValue(50),
+        Evasion = new PlayerValue(0),
+        Protection = new PlayerValue(0),
     };
     
     private void Start()

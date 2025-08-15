@@ -54,7 +54,16 @@ public class CombatHandler : MonoBehaviour
             int damage;
             if (playerTurn)
             {
+                //player is attacking
                 damage = _player.Data.Damage.Value;
+
+                var criticalHitChance = Mathf.Max(_player.Data.CriticalChance.Value / 100f, 1f);
+                if (Random.value <= criticalHitChance)
+                {
+                    var criticalDamage = Mathf.RoundToInt(damage * (_player.Data.CriticalDamage.Value / 100f));
+                    damage += criticalDamage;
+                }
+                
                 _enemy.CurrentHealth -= damage;
                 _healthBarUI.SetFill(_enemy.CurrentHealth / (float)_enemy.MaxHealth);
                 playerTurn = false;
@@ -65,10 +74,18 @@ public class CombatHandler : MonoBehaviour
             }
             else
             {
+                //enemy is attacking
                 damage = Random.Range(_enemy.DamageMin, _enemy.DamageMax);
-                damage = Mathf.Max(0, damage - _player.Data.Defense.Value);
+                
+                if (_player.Data.Protection.Value > 0)
+                {
+                    var armor = _player.Data.Protection.Value;
+                    var damageReduction = armor / (armor + 100f);
+                    damage = Mathf.RoundToInt(damage * (1f - damageReduction));
+                }
 
-                if (_player.Data.CurrentHealth.Value - damage <= 0 && _player.Data.HasItem(_reviveItem.Key))
+                var healthRemaining = _player.Data.CurrentHealth.Value - damage;
+                if (healthRemaining <= 0 && _player.Data.HasItem(_reviveItem.Key))
                 {
                     _player.Data.RemoveItem(_reviveItem.Key);
                     _audioSource.PlayOneShot(_reviveSound, 1f);

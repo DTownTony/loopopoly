@@ -6,15 +6,21 @@ public class PlayerData
 {
     public event Action<int> OnMaxHealthUpdated;
     
-    public int MaxHealth;
+
     public List<Item> Items = new List<Item>();
     
     public PlayerValue Experience;
     public PlayerValue Level;
     public PlayerValue Gold;
+    
+    //stats
+    public int MaxHealth;
     public PlayerValue CurrentHealth;
     public PlayerValue Damage;
-    public PlayerValue Defense;
+    public PlayerValue CriticalChance;
+    public PlayerValue CriticalDamage;
+    public PlayerValue Protection;
+    public PlayerValue Evasion;
 
     //stats
     public int BossDefeated;
@@ -46,8 +52,8 @@ public class PlayerData
                 case StatType.Damage:
                     Damage.Value += value;
                     break;
-                case StatType.Armor:
-                    Defense.Value += value;
+                case StatType.Protection:
+                    Protection.Value += value;
                     break;
                 case StatType.Experience:
                     Experience.Value += value;
