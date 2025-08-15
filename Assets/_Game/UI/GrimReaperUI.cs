@@ -13,6 +13,7 @@ public class GrimReaperUI : MonoBehaviour
     [Header("Audio")] 
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _skipSound;
+    [SerializeField] private AudioClip _hurtSound;
     
     private GrimReaperUIArgs _currentArgs;
 
@@ -40,7 +41,10 @@ public class GrimReaperUI : MonoBehaviour
         }
         else
         {
-            GameController.Instance.ChangeCurrentState(GameState.Death);
+            var player = GameController.Instance.Player;
+            var damage = Mathf.RoundToInt(player.Data.CurrentHealth.Value * .75f);
+            player.Data.CurrentHealth.Value -= damage;
+            _audioSource.PlayOneShot(_hurtSound, 1f);
         }
 
         Hide();

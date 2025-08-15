@@ -69,6 +69,18 @@ public class Player : MonoBehaviour
     {
         if (newValue > 0)
             return;
+
+        const string reviveItemKey = "guardian_angel";
+        if (Data.HasItem(reviveItemKey))
+        {
+            Data.RemoveItem(reviveItemKey);
+            //todo: play revive effect
+            //_audioSource.PlayOneShot(_reviveSound, 1f);
+            
+            var heal = Mathf.RoundToInt(Data.MaxHealth);
+            Data.CurrentHealth.Value += heal;
+            return;
+        }
         
         GameController.Instance.ChangeCurrentState(GameState.Death);
     }

@@ -6,7 +6,6 @@ public class CombatHandler : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private ItemData _bombItem;
-    [SerializeField] private ItemData _reviveItem;
     [SerializeField] private CinemachineImpulseSource _impulseSource;
     [SerializeField] private ParticleSystem _slashAttack;
     [SerializeField] private ParticleSystem _bombAttackPrefab;
@@ -17,7 +16,6 @@ public class CombatHandler : MonoBehaviour
     [SerializeField] private AudioClip[] _hitSounds;
     [SerializeField] private AudioClip _missSound;
     [SerializeField] private AudioClip _bossDefeatSound;
-    [SerializeField] private AudioClip _reviveSound;
     
     private Enemy _enemy;
     
@@ -91,14 +89,6 @@ public class CombatHandler : MonoBehaviour
                     damage = 0;
                 
                 _player.Data.CurrentHealth.Value -= damage;
-                
-                if (_player.Data.CurrentHealth.Value <= 0 && _player.Data.HasItem(_reviveItem.Key))
-                {
-                    _player.Data.RemoveItem(_reviveItem.Key);
-                    _audioSource.PlayOneShot(_reviveSound, 1f);
-                    var heal = Mathf.RoundToInt(_player.Data.MaxHealth * .5f);
-                    _player.Data.CurrentHealth.Value += heal;
-                }
                 
                 PlaySlashAttack(_player.Model);
 
