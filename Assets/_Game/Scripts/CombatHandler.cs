@@ -66,11 +66,12 @@ public class CombatHandler : MonoBehaviour
                 
                 _enemy.CurrentHealth -= damage;
                 _healthBarUI.SetFill(_enemy.CurrentHealth / (float)_enemy.MaxHealth);
-                playerTurn = false;
-
+               
                 PlaySlashAttack(_enemy.Model.transform);
                 var col = new Color32(232, 25, 34,255);
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"-{damage}", _enemy.Model.transform, col:col);
+                
+                playerTurn = false;
             }
             else
             {
@@ -84,17 +85,20 @@ public class CombatHandler : MonoBehaviour
                     damage = Mathf.RoundToInt(damage * (1f - damageReduction));
                 }
 
-                var healthRemaining = _player.Data.CurrentHealth.Value - damage;
-                if (healthRemaining <= 0 && _player.Data.HasItem(_reviveItem.Key))
+                var evasion = _player.Data.Evasion.Value;
+                var evasionChance = evasion / (evasion + 100f);
+                if (Random.value <= evasionChance)
+                    damage = 0;
+                
+                _player.Data.CurrentHealth.Value -= damage;
+                
+                if (_player.Data.CurrentHealth.Value <= 0 && _player.Data.HasItem(_reviveItem.Key))
                 {
                     _player.Data.RemoveItem(_reviveItem.Key);
                     _audioSource.PlayOneShot(_reviveSound, 1f);
                     var heal = Mathf.RoundToInt(_player.Data.MaxHealth * .5f);
                     _player.Data.CurrentHealth.Value += heal;
                 }
-                
-                _player.Data.CurrentHealth.Value -= damage;
-                playerTurn = true;
                 
                 PlaySlashAttack(_player.Model);
 
@@ -105,6 +109,8 @@ public class CombatHandler : MonoBehaviour
                     _impulseSource.GenerateImpulse(.05f);
                 var col = new Color32(232, 25, 34,255);
                 GameController.Instance.GameView.EventDetailDisplay.ShowMessage(message, _player.Model,col:col);
+                
+                playerTurn = true;
             }
             
             _audioSource.PlayOneShot(damage > 0 ? _hitSounds[Random.Range(0, _hitSounds.Length)] : _missSound, .35f);
