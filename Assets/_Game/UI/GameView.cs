@@ -13,6 +13,7 @@ public class GameView : MonoBehaviour
     [SerializeField] private PlayerValueUI _levelUI;
     [SerializeField] private PlayerValueUI _experienceUI;
     [SerializeField] private DeathView _deathView;
+    [SerializeField] private LevelUpView _levelUpView;
 
     [SerializeField] private TMP_Text _bossLoopsText;
 
@@ -22,6 +23,7 @@ public class GameView : MonoBehaviour
     {
         GameController.Instance.OnGameStateChanged += GameStateChanged;
         GameController.Instance.OnLoopsChanged += LoopsChanged;
+        GameController.Instance.Player.Data.Level.OnValueChanged += LevelUp;
     }
     
     private void GameStateChanged(GameState newState)
@@ -49,5 +51,10 @@ public class GameView : MonoBehaviour
         _defenseUI.SetPlayerValue(data.Protection);
         _levelUI.SetPlayerValue(data.Level);
         _experienceUI.SetPlayerValue(data.Experience);
+    }
+
+    private void LevelUp(int newLevel)
+    {
+        _levelUpView.Show();
     }
 }

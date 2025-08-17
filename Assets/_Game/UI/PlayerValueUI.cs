@@ -7,7 +7,7 @@ public class PlayerValueUI : MonoBehaviour
 
     public void SetPlayerValue(PlayerValue playerValue)
     {
-        playerValue.OnStatChanged += Set;
+        playerValue.OnValueChanged += Set;
         Set(playerValue.Value);
     }
 

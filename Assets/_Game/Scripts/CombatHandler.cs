@@ -55,10 +55,12 @@ public class CombatHandler : MonoBehaviour
                 //player is attacking
                 damage = _player.Data.Damage.Value;
 
-                var criticalHitChance = Mathf.Max(_player.Data.CriticalChance.Value / 100f, 1f);
+                var criticalChanceValue = _player.Data.CriticalChance.Value;
+                var criticalHitChance = Mathf.Min(criticalChanceValue / (criticalChanceValue + 100f), 1f);
                 if (Random.value <= criticalHitChance)
                 {
-                    var criticalDamage = Mathf.RoundToInt(damage * (_player.Data.CriticalDamage.Value / 100f));
+                    var criticalDamageValue = _player.Data.CriticalDamage.Value;
+                    var criticalDamage = Mathf.RoundToInt(damage * (criticalDamageValue / (criticalDamageValue + 100f)));
                     damage += criticalDamage;
                 }
                 

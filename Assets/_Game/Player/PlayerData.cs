@@ -6,7 +6,6 @@ public class PlayerData
 {
     public event Action<int> OnMaxHealthUpdated;
     
-
     public List<Item> Items = new List<Item>();
     
     public PlayerValue Experience;
@@ -119,7 +118,7 @@ public class PlayerData
 public class PlayerValue
 {
     public delegate void OnStatChangedDelegate(int newValue);
-    public event OnStatChangedDelegate OnStatChanged;
+    public event OnStatChangedDelegate OnValueChanged;
 
     private readonly int _minValue;
     private int _maxValue;
@@ -138,7 +137,7 @@ public class PlayerValue
         set
         {
             _value = Mathf.Clamp(value, _minValue, _maxValue);
-            OnStatChanged?.Invoke(_value);
+            OnValueChanged?.Invoke(_value);
         }
     }
     

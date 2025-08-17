@@ -35,8 +35,8 @@ public class Player : MonoBehaviour
     
     private void Start()
     {
-        Data.CurrentHealth.OnStatChanged += CheckCurrentHealth;
-        Data.Experience.OnStatChanged += ExperienceChanged;
+        Data.CurrentHealth.OnValueChanged += CheckCurrentHealth;
+        Data.Experience.OnValueChanged += ExperienceChanged;
     }
 
     #region Level / Experience
