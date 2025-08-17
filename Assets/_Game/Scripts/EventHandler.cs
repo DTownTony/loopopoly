@@ -29,7 +29,7 @@ public class EventHandler : MonoBehaviour
         switch (type)
         {
             case StatType.MaxHealth:
-                _player.Data.UpdateMaxHealth(amount);
+                _player.Data.MaxHealth.Value += amount;
                 break;
             case StatType.CurrentHealth:
                 _player.Data.CurrentHealth.Value += amount;

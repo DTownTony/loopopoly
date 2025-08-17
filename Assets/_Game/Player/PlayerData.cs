@@ -1,19 +1,17 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerData
 {
-    public event Action<int> OnMaxHealthUpdated;
-    
     public List<Item> Items = new List<Item>();
     
     public PlayerValue Experience;
     public PlayerValue Level;
     public PlayerValue Gold;
+    public PlayerValue StatPoints;
     
     //stats
-    public int MaxHealth;
+    public PlayerValue MaxHealth;
     public PlayerValue CurrentHealth;
     public PlayerValue Damage;
     public PlayerValue CriticalChance;
@@ -24,12 +22,10 @@ public class PlayerData
     //stats
     public int BossDefeated;
     public int TotalMoves;
-    
-    public void UpdateMaxHealth(int amount)
+
+    public void Initialize()
     {
-        MaxHealth += amount;
-        CurrentHealth.SetMaxValue(MaxHealth);
-        OnMaxHealthUpdated?.Invoke(MaxHealth);
+        MaxHealth.OnValueChanged += value => { CurrentHealth.SetMaxValue(value); };
     }
 
     private void ProcessItemBonuses(ItemData itemData, bool add)
@@ -43,7 +39,7 @@ public class PlayerData
             switch (bonus.Type)
             {
                 case StatType.MaxHealth:
-                    UpdateMaxHealth(value);
+                    MaxHealth.Value += value;
                     break;
                 case StatType.CurrentHealth:
                     CurrentHealth.Value += value;
@@ -59,7 +55,7 @@ public class PlayerData
                     break;
                 case StatType.CurrentHealthPercent:
                     var percent = bonus.Amount / 100f;
-                    var total = Mathf.RoundToInt(MaxHealth * percent);
+                    var total = Mathf.RoundToInt(MaxHealth.Value * percent);
                     CurrentHealth.Value += total;
                     break;
             }

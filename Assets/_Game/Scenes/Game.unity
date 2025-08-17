@@ -4104,11 +4104,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 361.15002
       objectReference: {fileID: 0}
     - target: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -296.6076
       objectReference: {fileID: 0}
     - target: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4668,11 +4668,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 361.15002
       objectReference: {fileID: 0}
     - target: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -210.43399
       objectReference: {fileID: 0}
     - target: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5800,11 +5800,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 361.15002
       objectReference: {fileID: 0}
     - target: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -124.2604
       objectReference: {fileID: 0}
     - target: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7747,6 +7747,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1083093416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1305500797 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4943216110230324238, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
+  m_PrefabInstance: {fileID: 666630420}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc9962b4d0775b45aa214093741518c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StatUpgradeButton
+--- !u!114 &1312723971 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4943216110230324238, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
+  m_PrefabInstance: {fileID: 586923858}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc9962b4d0775b45aa214093741518c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StatUpgradeButton
 --- !u!1 &1328536654
 GameObject:
   m_ObjectHideFlags: 0
@@ -8426,7 +8448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1547777373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8475,7 +8497,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547777372}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -8503,8 +8525,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662d05703e1f0f148b252c9b6b4fc988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelUpView
-  _canvas: {fileID: 1547777376}
   _canvasGroup: {fileID: 1547777378}
+  _maxHealthButton: {fileID: 1787619932}
+  _damageButton: {fileID: 1860855866}
+  _criticalChanceButton: {fileID: 1305500797}
+  _criticalDamageButton: {fileID: 1312723971}
+  _evasionButton: {fileID: 1897561179}
   _closeButton: {fileID: 1865411239}
 --- !u!225 &1547777378
 CanvasGroup:
@@ -9696,6 +9722,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
   m_PrefabInstance: {fileID: 6042742122478025022}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1787619932 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4943216110230324238, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
+  m_PrefabInstance: {fileID: 6042742122478025022}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc9962b4d0775b45aa214093741518c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StatUpgradeButton
 --- !u!1 &1828939025
 GameObject:
   m_ObjectHideFlags: 0
@@ -9832,6 +9869,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828939025}
   m_CullTransparentMesh: 1
+--- !u!114 &1860855866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4943216110230324238, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
+  m_PrefabInstance: {fileID: 848030720}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc9962b4d0775b45aa214093741518c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StatUpgradeButton
 --- !u!1 &1865411237
 GameObject:
   m_ObjectHideFlags: 0
@@ -10196,11 +10244,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 361.15002
       objectReference: {fileID: 0}
     - target: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -382.7812
       objectReference: {fileID: 0}
     - target: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10236,6 +10284,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
   m_PrefabInstance: {fileID: 1897561175}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1897561179 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4943216110230324238, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
+  m_PrefabInstance: {fileID: 1897561175}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc9962b4d0775b45aa214093741518c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StatUpgradeButton
 --- !u!1 &1925567581
 GameObject:
   m_ObjectHideFlags: 0
@@ -11729,7 +11788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 361.15002
       objectReference: {fileID: 0}
     - target: {fileID: 3607762142339357112, guid: 45907773a4c4cad4ba7516d7814b567a, type: 3}
       propertyPath: m_AnchoredPosition.y

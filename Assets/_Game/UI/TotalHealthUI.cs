@@ -8,7 +8,7 @@ public class TotalHealthUI : MonoBehaviour
     private void Start()
     {
         GameController.Instance.Player.Data.CurrentHealth.OnValueChanged += ValueChanged;
-        GameController.Instance.Player.Data.OnMaxHealthUpdated += MaxHealthUpdated;
+        GameController.Instance.Player.Data.MaxHealth.OnValueChanged += MaxHealthUpdated;
     }
 
     private void MaxHealthUpdated(int maxHealth)
@@ -18,7 +18,7 @@ public class TotalHealthUI : MonoBehaviour
 
     private void ValueChanged(int newValue)
     {
-        var percent = newValue / (float)GameController.Instance.Player.Data.MaxHealth;
+        var percent = newValue / (float)GameController.Instance.Player.Data.MaxHealth.Value;
         _healthFill.fillAmount = percent;
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3607762142339357112}
   - component: {fileID: 8256103225006227536}
   - component: {fileID: 5447661768119913425}
+  - component: {fileID: 4943216110230324238}
   m_Layer: 5
   m_Name: StatUpgradeButton
   m_TagString: Untagged
@@ -80,6 +81,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4943216110230324238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46820860135219931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc9962b4d0775b45aa214093741518c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StatUpgradeButton
+  _valueText: {fileID: 9044133787758821277}
+  _increaseButton: {fileID: 6813389579623083428}
+  _decreaseButton: {fileID: 6583082345693851005}
 --- !u!1 &1063687581320206176
 GameObject:
   m_ObjectHideFlags: 0

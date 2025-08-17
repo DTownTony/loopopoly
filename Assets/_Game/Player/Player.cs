@@ -24,17 +24,19 @@ public class Player : MonoBehaviour
         Level = new PlayerValue(0),
         Experience = new PlayerValue(0, 0, 100),
         Gold = new PlayerValue(100),
-        MaxHealth = 50,
+        MaxHealth = new PlayerValue(50),
         CurrentHealth = new PlayerValue(50, 0, 50),
         Damage = new PlayerValue(5, 1),
         CriticalChance = new PlayerValue(5),
         CriticalDamage = new PlayerValue(50),
         Evasion = new PlayerValue(0),
         Protection = new PlayerValue(0),
+        StatPoints = new PlayerValue(0)
     };
     
     private void Start()
     {
+        Data.Initialize();
         Data.CurrentHealth.OnValueChanged += CheckCurrentHealth;
         Data.Experience.OnValueChanged += ExperienceChanged;
     }
@@ -53,10 +55,10 @@ public class Player : MonoBehaviour
     {
         Data.Level.Value++;
         Data.Experience.Value = 0;
-        Data.UpdateMaxHealth(5);
+
         Data.Experience.SetMaxValue(GetExperienceNeededForLevel());
-        Data.Damage.Value++;
-        Data.CurrentHealth.Value = Data.MaxHealth;
+        Data.CurrentHealth.Value = Data.MaxHealth.Value;
+        Data.StatPoints.Value += 3;
         
         _audioSource.PlayOneShot(_levelUpSound, .5f);
         var col1 = new Color32(52, 155, 242,255);
@@ -77,7 +79,7 @@ public class Player : MonoBehaviour
             //todo: play revive effect
             //_audioSource.PlayOneShot(_reviveSound, 1f);
             
-            var heal = Mathf.RoundToInt(Data.MaxHealth);
+            var heal = Mathf.RoundToInt(Data.MaxHealth.Value);
             Data.CurrentHealth.Value += heal;
             return;
         }
