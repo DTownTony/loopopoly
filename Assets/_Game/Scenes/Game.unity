@@ -8526,6 +8526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelUpView
   _canvasGroup: {fileID: 1547777378}
+  _statAmountText: {fileID: 1052101873}
   _maxHealthButton: {fileID: 1787619932}
   _damageButton: {fileID: 1860855866}
   _criticalChanceButton: {fileID: 1305500797}
