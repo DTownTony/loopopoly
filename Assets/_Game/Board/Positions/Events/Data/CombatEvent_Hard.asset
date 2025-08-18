@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ebf9e6c0c6204f7695975d56f5490f9, type: 3}
-  m_Name: CombatEvent
+  m_Name: CombatEvent_Hard
   m_EditorClassIdentifier: 
   Name: Combat
   BoardPiece:

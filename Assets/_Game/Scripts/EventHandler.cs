@@ -50,9 +50,9 @@ public class EventHandler : MonoBehaviour
         _combatHandler.StartCombat(GameController.Instance.LevelData.BossData);
     }
     
-    public void SetupCombat()
+    public void SetupCombat(CombatDifficulty difficulty)
     {
-        _combatHandler.StartCombat(GameController.Instance.LevelData.EnemyData);
+        _combatHandler.StartCombat(GameController.Instance.LevelData.GetEnemyDifficulty(difficulty));
     }
 
     #region UI Views

@@ -57,7 +57,6 @@ public class CombatHandler : MonoBehaviour
 
                 var criticalChanceValue = _player.Data.CriticalChance.Value;
                 var criticalHitChance = Mathf.Min(criticalChanceValue / (criticalChanceValue + 100f), 1f);
-                Debug.Log(criticalHitChance);
                 if (Random.value <= criticalHitChance)
                 {
                     var criticalDamageValue = _player.Data.CriticalDamage.Value;

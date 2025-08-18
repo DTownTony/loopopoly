@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxLoops: 3
   BossData: {fileID: 11400000, guid: cd669856d43b3b542b329f07cf5a106c, type: 2}
-  EnemyData: {fileID: 11400000, guid: 24017ee9aeb66f147bf9654877b80fb9, type: 2}
   Music: {fileID: 8300000, guid: c6cd8c1f679d8544d83f732a8c277f2f, type: 3}
+  _enemyData:
+  - {fileID: 11400000, guid: 24017ee9aeb66f147bf9654877b80fb9, type: 2}
+  - {fileID: 11400000, guid: 24017ee9aeb66f147bf9654877b80fb9, type: 2}
+  - {fileID: 11400000, guid: 24017ee9aeb66f147bf9654877b80fb9, type: 2}

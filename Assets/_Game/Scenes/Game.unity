@@ -11611,12 +11611,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5296250805347664085, guid: 6f94eae1d94f942c2a15727d8b4e012d, type: 3}
       propertyPath: _eventData.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5296250805347664085, guid: 6f94eae1d94f942c2a15727d8b4e012d, type: 3}
       propertyPath: '_eventData.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: 8d28cd97b0ad7498098299e44ad734af, type: 2}
+    - target: {fileID: 5296250805347664085, guid: 6f94eae1d94f942c2a15727d8b4e012d, type: 3}
+      propertyPath: '_eventData.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: ae9928508bc29a4468c05e6d570442ea, type: 2}
+    - target: {fileID: 5296250805347664085, guid: 6f94eae1d94f942c2a15727d8b4e012d, type: 3}
+      propertyPath: '_eventData.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 27a0fc1a41ec12844beee78ffab8330e, type: 2}
     - target: {fileID: 5681819513699103549, guid: 6f94eae1d94f942c2a15727d8b4e012d, type: 3}
       propertyPath: m_Name
       value: Board

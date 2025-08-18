@@ -5,6 +5,12 @@ public class LevelData : ScriptableObject
 {
     public int MaxLoops;
     public EnemyData BossData;
-    public EnemyData EnemyData;
     public AudioClip Music;
+
+    [SerializeField] private EnemyData[] _enemyData;
+
+    public EnemyData GetEnemyDifficulty(CombatDifficulty difficulty)
+    {
+        return _enemyData[(int)difficulty];
+    }
 }
