@@ -15,3 +15,5 @@ MonoBehaviour:
   Name: Combat
   BoardPiece:
   - {fileID: 1584741293693512915, guid: 7b8e810c1b6025c4b8680bb96169e8d1, type: 3}
+  SpawnOneTime: 0
+  _combatDifficulty: 2
