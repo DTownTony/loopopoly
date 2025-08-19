@@ -13,22 +13,23 @@ public class BitmapBoardBuilder : EditorWindow
     [SerializeField] private Texture2D sourceTexture;
 
     [Header("Placement")]
-    [SerializeField] private float xSpace = 1f;             // NEW: horizontal spacing (world X)
-    [SerializeField] private float zSpace = 1f;             // NEW: vertical spacing (world Z, image Y)
-    [SerializeField] private float yLevel = 0f;             // Y height for all nodes
+    [SerializeField] private float xSpace = 0.79f;              // base horizontal spacing (world X)
+    [SerializeField] private float zSpace = 0.79f;              // base vertical spacing (world Z, image Y)
+    [SerializeField] private float cornerSpace = 1f;         // spacing for segments touching red/blue corners (applies to both axes)
+    [SerializeField] private float yLevel = 0f;              // Y height for all nodes
     [SerializeField] private bool centerOnOrigin = true;
     [SerializeField] private bool invertY = false;           // Top row first (image-space) -> world Z
 
     [Header("Path Options")]
-    [SerializeField] private bool use4Connectivity = true;  // 4-neighbors (on-grid). Turn off for 8-neighbors.
+    [SerializeField] private bool use4Connectivity = true;   // 4-neighbors (on-grid). Turn off for 8-neighbors.
 
     [Header("Node Prefab (optional)")]
-    [SerializeField] private GameObject placementPrefab;    // Drag a prefab here to spawn it per node
+    [SerializeField] private GameObject placementPrefab;     // Drag a prefab here to spawn it per node
     [SerializeField] private Vector3 nodeScale = Vector3.one;
 
     [Header("Output")]
     [SerializeField] private string prefabFolder = "Assets/Boards";
-    [SerializeField] private string boardNameOverride = ""; // defaults to Board_<textureName>
+    [SerializeField] private string boardNameOverride = "";  // defaults to Board_<textureName>
 
     [MenuItem("Tools/Build Board From Bitmap")]
     private static void ShowWindow()
@@ -47,6 +48,7 @@ public class BitmapBoardBuilder : EditorWindow
         EditorGUILayout.LabelField("Placement", EditorStyles.boldLabel);
         xSpace = EditorGUILayout.FloatField("X Space", Mathf.Max(0.0001f, xSpace));
         zSpace = EditorGUILayout.FloatField("Z Space (Image Y)", Mathf.Max(0.0001f, zSpace));
+        cornerSpace = EditorGUILayout.FloatField("Corner Space (red/blue)", Mathf.Max(0.0001f, cornerSpace));
         yLevel = EditorGUILayout.FloatField("Y Level", yLevel);
         centerOnOrigin = EditorGUILayout.Toggle("Center On Origin", centerOnOrigin);
         invertY = EditorGUILayout.Toggle("Invert Y (Top Row First)", invertY);
@@ -75,10 +77,9 @@ public class BitmapBoardBuilder : EditorWindow
         }
 
         EditorGUILayout.HelpBox(
-            "Red = start; Black/Blue = path; Blue marks special events; White/transparent ignored. " +
-            "Nodes spawn CLOCKWISE for loops and are rotated based on step direction: " +
-            "X moves -> yaw 0°/+X or 180°/−X, Y/diagonal -> yaw 90°. " +
-            "Use X Space and Z Space for per-axis spacing.",
+            "Red = start; Black/Blue = path; Blue marks special events; White/transparent ignored.\n" +
+            "Spacing: normal segments use X/Z Space; segments touching red/blue use Corner Space (both axes).\n" +
+            "Nodes spawn CLOCKWISE for loops and rotate by step direction: X -> 0°/180°, Y/diag -> 90°.",
             MessageType.Info);
     }
 
@@ -121,8 +122,8 @@ public class BitmapBoardBuilder : EditorWindow
 
         var pixels = sourceTexture.GetPixels32();
         var boardMask = new bool[w * h];
-        var redMask = new bool[w * h];
-        var blueMask = new bool[w * h]; // track blue pixels for specials
+        var redMask   = new bool[w * h];
+        var blueMask  = new bool[w * h];
         int boardCount = 0;
 
         // Build masks: board = red or black or blue; white & transparent ignored
@@ -132,7 +133,7 @@ public class BitmapBoardBuilder : EditorWindow
             bool isTransparent = c.a <= 10;
 
             bool isWhite = (c.r > 230 && c.g > 230 && c.b > 230) && !isTransparent;
-            bool isBlack = (c.r < 30 && c.g < 30 && c.b < 30) && !isTransparent;
+            bool isBlack = (c.r < 30  && c.g < 30  && c.b < 30 ) && !isTransparent;
             bool isRed   = (c.r > 200 && c.g < 40  && c.b < 40 ) && !isTransparent;
             bool isBlue  = (c.b > 200 && c.r < 40  && c.g < 40 ) && !isTransparent;
 
@@ -201,30 +202,80 @@ public class BitmapBoardBuilder : EditorWindow
         if (nodeCount > 1 && path[0] == path[nodeCount - 1])
             nodeCount--;
 
+        // Precompute: row mapping & whether each node is a corner (red or blue) for spacing
+        var rows = new int[nodeCount];
+        var isCornerNode = new bool[nodeCount]; // red OR blue
+        for (int i = 0; i < nodeCount; i++)
+        {
+            var p = path[i];
+            rows[i] = invertY ? (h - 1 - p.y) : p.y;
+            int pixIndex = p.y * w + p.x;
+            bool isRedPix  = pixIndex >= 0 && pixIndex < redMask.Length  && redMask[pixIndex];
+            bool isBluePix = pixIndex >= 0 && pixIndex < blueMask.Length && blueMask[pixIndex];
+            isCornerNode[i] = isRedPix || isBluePix;
+        }
+
+        // Build local positions with per-segment spacing
+        var localPos = new Vector3[nodeCount];
+        localPos[0] = Vector3.zero;
+
+        for (int i = 1; i < nodeCount; i++)
+        {
+            var a = path[i - 1];
+            var b = path[i];
+
+            int dx = b.x - a.x;            // image X difference
+            int dr = rows[i] - rows[i - 1]; // world Z row difference after invertY mapping
+
+            bool cornerSegment = isCornerNode[i] || isCornerNode[i - 1];
+            float stepX = cornerSegment ? cornerSpace : xSpace;
+            float stepZ = cornerSegment ? cornerSpace : zSpace;
+
+            Vector3 delta;
+            if (dr == 0 && dx != 0)
+            {
+                delta = new Vector3(Mathf.Sign(dx) * stepX, 0f, 0f);
+            }
+            else if (dx == 0 && dr != 0)
+            {
+                delta = new Vector3(0f, 0f, Mathf.Sign(dr) * stepZ);
+            }
+            else
+            {
+                // Diagonal fallback (shouldn't happen with 4-connectivity)
+                if (Mathf.Abs(dx) >= Mathf.Abs(dr))
+                    delta = new Vector3(Mathf.Sign(dx) * stepX, 0f, 0f);
+                else
+                    delta = new Vector3(0f, 0f, Mathf.Sign(dr) * stepZ);
+            }
+
+            localPos[i] = localPos[i - 1] + delta;
+        }
+
+        // Centering
+        if (centerOnOrigin && nodeCount > 0)
+        {
+            float minX = localPos[0].x, maxX = localPos[0].x;
+            float minZ = localPos[0].z, maxZ = localPos[0].z;
+            for (int i = 1; i < nodeCount; i++)
+            {
+                var v = localPos[i];
+                if (v.x < minX) minX = v.x; if (v.x > maxX) maxX = v.x;
+                if (v.z < minZ) minZ = v.z; if (v.z > maxZ) maxZ = v.z;
+            }
+            var center = new Vector3((minX + maxX) * 0.5f, 0f, (minZ + maxZ) * 0.5f);
+            for (int i = 0; i < nodeCount; i++) localPos[i] -= center;
+        }
+
         // Create root & children as Pos (i) — using prefab if provided
         string boardName = string.IsNullOrEmpty(boardNameOverride) ? $"Board_{sourceTexture.name}" : boardNameOverride;
         var root = new GameObject(boardName);
         Undo.RegisterCreatedObjectUndo(root, "Create Board Root");
 
-        float xOffset = 0f, zOffset = 0f;
-        if (centerOnOrigin)
-        {
-            // center using full image bounds for consistent spacing from edges (per-axis)
-            xOffset = -((w - 1) * 0.5f * xSpace);
-            zOffset = -((h - 1) * 0.5f * zSpace);
-        }
-
         var nodes = new Transform[nodeCount];
 
         for (int i = 0; i < nodeCount; i++)
         {
-            var p = path[i];
-            int row = invertY ? (h - 1 - p.y) : p.y;
-
-            float x = p.x * xSpace + xOffset;   // NEW: xSpace
-            float y = yLevel;
-            float z = row  * zSpace + zOffset;  // NEW: zSpace
-
             GameObject childGo;
             if (placementPrefab != null)
             {
@@ -252,18 +303,20 @@ public class BitmapBoardBuilder : EditorWindow
 
             childGo.name = $"Pos ({i})";
             Undo.RegisterCreatedObjectUndo(childGo, "Create Node");
+
             var t = childGo.transform;
-            t.localPosition = new Vector3(x, y, z);
+            var lp = localPos[i];
+            t.localPosition = new Vector3(lp.x, yLevel, lp.z);
             t.localScale = nodeScale;
 
             // --- Direction-based rotation (force 0 / 180 / 90; never -180) ---
             Vector2Int refPt;
             if (i > 0) refPt = path[i - 1];          // compare to previous
-            else if (path.Count > 1) refPt = path[1]; // or look ahead for first node
-            else refPt = p;
+            else if (nodeCount > 1) refPt = path[1];  // or look ahead for first node
+            else refPt = path[i];
 
-            int dx = p.x - refPt.x;   // image-space
-            int dy = p.y - refPt.y;
+            int dx = path[i].x - refPt.x;   // image-space
+            int dy = path[i].y - refPt.y;
 
             float yaw;
             if (dy == 0 && dx != 0)
@@ -296,7 +349,7 @@ public class BitmapBoardBuilder : EditorWindow
             TryAssignTransforms(board, "path",            nodes);
             TryAssignTransforms(board, "waypoints",       nodes);
 
-            // Keep wiring a single "space"/"spacing" to Board using X spacing
+            // Keep wiring a single "space"/"spacing" to Board using base X spacing
             TryAssignFloat(board, "space",   xSpace);
             TryAssignFloat(board, "spacing", xSpace);
             TryAssignFloat(board, "yLevel",  yLevel);
