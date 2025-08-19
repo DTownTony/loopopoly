@@ -41,6 +41,8 @@ public class GameController : MonoBehaviour
     
     public void Setup(GameData gameData)
     {
+        _currentLevelLoop = gameData.LevelIndex;
+        
         LevelData = _loopsLevels[_currentLevelLoop];
         _musicSource.clip = LevelData.Music;
         _musicSource.Play();
