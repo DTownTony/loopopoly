@@ -7,6 +7,4 @@ public class GlobalEvents : ScriptableObject
     
     public BoardEvent[] EventData;
     public BoardEvent[] SpecialEventData;
-    
-    public BoardEvent[] EmptyCornerEventData;
 }

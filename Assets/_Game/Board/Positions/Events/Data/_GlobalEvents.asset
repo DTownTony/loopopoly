@@ -37,5 +37,4 @@ MonoBehaviour:
   SpecialEventData:
   - {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}
   - {fileID: 11400000, guid: 607d9dd98b0724a498147c02147a86c8, type: 2}
-  EmptyCornerEventData:
   - {fileID: 11400000, guid: ff93558b31a965b44a13bb6c90f41e27, type: 2}
