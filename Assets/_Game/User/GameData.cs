@@ -2,5 +2,5 @@ using UnityEngine;
 
 public class GameData
 {
-    public int Tokens;
+    public int BoardIndex = -1;
 }

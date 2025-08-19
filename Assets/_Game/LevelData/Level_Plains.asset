@@ -15,6 +15,9 @@ MonoBehaviour:
   MaxLoops: 2
   BossData: {fileID: 11400000, guid: 422f99ef5bfb74ece8dffff72fca26d5, type: 2}
   Music: {fileID: 8300000, guid: 4c7e7bb61e789f449a800b54cbdeaa68, type: 3}
+  _boards:
+  - {fileID: 6930251208894153433, guid: e9e98c66717b1b74a924c53040d0d487, type: 3}
+  - {fileID: 4981444980118143825, guid: 75d46572a5f45144ebacf4e0c8574696, type: 3}
   _enemyData:
   - {fileID: 11400000, guid: 3f4fd55948abe4c38822f9e951d9ac00, type: 2}
   - {fileID: 11400000, guid: 3f4fd55948abe4c38822f9e951d9ac00, type: 2}
