@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 930e26d52ba36a1479ebfff370b40ff7, type: 3}
+  m_Name: _GlobalEvents
+  m_EditorClassIdentifier: Assembly-CSharp::GlobalEvents
+  EventData:
+  - {fileID: 11400000, guid: 8ea9d8c366b4ff44fa21cae75551fe6e, type: 2}
+  - {fileID: 11400000, guid: c149af1d5f8ec3e4e816dae050a8999f, type: 2}
+  - {fileID: 11400000, guid: 74454ec84797ea447bb2438889471238, type: 2}
+  - {fileID: 11400000, guid: 8d28cd97b0ad7498098299e44ad734af, type: 2}
+  - {fileID: 11400000, guid: 27a0fc1a41ec12844beee78ffab8330e, type: 2}
+  - {fileID: 11400000, guid: ae9928508bc29a4468c05e6d570442ea, type: 2}
+  - {fileID: 11400000, guid: ff93558b31a965b44a13bb6c90f41e27, type: 2}
+  - {fileID: 11400000, guid: 05d6fc99451904628a15995b88bb0941, type: 2}
+  - {fileID: 11400000, guid: a5208a625c9664af19ff182f2511b90e, type: 2}
+  - {fileID: 11400000, guid: 742bef772e94840bf827a9676916971a, type: 2}
+  - {fileID: 11400000, guid: a07807186aac4476ba06f37b79bc7489, type: 2}
+  - {fileID: 11400000, guid: a7d706c58a6a842f89bf09cfa17ec9a2, type: 2}
+  - {fileID: 11400000, guid: 9fd8a243e04e4b543a9786db3d279da4, type: 2}
+  - {fileID: 11400000, guid: 3e6f7a05ff21043e69962b7efb9266d1, type: 2}
+  - {fileID: 11400000, guid: 09cfa595331ef9649afb7fa55b930ad2, type: 2}
+  - {fileID: 11400000, guid: 868f6e743e180497a86ce5e59bb48d98, type: 2}
+  - {fileID: 11400000, guid: 14e30f978da144183837c7f84c8a9dee, type: 2}
+  - {fileID: 11400000, guid: 2650d195dd2bbf143a71528d1948f610, type: 2}
+  - {fileID: 11400000, guid: f7aaec9a12f493443a2f20985beed90c, type: 2}
+  - {fileID: 11400000, guid: ea66b77f250334079ae997aa9fbfc460, type: 2}
+  SpecialEventData:
+  - {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}
+  - {fileID: 11400000, guid: 607d9dd98b0724a498147c02147a86c8, type: 2}
+  EmptyCornerEventData:
+  - {fileID: 11400000, guid: ff93558b31a965b44a13bb6c90f41e27, type: 2}

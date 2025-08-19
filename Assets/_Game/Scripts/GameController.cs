@@ -24,7 +24,6 @@ public class GameController : MonoBehaviour
     public LevelData LevelData { get; private set; }
     [SerializeField] private LevelData[] _loopsLevels;
     private int _currentLevelLoop;
-    private int _boardIndex;
     
     [SerializeField] private DiceRoller _diceRoller;
 
@@ -44,21 +43,20 @@ public class GameController : MonoBehaviour
     {
         //load data
         _currentLevelLoop = gameData.LevelIndex;
-        _boardIndex = gameData.BoardIndex;
         
+        //setup game
         LevelData = _loopsLevels[_currentLevelLoop];
         _musicSource.clip = LevelData.Music;
         _musicSource.Play();
 
         var boardToSpawn = gameData.BoardIndex == -1 
-            ? LevelData.GetRandomBoard(out _boardIndex) 
+            ? LevelData.GetRandomBoard(out gameData.BoardIndex) 
             : LevelData.GetBoard(gameData.BoardIndex);
 
         _board = Instantiate(boardToSpawn);
         _board.BuildBoard();
         
         Player.PlacePlayer(_board.GetBoardPosition(0));
-        
         ChangeCurrentState(GameState.WaitingForPlayer);
         
         ResetLoops();

@@ -189,16 +189,7 @@ MonoBehaviour:
   - {fileID: 8823032876745157307}
   - {fileID: 927979294376073263}
   - {fileID: 631666214033472368}
-  _eventData:
-  - {fileID: 11400000, guid: 8d28cd97b0ad7498098299e44ad734af, type: 2}
-  - {fileID: 11400000, guid: 05d6fc99451904628a15995b88bb0941, type: 2}
-  - {fileID: 11400000, guid: 05d6fc99451904628a15995b88bb0941, type: 2}
-  _specialEventData:
-  - {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}
-  - {fileID: 11400000, guid: 607d9dd98b0724a498147c02147a86c8, type: 2}
-  - {fileID: 11400000, guid: ff93558b31a965b44a13bb6c90f41e27, type: 2}
-  _emptyCornerEventData:
-  - {fileID: 11400000, guid: ff93558b31a965b44a13bb6c90f41e27, type: 2}
+  _globalEvents: {fileID: 11400000, guid: 6e5fea344a18fb04aa3c46052f2dafd3, type: 2}
   _specialEventIndexes: 0900000010000000130000001900000023000000290000002d00000031000000360000003f00000046000000
 --- !u!1001 &12606172088794547
 PrefabInstance:

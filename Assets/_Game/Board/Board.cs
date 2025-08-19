@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -6,11 +5,9 @@ using Random = UnityEngine.Random;
 public class Board : MonoBehaviour
 {
     [SerializeField] private BoardPosition[] _boardPositions;
-    [SerializeField] private BoardEvent[] _eventData;
-    [SerializeField] private BoardEvent[] _specialEventData;
-    [SerializeField] private BoardEvent[] _emptyCornerEventData;
+    [SerializeField] private GlobalEvents _globalEvents;
 
-    public List<int> _specialEventIndexes = new List<int>();
+    [SerializeField] private List<int> _specialEventIndexes = new List<int>();
 
     public void BuildBoard()
     {
@@ -19,118 +16,36 @@ public class Board : MonoBehaviour
             Debug.LogWarning("[Board] No board positions to build.");
             return;
         }
-
-        // Work lists
-        var availableEvents = new List<BoardEvent>(_eventData ?? new BoardEvent[0]);
-
-        // Corner indices, excluding start index 0 (you handle start separately below)
-        var cornerIndexes = new List<int>();
-        for (var i = 0; i < _specialEventIndexes.Count; i++)
-        {
-            var idx = _specialEventIndexes[i];
-            if (idx > 0 && idx < _boardPositions.Length) cornerIndexes.Add(idx);
-        }
-        Shuffle(cornerIndexes);
-
-        // Special pool (unique use). If you use a special at start, we’ll exclude that entry from the pool.
-        var uniqueSpecialPool = new List<BoardEvent>(_specialEventData ?? Array.Empty<BoardEvent>());
-        Shuffle(uniqueSpecialPool);
-
-        // Build loop
+        
+        var availableEvents = new List<BoardEvent>(_globalEvents.EventData);
+        var specialEvents = new List<BoardEvent>(_globalEvents.SpecialEventData);
+        specialEvents.AddRange(_globalEvents.EmptyCornerEventData);
+        
         for (var i = 0; i < _boardPositions.Length; i++)
         {
             var boardPosition = _boardPositions[i];
             boardPosition.SetIndex(i);
 
-            // START TILE (index 0)
+            //todo: weighted events
             if (i == 0)
             {
-                // Prefer: a specific special (your previous behavior), else fall back
-                BoardEvent startEvent = null;
-
-                if (_specialEventData != null && _specialEventData.Length > 0)
-                {
-                    startEvent = _specialEventData[_specialEventData.Length - 1]; // your original choice (^1)
-                    // remove this from the unique pool (avoid duplicates on corners)
-                    RemoveFirstOccurrence(uniqueSpecialPool, startEvent);
-                }
-                else if (_emptyCornerEventData != null && _emptyCornerEventData.Length > 0)
-                {
-                    startEvent = _emptyCornerEventData[Random.Range(0, _emptyCornerEventData.Length)];
-                }
-                else if (_eventData != null && _eventData.Length > 0)
-                {
-                    startEvent = _eventData[Random.Range(0, _eventData.Length)];
-                }
-
-                if (startEvent != null)
-                {
-                    var piece = startEvent.BoardPiece[Random.Range(0, startEvent.BoardPiece.Length)];
-                    boardPosition.SetEvent(startEvent, piece);
-                }
-                else
-                {
-                    Debug.LogWarning("[Board] No event data available for start tile.");
-                }
-
+                var boardEvent = _globalEvents.EmptyCornerEventData[0]; //todo: go piece
+                var piece = boardEvent.BoardPiece[0];  //todo: refactor piece
+                boardPosition.SetEvent(boardEvent, piece);
                 continue;
             }
-
-            // CORNER TILE?
+            
             var isCorner = _specialEventIndexes.Contains(i);
             if (isCorner)
             {
-                BoardEvent boardEvent = null;
+                var boardEvent = specialEvents[Random.Range(0, specialEvents.Count)];
 
-                if (uniqueSpecialPool.Count > 0)
-                {
-                    //Use each special once
-                    var last = uniqueSpecialPool.Count - 1;
-                    boardEvent = uniqueSpecialPool[last];
-                    uniqueSpecialPool.RemoveAt(last);
-                }
-                else if (_emptyCornerEventData != null && _emptyCornerEventData.Length > 0)
-                {
-                    //Fill remaining corners with random empty corner events
-                    boardEvent = _emptyCornerEventData[Random.Range(0, _emptyCornerEventData.Length)];
-                }
-                else
-                {
-                    //Fallbacks to avoid null refs if emptyCornerEventData is empty
-                    if (_specialEventData != null && _specialEventData.Length > 0)
-                        boardEvent = _specialEventData[Random.Range(0, _specialEventData.Length)];
-                    else if (_eventData != null && _eventData.Length > 0)
-                        boardEvent = _eventData[Random.Range(0, _eventData.Length)];
-                }
-
-                if (boardEvent != null)
-                {
-                    var piece = boardEvent.BoardPiece[Random.Range(0, boardEvent.BoardPiece.Length)];
-                    boardPosition.SetEvent(boardEvent, piece);
-                }
-                else
-                {
-                    Debug.LogWarning($"[Board] No event available for corner at index {i}.");
-                }
+                var piece = boardEvent.BoardPiece[Random.Range(0, boardEvent.BoardPiece.Length)];
+                boardPosition.SetEvent(boardEvent, piece);
             }
             else
             {
-                // NORMAL TILE
-                if (availableEvents.Count == 0)
-                {
-                    // Refill from source as a fallback so we never crash
-                    if (_eventData != null && _eventData.Length > 0)
-                        availableEvents.AddRange(_eventData);
-                    else
-                    {
-                        Debug.LogWarning($"[Board] No normal events available for index {i}.");
-                        continue;
-                    }
-                }
-
                 var boardEvent = availableEvents[Random.Range(0, availableEvents.Count)];
-                if (boardEvent.SpawnOneTime)
-                    availableEvents.Remove(boardEvent);
 
                 var piece = boardEvent.BoardPiece[Random.Range(0, boardEvent.BoardPiece.Length)];
                 boardPosition.SetEvent(boardEvent, piece);
@@ -181,12 +96,5 @@ public class Board : MonoBehaviour
             var j = Random.Range(0, i + 1);
             (list[i], list[j]) = (list[j], list[i]);
         }
-    }
-
-    private static void RemoveFirstOccurrence<T>(List<T> list, T item)
-    {
-        if (list == null) return;
-        var idx = list.IndexOf(item);
-        if (idx >= 0) list.RemoveAt(idx);
     }
 }
