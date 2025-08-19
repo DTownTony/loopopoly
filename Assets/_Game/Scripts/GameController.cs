@@ -47,6 +47,9 @@ public class GameController : MonoBehaviour
         
         _board = Instantiate(LevelData.GetBoard(gameData.BoardIndex));
         _board.BuildBoard();
+        
+        Player.PlacePlayer(_board.GetBoardPosition(0));
+        
         ChangeCurrentState(GameState.WaitingForPlayer);
         
         ResetLoops();

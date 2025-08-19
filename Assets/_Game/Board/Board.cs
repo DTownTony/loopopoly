@@ -136,14 +136,6 @@ public class Board : MonoBehaviour
                 boardPosition.SetEvent(boardEvent, piece);
             }
         }
-
-        PlacePieces();
-    }
-
-    private void PlacePieces()
-    {
-        // Place Player at the start position
-        GameController.Instance.Player.PlacePlayer(_boardPositions[0]);
     }
     
     public List<BoardPosition> GetBoardPositions(int starting, int move)
@@ -171,7 +163,7 @@ public class Board : MonoBehaviour
         return positions;
     }
 
-    private BoardPosition GetBoardPosition(int index)
+    public BoardPosition GetBoardPosition(int index)
     {
         if (index < 0 || index >= _boardPositions.Length)
             return null;
@@ -197,11 +189,4 @@ public class Board : MonoBehaviour
         var idx = list.IndexOf(item);
         if (idx >= 0) list.RemoveAt(idx);
     }
-    
-#if UNITY_EDITOR
-    public void SetSpecialEventIndexes(int index)
-    { 
-        _specialEventIndexes.Add(index);
-    }
-#endif
 }
