@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Board : MonoBehaviour
 {
@@ -23,19 +25,19 @@ public class Board : MonoBehaviour
 
         // Corner indices, excluding start index 0 (you handle start separately below)
         var cornerIndexes = new List<int>();
-        for (int i = 0; i < _specialEventIndexes.Count; i++)
+        for (var i = 0; i < _specialEventIndexes.Count; i++)
         {
-            int idx = _specialEventIndexes[i];
+            var idx = _specialEventIndexes[i];
             if (idx > 0 && idx < _boardPositions.Length) cornerIndexes.Add(idx);
         }
         Shuffle(cornerIndexes);
 
         // Special pool (unique use). If you use a special at start, we’ll exclude that entry from the pool.
-        var uniqueSpecialPool = new List<BoardEvent>(_specialEventData ?? new BoardEvent[0]);
+        var uniqueSpecialPool = new List<BoardEvent>(_specialEventData ?? Array.Empty<BoardEvent>());
         Shuffle(uniqueSpecialPool);
 
         // Build loop
-        for (int i = 0; i < _boardPositions.Length; i++)
+        for (var i = 0; i < _boardPositions.Length; i++)
         {
             var boardPosition = _boardPositions[i];
             boardPosition.SetIndex(i);
@@ -134,8 +136,16 @@ public class Board : MonoBehaviour
                 boardPosition.SetEvent(boardEvent, piece);
             }
         }
+
+        PlacePieces();
     }
 
+    private void PlacePieces()
+    {
+        // Place Player at the start position
+        GameController.Instance.Player.PlacePlayer(_boardPositions[0]);
+    }
+    
     public List<BoardPosition> GetBoardPositions(int starting, int move)
     {
         starting += 1;
@@ -184,7 +194,7 @@ public class Board : MonoBehaviour
     private static void RemoveFirstOccurrence<T>(List<T> list, T item)
     {
         if (list == null) return;
-        int idx = list.IndexOf(item);
+        var idx = list.IndexOf(item);
         if (idx >= 0) list.RemoveAt(idx);
     }
     

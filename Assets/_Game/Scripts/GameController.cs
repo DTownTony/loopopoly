@@ -26,7 +26,9 @@ public class GameController : MonoBehaviour
     private int _currentLevelLoop;
     
     [SerializeField] private DiceRoller _diceRoller;
-    [SerializeField] private Board _board;
+    [SerializeField] private Transform _BoardHolder;
+    [SerializeField] private Board _boardPrefab;
+    private Board _board;
     
     public float LoopExponentialValue { get; private set; }= 1.05f;
     public float CombatExponentialValue { get; private set; } = 1.15f;
@@ -45,13 +47,14 @@ public class GameController : MonoBehaviour
         _musicSource.clip = LevelData.Music;
         _musicSource.Play();
         
+        _board = Instantiate(_boardPrefab, _BoardHolder);
         _board.BuildBoard();
         ChangeCurrentState(GameState.WaitingForPlayer);
         
         ResetLoops();
         GameView.SetStats(Player.Data);
     }
-
+    
     private void DiceRolled(int value)
     {
         PlayerMove(value);

@@ -28,7 +28,7 @@ public class BitmapBoardBuilder : EditorWindow
     [SerializeField] private Vector3 nodeScale = Vector3.one;
 
     [Header("Output")]
-    [SerializeField] private string prefabFolder = "Assets/Boards";
+    [SerializeField] private string prefabFolder = "Assets/_Game/Board";
     [SerializeField] private string boardNameOverride = "";  // defaults to Board_<textureName>
 
     [MenuItem("Tools/Build Board From Bitmap")]

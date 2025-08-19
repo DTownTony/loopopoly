@@ -149,4 +149,17 @@ public class Player : MonoBehaviour
     {
         return 50 + Mathf.RoundToInt(Data.Level.Value * 25f);
     }
+
+    public void PlacePlayer(BoardPosition position)
+    {
+        var endY = Model.position.y + 5f;
+        
+        transform.DOMove(position.transform.position, 0f);
+        Model.DOLocalMoveY(endY, 0.5f)
+            .From()
+            .SetDelay(0.25f)
+            .OnComplete(()=>_audioSource.PlayOneShot(_moveSound, .35f));
+        
+        CurrentPositionIndex = position.Index;
+    }
 }
