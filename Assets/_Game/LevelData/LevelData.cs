@@ -15,8 +15,14 @@ public class LevelData : ScriptableObject
         return _enemyData[(int)difficulty];
     }
 
-    public Board GetBoard(int index = -1)
+    public Board GetBoard(int index)
     {
-        return index > 0 ? _boards[index] : _boards[Random.Range(0, _boards.Length)];
+        return _boards[index];
+    }
+
+    public Board GetRandomBoard(out int index)
+    {
+        index = Random.Range(0, _boards.Length);
+        return _boards[index];
     }
 }
