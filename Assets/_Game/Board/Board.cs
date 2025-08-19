@@ -75,26 +75,26 @@ public class Board : MonoBehaviour
             }
 
             // CORNER TILE?
-            bool isCorner = _specialEventIndexes.Contains(i);
+            var isCorner = _specialEventIndexes.Contains(i);
             if (isCorner)
             {
                 BoardEvent boardEvent = null;
 
                 if (uniqueSpecialPool.Count > 0)
                 {
-                    // Use each special exactly once
-                    int last = uniqueSpecialPool.Count - 1;
+                    //Use each special once
+                    var last = uniqueSpecialPool.Count - 1;
                     boardEvent = uniqueSpecialPool[last];
                     uniqueSpecialPool.RemoveAt(last);
                 }
                 else if (_emptyCornerEventData != null && _emptyCornerEventData.Length > 0)
                 {
-                    // Fill remaining corners with “empty corner” events (duplicates allowed)
+                    //Fill remaining corners with random empty corner events
                     boardEvent = _emptyCornerEventData[Random.Range(0, _emptyCornerEventData.Length)];
                 }
                 else
                 {
-                    // Fallbacks to avoid null refs if emptyCornerEventData is empty
+                    //Fallbacks to avoid null refs if emptyCornerEventData is empty
                     if (_specialEventData != null && _specialEventData.Length > 0)
                         boardEvent = _specialEventData[Random.Range(0, _specialEventData.Length)];
                     else if (_eventData != null && _eventData.Length > 0)
@@ -168,29 +168,16 @@ public class Board : MonoBehaviour
 
         return _boardPositions[index];
     }
-
-#if UNITY_EDITOR
-    // Your editor-time adder that the builder calls per index
-    public void SetSpecialEventIndexes(int index)
-    {
-        if (index >= 0 && (index < _boardPositions?.Length))
-        {
-            if (!_specialEventIndexes.Contains(index))
-                _specialEventIndexes.Add(index);
-        }
-    }
-#endif
+    
 
     // ----------------- helpers -----------------
     private static void Shuffle<T>(List<T> list)
     {
         // Fisher-Yates using UnityEngine.Random
-        for (int i = list.Count - 1; i > 0; i--)
+        for (var i = list.Count - 1; i > 0; i--)
         {
-            int j = Random.Range(0, i + 1);
-            var tmp = list[i];
-            list[i] = list[j];
-            list[j] = tmp;
+            var j = Random.Range(0, i + 1);
+            (list[i], list[j]) = (list[j], list[i]);
         }
     }
 
@@ -200,4 +187,11 @@ public class Board : MonoBehaviour
         int idx = list.IndexOf(item);
         if (idx >= 0) list.RemoveAt(idx);
     }
+    
+#if UNITY_EDITOR
+    public void SetSpecialEventIndexes(int index)
+    { 
+        _specialEventIndexes.Add(index);
+    }
+#endif
 }

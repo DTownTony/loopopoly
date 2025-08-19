@@ -13,10 +13,11 @@ public class BitmapBoardBuilder : EditorWindow
     [SerializeField] private Texture2D sourceTexture;
 
     [Header("Placement")]
-    [SerializeField] private float space = 1f;              // distance between nodes
+    [SerializeField] private float xSpace = 1f;             // NEW: horizontal spacing (world X)
+    [SerializeField] private float zSpace = 1f;             // NEW: vertical spacing (world Z, image Y)
     [SerializeField] private float yLevel = 0f;             // Y height for all nodes
     [SerializeField] private bool centerOnOrigin = true;
-    [SerializeField] private bool invertY = true;           // Top row first (image-space) -> world Z
+    [SerializeField] private bool invertY = false;           // Top row first (image-space) -> world Z
 
     [Header("Path Options")]
     [SerializeField] private bool use4Connectivity = true;  // 4-neighbors (on-grid). Turn off for 8-neighbors.
@@ -44,7 +45,8 @@ public class BitmapBoardBuilder : EditorWindow
 
         EditorGUILayout.Space(6);
         EditorGUILayout.LabelField("Placement", EditorStyles.boldLabel);
-        space = EditorGUILayout.FloatField("Space", Mathf.Max(0.0001f, space));
+        xSpace = EditorGUILayout.FloatField("X Space", Mathf.Max(0.0001f, xSpace));
+        zSpace = EditorGUILayout.FloatField("Z Space (Image Y)", Mathf.Max(0.0001f, zSpace));
         yLevel = EditorGUILayout.FloatField("Y Level", yLevel);
         centerOnOrigin = EditorGUILayout.Toggle("Center On Origin", centerOnOrigin);
         invertY = EditorGUILayout.Toggle("Invert Y (Top Row First)", invertY);
@@ -76,7 +78,7 @@ public class BitmapBoardBuilder : EditorWindow
             "Red = start; Black/Blue = path; Blue marks special events; White/transparent ignored. " +
             "Nodes spawn CLOCKWISE for loops and are rotated based on step direction: " +
             "X moves -> yaw 0°/+X or 180°/−X, Y/diagonal -> yaw 90°. " +
-            "Specials are sent via Board.SetSpecialEventIndexes(int) per index.",
+            "Use X Space and Z Space for per-axis spacing.",
             MessageType.Info);
     }
 
@@ -194,6 +196,11 @@ public class BitmapBoardBuilder : EditorWindow
             }
         }
 
+        // FINAL SAFETY: drop closing duplicate if still present
+        int nodeCount = path.Count;
+        if (nodeCount > 1 && path[0] == path[nodeCount - 1])
+            nodeCount--;
+
         // Create root & children as Pos (i) — using prefab if provided
         string boardName = string.IsNullOrEmpty(boardNameOverride) ? $"Board_{sourceTexture.name}" : boardNameOverride;
         var root = new GameObject(boardName);
@@ -202,21 +209,21 @@ public class BitmapBoardBuilder : EditorWindow
         float xOffset = 0f, zOffset = 0f;
         if (centerOnOrigin)
         {
-            // center using full image bounds for consistent spacing from edges
-            xOffset = -((w - 1) * 0.5f * space);
-            zOffset = -((h - 1) * 0.5f * space);
+            // center using full image bounds for consistent spacing from edges (per-axis)
+            xOffset = -((w - 1) * 0.5f * xSpace);
+            zOffset = -((h - 1) * 0.5f * zSpace);
         }
 
-        var nodes = new Transform[path.Count];
+        var nodes = new Transform[nodeCount];
 
-        for (int i = 0; i < path.Count; i++)
+        for (int i = 0; i < nodeCount; i++)
         {
             var p = path[i];
             int row = invertY ? (h - 1 - p.y) : p.y;
 
-            float x = p.x * space + xOffset;
+            float x = p.x * xSpace + xOffset;   // NEW: xSpace
             float y = yLevel;
-            float z = row * space + zOffset;
+            float z = row  * zSpace + zOffset;  // NEW: zSpace
 
             GameObject childGo;
             if (placementPrefab != null)
@@ -289,8 +296,9 @@ public class BitmapBoardBuilder : EditorWindow
             TryAssignTransforms(board, "path",            nodes);
             TryAssignTransforms(board, "waypoints",       nodes);
 
-            TryAssignFloat(board, "space",   space);
-            TryAssignFloat(board, "spacing", space);
+            // Keep wiring a single "space"/"spacing" to Board using X spacing
+            TryAssignFloat(board, "space",   xSpace);
+            TryAssignFloat(board, "spacing", xSpace);
             TryAssignFloat(board, "yLevel",  yLevel);
 
             EditorUtility.SetDirty(board);
@@ -303,22 +311,16 @@ public class BitmapBoardBuilder : EditorWindow
         // --- Collect specials from BLUE pixels and send via SetSpecialEventIndexes(int) ---
         if (board != null)
         {
-            // dedupe specials so we don't spam duplicates
             var specials = new HashSet<int>();
-            for (int i = 0; i < path.Count; i++)
+            for (int i = 0; i < nodeCount; i++)
             {
                 var p = path[i];
                 int idxPix = p.y * w + p.x; // image-space index
                 if (idxPix >= 0 && idxPix < blueMask.Length && blueMask[idxPix])
-                {
                     specials.Add(i);
-                }
             }
 
-            // Try to clear existing specials first (if your Board has such a method or field)
             TryClearExistingSpecials(board);
-
-            // Add each special via SetSpecialEventIndexes(int)
             foreach (var idx in specials)
                 TryInvokeAddSpecialIndex(board, idx);
         }
