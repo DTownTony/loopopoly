@@ -7,7 +7,7 @@ public class Board : MonoBehaviour
     [SerializeField] private BoardPosition[] _boardPositions;
     [SerializeField] private GlobalEvents _globalEvents;
 
-    [SerializeField] private List<int> _specialEventIndexes = new List<int>();
+    [SerializeField] private List<int> _corners = new List<int>();
 
     public void BuildBoard()
     {
@@ -19,7 +19,6 @@ public class Board : MonoBehaviour
         
         var availableEvents = new List<BoardEvent>(_globalEvents.EventData);
         var specialEvents = new List<BoardEvent>(_globalEvents.SpecialEventData);
-        specialEvents.AddRange(_globalEvents.EmptyCornerEventData);
         
         for (var i = 0; i < _boardPositions.Length; i++)
         {
@@ -29,13 +28,13 @@ public class Board : MonoBehaviour
             //todo: weighted events
             if (i == 0)
             {
-                var boardEvent = _globalEvents.EmptyCornerEventData[0]; //todo: go piece
+                var boardEvent = _globalEvents.StartEvent;
                 var piece = boardEvent.BoardPiece[0];  //todo: refactor piece
                 boardPosition.SetEvent(boardEvent, piece);
                 continue;
             }
             
-            var isCorner = _specialEventIndexes.Contains(i);
+            var isCorner = _corners.Contains(i);
             if (isCorner)
             {
                 var boardEvent = specialEvents[Random.Range(0, specialEvents.Count)];

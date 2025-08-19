@@ -126,7 +126,7 @@ MonoBehaviour:
   - {fileID: 3605528129975455412}
   - {fileID: 4465943045320694303}
   _globalEvents: {fileID: 11400000, guid: 6e5fea344a18fb04aa3c46052f2dafd3, type: 2}
-  _specialEventIndexes: 0a000000140000001e000000
+  _corners: 0a000000140000001e000000
 --- !u!1001 &276613453939868780
 PrefabInstance:
   m_ObjectHideFlags: 0
