@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
     private int _currentLevelLoop;
     
     [SerializeField] private DiceRoller _diceRoller;
-
+    [SerializeField] private Transform _boardHolder;
     private Board _board;
     
     public float LoopExponentialValue { get; private set; }= 1.05f;
@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
             ? LevelData.GetRandomBoard(out gameData.BoardIndex) 
             : LevelData.GetBoard(gameData.BoardIndex);
 
-        _board = Instantiate(boardToSpawn);
+        _board = Instantiate(boardToSpawn,_boardHolder);
         _board.BuildBoard();
         
         Player.PlacePlayer(_board.GetBoardPosition(0));

@@ -4181,6 +4181,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5e8ff256c2b57874aaabef8166519420, type: 2}
   - {fileID: 11400000, guid: fc5defd0aa4304c4680902ae947387d8, type: 2}
   _diceRoller: {fileID: 1083093415}
+  _boardHolder: {fileID: 804853536}
   _musicSource: {fileID: 2039254375}
 --- !u!4 &598989631
 Transform:
