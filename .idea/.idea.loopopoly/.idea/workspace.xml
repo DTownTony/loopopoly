@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee11fd1e-09a8-42fe-8861-c8038be924cc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Board/Positions/Events/GoldEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Board/Positions/Events/GoldEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Board/Positions/Events/ItemEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Board/Positions/Events/ItemEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Board/Positions/Events/StatEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Board/Positions/Events/StatEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/CombatHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/CombatHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/UI/EventDetailDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/UI/EventDetailDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/UI/GrimReaperUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/UI/GrimReaperUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/UI/TreasureUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/UI/TreasureUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Board/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Board/Board.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Game.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +112,7 @@
       <workItem from="1754155871548" duration="2999000" />
       <workItem from="1754159422706" duration="1781000" />
       <workItem from="1754161234413" duration="1074000" />
+      <workItem from="1755547648805" duration="5850000" />
     </task>
     <servers />
   </component>

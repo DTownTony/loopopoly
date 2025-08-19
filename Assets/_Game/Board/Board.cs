@@ -4,15 +4,12 @@ using UnityEngine;
 public class Board : MonoBehaviour
 {
     [SerializeField] private BoardPosition[] _boardPositions;
-    
     [SerializeField] private BoardEvent[] _eventData;
     [SerializeField] private BoardEvent[] _specialEventData;
-
-    private readonly HashSet<int> _specialEventIndexes = new HashSet<int>()
-    {
-        10, 20, 30
-    };
-
+    [SerializeField] private BoardEvent[] _emptyCornerEventData;
+    
+    public  List<int> _specialEventIndexes = new List<int>();
+    
     public void BuildBoard()
     {
         var availableSpecialEvents = new List<BoardEvent>(_specialEventData);
@@ -84,4 +81,11 @@ public class Board : MonoBehaviour
         
         return _boardPositions[index];
     }
+    
+#if UNITY_EDITOR
+    public void SetSpecialEventIndexes(int index)
+    {
+                _specialEventIndexes.Add(index);
+    }
+#endif
 }
