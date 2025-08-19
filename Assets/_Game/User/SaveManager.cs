@@ -45,6 +45,12 @@ public class SaveManager
         return File.Exists(path);
     }
     
+    public static void DeleteSave(string saveName = "autosave")
+    {
+        var path = $"{_saveDataPath}{saveName}.save";
+        File.Delete(path);
+    }
+    
     #region Editor Tools
 
 #if UNITY_EDITOR
@@ -55,7 +61,7 @@ public class SaveManager
     }
 
     [MenuItem("Tools/Save/Delete Data")]
-    public static void Delete()
+    public static void DeleteAll()
     {
         PlayerPrefs.DeleteAll();
         Directory.Delete(Application.persistentDataPath, true);
