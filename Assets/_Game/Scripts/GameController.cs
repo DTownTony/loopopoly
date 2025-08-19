@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -37,16 +36,18 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+    
+    public void Setup(GameData gameData)
+    {
+        Debug.Log("Setup game: " + gameData.Tokens);
         LevelData = _loopsLevels[_currentLevelLoop];
         _musicSource.clip = LevelData.Music;
         _musicSource.Play();
         
         _board.BuildBoard();
         ChangeCurrentState(GameState.WaitingForPlayer);
-    }
-
-    private void Start()
-    {
+        
         ResetLoops();
         GameView.SetStats(Player.Data);
     }
@@ -116,8 +117,8 @@ public class GameController : MonoBehaviour
         _currentLevelLoop++;
         if (_currentLevelLoop >= _loopsLevels.Length)
         {
-            LoopExponentialValue += .0025f;
-            CombatExponentialValue += .0025f;
+            LoopExponentialValue += .0001f;
+            CombatExponentialValue += .0001f;
             _currentLevelLoop = 0;
         }
 
