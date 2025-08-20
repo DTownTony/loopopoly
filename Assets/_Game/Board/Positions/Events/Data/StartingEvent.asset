@@ -12,10 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a101733dc7b424f0f913aae544aa90c1, type: 3}
   m_Name: StartingEvent
   m_EditorClassIdentifier: 
-  Name: Tavern Chillin'
+  Name: Go!
   BoardPiece:
-  - {fileID: 5209276345633551725, guid: dfdbebf310fd5664d9f22fec89f3e029, type: 3}
-  - {fileID: 8479348985966430461, guid: c6dd0f270f77e0f46819b6d3303a9244, type: 3}
-  - {fileID: 5349692307392679744, guid: 865259e914d953c499c69dff6c4efe4e, type: 3}
-  - {fileID: 3265149439940323988, guid: ae37ca34f8fbbbe4494b790245f0a525, type: 3}
-  SpawnOneTime: 0
+  - {fileID: 5209276345633551725, guid: 483887ad91febf945a9339223c82ccbe, type: 3}
