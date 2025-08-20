@@ -321,15 +321,15 @@ public class BitmapBoardBuilder : EditorWindow
             float yaw;
             if (dy == 0 && dx != 0)
             {
-                // X move: +X -> 0°, -X -> 180°
-                yaw = dx > 0 ? 0f : 180f;
+                // X 
+                yaw = 0f;
             }
             else
             {
-                // Y (or diagonal fallback) -> 90°
-                yaw = 90f;
+                // Y 
+                yaw = -90f;
             }
-            t.localEulerAngles = new Vector3(0f, NormalizeYaw360(yaw), 0f);
+            t.localEulerAngles = new Vector3(0f, yaw, 0f);
 
             nodes[i] = t;
         }
@@ -375,7 +375,7 @@ public class BitmapBoardBuilder : EditorWindow
 
             TryClearExistingSpecials(board);
             foreach (var idx in specials)
-                TryInvokeAddSpecialIndex(board, idx);
+                TryInvokeAddCornerIndex(board, idx);
         }
 
         // Save as prefab
@@ -680,10 +680,10 @@ public class BitmapBoardBuilder : EditorWindow
         }
     }
 
-    private static void TryInvokeAddSpecialIndex(object board, int index)
+    private static void TryInvokeAddCornerIndex(object board, int index)
     {
         var t = board.GetType();
-        var m = t.GetMethod("SetSpecialEventIndexes", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+        var m = t.GetMethod("AddCornerIndexes", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
         if (m == null) return;
 
         var parms = m.GetParameters();
