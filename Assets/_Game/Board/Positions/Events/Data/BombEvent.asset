@@ -15,4 +15,4 @@ MonoBehaviour:
   Name: Bomb!
   BoardPiece:
   - {fileID: 5055539213916576850, guid: 153159e02b3dec348b2dda3bc3d4c1ff, type: 3}
-  _itemToAdd: {fileID: 11400000, guid: 845313918b5cf4cdf89054d3863ef2fe, type: 2}
+  _itemToAdd: {fileID: 11400000, guid: 35bb51183ea42274c97336d1c43dc5f7, type: 2}

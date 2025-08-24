@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f8a5fff12d3cf49a021de989f0fa5f, type: 3}
   m_Name: ItemEffect_Move_-3
   m_EditorClassIdentifier: Assembly-CSharp::MoveItemEffect
-  _amount: 1
+  _amount: -3

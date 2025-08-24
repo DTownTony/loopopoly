@@ -87,11 +87,11 @@ public class Player : MonoBehaviour
         GameController.Instance.ChangeCurrentState(GameState.Death);
     }
     
-    public void Move(List<BoardPosition> positions, Action onComplete)
+    public void Move(List<BoardPosition> positions, Action onComplete, bool movedForward)
     {
         Data.TotalMoves++;
         MovesLeft = positions.Count;
-        StartCoroutine(MoveSequence(positions, onComplete));
+        StartCoroutine(MoveSequence(positions, onComplete, movedForward));
     }
     
     public void MoveForCombat()
@@ -104,7 +104,7 @@ public class Player : MonoBehaviour
         Model.DOLocalMoveX(0, .1f);
     }
 
-    private IEnumerator MoveSequence(List<BoardPosition> positions, Action onComplete)
+    private IEnumerator MoveSequence(List<BoardPosition> positions, Action onComplete, bool movedForward)
     {
         const float moveDuration = .35f;
         var startY = Model.position.y;
@@ -121,7 +121,7 @@ public class Player : MonoBehaviour
             CurrentPositionIndex = position.Index;
 
             //loop completed
-            if (CurrentPositionIndex == 0)
+            if (CurrentPositionIndex == 0 && movedForward)
             {
                 var controller = GameController.Instance;
                 controller.IncreaseGameLoop();

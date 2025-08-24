@@ -54,18 +54,32 @@ public class Board : MonoBehaviour
     
     public List<BoardPosition> GetBoardPositions(int starting, int move)
     {
-        starting += 1;
-
         var positions = new List<BoardPosition>();
         var posIndex = 0;
 
         if (move < 0)
         {
+            starting -= 1;
+            
             //move backwards
-            //todo
+            for (var i = 0; i < Mathf.Abs(move); i++)
+            {
+                var index = starting + posIndex;
+                if (index < 0)
+                {
+                    //dont allow player to reduce loops
+                    break;
+                }
+
+                var position = GetBoardPosition(index);
+                positions.Add(position);
+                posIndex--;
+            }
         }
         else
         {
+            starting += 1;
+
             //move forward
             for (var i = 0; i < move; i++)
             {

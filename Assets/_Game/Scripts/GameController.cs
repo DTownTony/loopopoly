@@ -93,7 +93,7 @@ public class GameController : MonoBehaviour
         Player.Move(boardPosition, () =>
         {
             PositionEventTrigger(finalPosition);
-        });
+        }, value > 0);
     }
 
     private void PositionEventTrigger(BoardPosition position)
