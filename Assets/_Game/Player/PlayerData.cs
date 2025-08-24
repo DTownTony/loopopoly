@@ -28,12 +28,11 @@ public class PlayerData
         MaxHealth.OnValueChanged += value => { CurrentHealth.SetMaxValue(value); };
     }
 
+    //todo change to gear
+    /*
     private void ProcessItemBonuses(ItemData itemData, bool add)
     {
-        if (itemData is not StatItemData statItemData)
-            return;
-
-        foreach (var bonus in statItemData.StatBonuses)
+        foreach (var bonus in itemData.StatBonuses)
         {
             var value = add ? bonus.Amount : -bonus.Amount;
             switch (bonus.Type)
@@ -61,6 +60,7 @@ public class PlayerData
             }
         }
     }
+    */
     
     #region Items
     
@@ -75,16 +75,9 @@ public class PlayerData
     
     public void AddItem(ItemData itemData)
     {
-        if (itemData.IgnoreInventory)
-        {
-            //only process bonuses
-            ProcessItemBonuses(itemData, true);
-            return;
-        }
-
         var item = new Item(itemData);
         Items.Add(item);
-        ProcessItemBonuses(itemData, true);
+        //ProcessItemBonuses(itemData, true);
         OnItemAdded?.Invoke(item);
     }
     
@@ -104,7 +97,7 @@ public class PlayerData
             return;
         
         Items.Remove(itemToRemove);
-        ProcessItemBonuses(itemToRemove.Data, false);
+        //ProcessItemBonuses(itemToRemove.Data, false);
         OnItemRemoved?.Invoke(itemToRemove);
     }
     

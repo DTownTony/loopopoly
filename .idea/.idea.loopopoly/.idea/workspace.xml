@@ -6,8 +6,63 @@
   <component name="ChangeListManager">
     <list default="true" id="ee11fd1e-09a8-42fe-8861-c8038be924cc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Board/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Board/Board.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_armorer_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_armorer_1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_armorer_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_armorer_2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_armorer_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_armorer_3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_battleAxe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_battleAxe.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_bucket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_bucket.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_gaurdsHelmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_gaurdsHelmet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_knightsArmor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_knightsArmor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_leatherArmor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_leatherArmor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_magicHood.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_magicHood.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_magicNecklace.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_magicNecklace.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_rustyDagger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_rustyDagger.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Items/icon_sword.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Board/Positions/Events/Data/_GlobalEvents.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Board/Positions/Events/Data/_GlobalEvents.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_BattleAxe.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_BattleAxe.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_Bomb.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_Bomb.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_BucketHat.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_BucketHat.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_GuardHelm.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_GuardHelm.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_GuardianAngel.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_GuardianAngel.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_GuardsSword.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_GuardsSword.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_KnightArmor.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_KnightArmor.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_LeatherArmor.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_LeatherArmor.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_MagicCloak.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_MagicCloak.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_MagicNecklace.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_MagicNecklace.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_RustyDagger.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_RustyDagger.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_TaxVoucher.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Items/Data/Item_TaxVoucher.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Data/_ItemDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Items/Data/_ItemDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/ItemData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Items/ItemData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/StatItemData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/StatItemData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/UI/ItemCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Items/UI/ItemCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/UI/ItemCard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Items/UI/ItemCard.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Player/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Player/PlayerData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Shop/ShopItemCard Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Shop/ShopItemCard Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Shop/ShopItemCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Shop/ShopItemCard.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +78,8 @@
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.inputsystem@1.14.1/InputSystem/Plugins/XInput/XInputSupport.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.inputsystem@1.14.1/InputSystem/Plugins/iOS/IOSGameController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.inputsystem@1.14.1/InputSystem/Plugins/iOS/iOSSupport.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Game/LevelData/LoopLevelData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Items/Effects/HealItemEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Items/Effects/ItemEffect.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -50,7 +106,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.14f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\Nicho\Documents\GitHub\loopopoly -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Nicho\Documents\GitHub\loopopoly" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -62,7 +118,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.14f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\Nicho\Documents\GitHub\loopopoly -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Nicho\Documents\GitHub\loopopoly" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -101,6 +157,9 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="Attach to Device" type="UnityDevicePlayer" factoryName="UnityAttachToDevicePlayer">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -115,6 +174,8 @@
       <workItem from="1754159422706" duration="1781000" />
       <workItem from="1754161234413" duration="1074000" />
       <workItem from="1755547648805" duration="5850000" />
+      <workItem from="1755729151007" duration="4017000" />
+      <workItem from="1756052569280" duration="1785000" />
     </task>
     <servers />
   </component>

@@ -16,5 +16,6 @@ MonoBehaviour:
   Description: Skip paying taxes
   Icon: {fileID: 21300000, guid: dc56e2c13eeb44c4cb489f7faa8f266f, type: 3}
   Cost: 0
-  IgnoreInventory: 0
   Key: tax_voucher
+  DisableUse: 1
+  Effects: []

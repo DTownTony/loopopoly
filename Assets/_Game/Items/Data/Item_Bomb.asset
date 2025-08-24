@@ -16,5 +16,5 @@ MonoBehaviour:
   Description: Instantly defeat a non-boss enemy
   Icon: {fileID: 21300000, guid: fb00554d35250ab4eb8e1ce03d32575a, type: 3}
   Cost: 50
-  IgnoreInventory: 0
   Key: bomb
+  Effects: []

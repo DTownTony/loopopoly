@@ -85,7 +85,7 @@ public class GameController : MonoBehaviour
         OnGameStateChanged?.Invoke(CurrentGameState);
     }
 
-    private void PlayerMove(int value)
+    public void PlayerMove(int value)
     {
         ChangeCurrentState(GameState.PlayerMoving);
         var boardPosition = _board.GetBoardPositions(Player.CurrentPositionIndex, value);

@@ -58,20 +58,30 @@ public class Board : MonoBehaviour
 
         var positions = new List<BoardPosition>();
         var posIndex = 0;
-        for (var i = 0; i < move; i++)
-        {
-            var index = starting + posIndex;
-            if (index >= _boardPositions.Length)
-            {
-                // reset all
-                starting = 0;
-                posIndex = 0;
-                index = 0;
-            }
 
-            var position = GetBoardPosition(index);
-            positions.Add(position);
-            posIndex++;
+        if (move < 0)
+        {
+            //move backwards
+            //todo
+        }
+        else
+        {
+            //move forward
+            for (var i = 0; i < move; i++)
+            {
+                var index = starting + posIndex;
+                if (index >= _boardPositions.Length)
+                {
+                    // reset all
+                    starting = 0;
+                    posIndex = 0;
+                    index = 0;
+                }
+
+                var position = GetBoardPosition(index);
+                positions.Add(position);
+                posIndex++;
+            }
         }
 
         return positions;
