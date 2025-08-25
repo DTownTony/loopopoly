@@ -36,6 +36,7 @@ public class MoveToItemEffect : ItemEffect
             if (distance < 0 && _disableGoBack)
                 distance = (allPositions.Length - currentPosition) + position.Index;
 
+            distance = Mathf.Abs(distance);
             if (distance < closestDistance)
             {
                 closestDistance = distance;
