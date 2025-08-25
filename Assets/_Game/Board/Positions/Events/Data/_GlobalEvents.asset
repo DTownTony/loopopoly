@@ -15,6 +15,7 @@ MonoBehaviour:
   StartEvent: {fileID: 11400000, guid: 09cfa595331ef9649afb7fa55b930ad2, type: 2}
   EventData:
   - {fileID: 11400000, guid: 74454ec84797ea447bb2438889471238, type: 2}
+  - {fileID: 11400000, guid: 3e6f7a05ff21043e69962b7efb9266d1, type: 2}
   SpecialEventData:
   - {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}
   - {fileID: 11400000, guid: 607d9dd98b0724a498147c02147a86c8, type: 2}

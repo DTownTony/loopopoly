@@ -29,4 +29,9 @@ public class BoardPosition : MonoBehaviour
         //Debug.Log("Landed on position: " + Index + " with event: " + _event.Name);
         _event.Trigger();
     }
+
+    public bool IsSameEvent(BoardEvent boardEvent)
+    {
+        return _event == boardEvent;
+    }
 }

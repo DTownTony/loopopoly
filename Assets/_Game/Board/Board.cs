@@ -108,6 +108,11 @@ public class Board : MonoBehaviour
 
         return _boardPositions[index];
     }
+
+    public BoardPosition[] GetBoardPositions()
+    {
+        return _boardPositions;
+    }
     
 
     // ----------------- helpers -----------------

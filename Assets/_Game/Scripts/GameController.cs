@@ -21,14 +21,14 @@ public class GameController : MonoBehaviour
     public EventHandler EventHandler;
     public GameView GameView;
 
+    public Board Board { get; private set; }
     public LevelData LevelData { get; private set; }
     [SerializeField] private LevelData[] _loopsLevels;
     private int _currentLevelLoop;
     
     [SerializeField] private DiceRoller _diceRoller;
     [SerializeField] private Transform _boardHolder;
-    private Board _board;
-    
+
     public float LoopExponentialValue { get; private set; }= 1.05f;
     public float CombatExponentialValue { get; private set; } = 1.15f;
 
@@ -53,10 +53,10 @@ public class GameController : MonoBehaviour
             ? LevelData.GetRandomBoard(out gameData.BoardIndex) 
             : LevelData.GetBoard(gameData.BoardIndex);
 
-        _board = Instantiate(boardToSpawn,_boardHolder);
-        _board.BuildBoard();
+        Board = Instantiate(boardToSpawn,_boardHolder);
+        Board.BuildBoard();
         
-        Player.PlacePlayer(_board.GetBoardPosition(0));
+        Player.PlacePlayer(Board.GetBoardPosition(0));
         ChangeCurrentState(GameState.WaitingForPlayer);
         
         ResetLoops();
@@ -88,7 +88,12 @@ public class GameController : MonoBehaviour
     public void PlayerMove(int value)
     {
         ChangeCurrentState(GameState.PlayerMoving);
-        var boardPosition = _board.GetBoardPositions(Player.CurrentPositionIndex, value);
+        var boardPosition = Board.GetBoardPositions(Player.CurrentPositionIndex, value);
+        
+        //get same position
+        if (value == 0)
+            boardPosition.Add(Board.GetBoardPosition(Player.CurrentPositionIndex));
+        
         var finalPosition = boardPosition[^1];
         Player.Move(boardPosition, () =>
         {
@@ -134,7 +139,7 @@ public class GameController : MonoBehaviour
         }
 
         LevelData = _loopsLevels[_currentLevelLoop];
-        _board.BuildBoard();
+        Board.BuildBoard();
         StartCoroutine(DelayNextMusic());
         
         OnLoopsChanged?.Invoke(_loops, LevelData.MaxLoops);

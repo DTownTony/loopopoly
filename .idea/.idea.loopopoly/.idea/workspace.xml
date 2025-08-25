@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee11fd1e-09a8-42fe-8861-c8038be924cc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Board/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Board/Board.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Board/Positions/Events/Data/BombEvent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Board/Positions/Events/Data/BombEvent.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Effects/Data/Move/ItemEffect_Move_-1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Items/Effects/Data/Move/ItemEffect_Move_-1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Effects/Data/Move/ItemEffect_Move_-3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Items/Effects/Data/Move/ItemEffect_Move_-3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/Effects/Data/Move/ItemEffect_Move_-5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Items/Effects/Data/Move/ItemEffect_Move_-5.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/GameController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="ee11fd1e-09a8-42fe-8861-c8038be924cc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +116,7 @@
       <workItem from="1754161234413" duration="1074000" />
       <workItem from="1755547648805" duration="5850000" />
       <workItem from="1755729151007" duration="4017000" />
-      <workItem from="1756052569280" duration="2859000" />
+      <workItem from="1756052569280" duration="3091000" />
     </task>
     <servers />
   </component>
