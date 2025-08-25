@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ItemEffectMoveToGo
   m_EditorClassIdentifier: Assembly-CSharp::MoveToItemEffect
   _eventToMoveTo: {fileID: 11400000, guid: 09cfa595331ef9649afb7fa55b930ad2, type: 2}
+  _disableGoBack: 1
