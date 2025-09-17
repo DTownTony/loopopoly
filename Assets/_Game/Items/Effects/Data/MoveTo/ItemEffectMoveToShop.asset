@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ItemEffectMoveToShop
   m_EditorClassIdentifier: Assembly-CSharp::MoveToItemEffect
   _eventToMoveTo: {fileID: 11400000, guid: 3e6f7a05ff21043e69962b7efb9266d1, type: 2}
+  _disableGoBack: 0
