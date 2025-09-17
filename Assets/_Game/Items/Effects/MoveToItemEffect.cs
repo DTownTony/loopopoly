@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Effects/MoveToItemEffect")]
@@ -10,13 +9,13 @@ public class MoveToItemEffect : ItemEffect
     
     public override void ApplyEffect()
     {
-        var currentPosition = GameController.Instance.Player.CurrentPositionIndex;
-        var position = GetBoardPosition(currentPosition, out var distance);
+        var currentPosition = GameController.Instance.Player.CurrentPositionIndex; 
+        GetBoardPosition(currentPosition, out var distance);
         
         GameController.Instance.PlayerMove(distance);
     }
 
-    private BoardPosition GetBoardPosition(int currentPosition, out int distanceToMove)
+    private void GetBoardPosition(int currentPosition, out int distanceToMove)
     {
         var eventPositions = new List<BoardPosition>();
 
@@ -28,23 +27,30 @@ public class MoveToItemEffect : ItemEffect
         }
         
         //find nearest position
-        var closestDistance = int.MaxValue;
-        BoardPosition closestPosition = null;
+        var closestDistancePositive = int.MaxValue;
+        var closestDistanceNegative = -int.MaxValue;
         foreach (var position in eventPositions)
         {
             var distance = position.Index - currentPosition;
+            //loop around to start
             if (distance < 0 && _disableGoBack)
                 distance = (allPositions.Length - currentPosition) + position.Index;
-
-            distance = Mathf.Abs(distance);
-            if (distance < closestDistance)
+            
+            var isPositive = distance >= 0;
+            if (isPositive)
             {
-                closestDistance = distance;
-                closestPosition = position;
+                if (distance < closestDistancePositive)
+                    closestDistancePositive = distance;
+            }
+            else
+            {
+                if (distance > closestDistanceNegative)
+                    closestDistanceNegative = distance;
             }
         }
-
-        distanceToMove = closestDistance;
-        return closestPosition;
+        
+        distanceToMove = closestDistanceNegative > -int.MaxValue && Mathf.Abs(closestDistanceNegative) < closestDistancePositive 
+            ? closestDistanceNegative 
+            : closestDistancePositive;
     }
 }
