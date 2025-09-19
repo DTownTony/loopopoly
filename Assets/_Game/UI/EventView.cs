@@ -9,6 +9,8 @@ public class EventView : MonoBehaviour
     [SerializeField] private KingsTaxesUI _kingsTaxesUI;
     [SerializeField] private EventUI _basicEventUI;
 
+    [SerializeField] private ChoiceEventUI _choiceEventUI;
+    
     //todo: make base class for all event views
     
     public void ShowShop()
@@ -45,6 +47,12 @@ public class EventView : MonoBehaviour
     {
         _canvas.enabled = true;
         _basicEventUI.Show(args);
+    }
+
+    public void ShowChoiceEvent(ChoiceEventUIArgs args)
+    {
+        _canvas.enabled = true;
+        _choiceEventUI.Show(args);
     }
 
     public void Hide()
