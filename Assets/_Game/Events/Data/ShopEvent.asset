@@ -15,3 +15,4 @@ MonoBehaviour:
   Name: Ye Olde Shop
   BoardPiece:
   - {fileID: 915585209983047097, guid: 0b54d1d1efd07e748817e007dde05933, type: 3}
+  _itemDatabase: {fileID: 11400000, guid: 681629a476a19428089a3b074c223f89, type: 2}
