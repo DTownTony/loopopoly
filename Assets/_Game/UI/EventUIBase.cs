@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,6 +25,7 @@ public abstract class EventUIBase<T> : MonoBehaviour where T : EventUIArgsBase
     
     protected virtual void Hide()
     {
+        _currentArgs.OnHide?.Invoke();
         gameObject.SetActive(false);
         _eventView.Hide();
         GameController.Instance.ChangeCurrentState(GameState.WaitingForPlayer);
@@ -35,6 +37,8 @@ public class EventUIArgsBase
     public string Header;
     public Sprite Icon;
     public string Description;
+
+    public Action OnHide;
 
     public EventUIArgsBase(string header, Sprite icon, string description)
     {

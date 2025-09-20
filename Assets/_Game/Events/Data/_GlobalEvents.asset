@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GlobalEvents
   StartEvent: {fileID: 11400000, guid: 09cfa595331ef9649afb7fa55b930ad2, type: 2}
   EventData:
-  - {fileID: 11400000, guid: 74454ec84797ea447bb2438889471238, type: 2}
-  - {fileID: 11400000, guid: 3e6f7a05ff21043e69962b7efb9266d1, type: 2}
   - {fileID: 11400000, guid: a5208a625c9664af19ff182f2511b90e, type: 2}
   SpecialEventData:
   - {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}

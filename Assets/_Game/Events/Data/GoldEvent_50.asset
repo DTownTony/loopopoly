@@ -16,6 +16,7 @@ MonoBehaviour:
   BoardPiece:
   - {fileID: 2165125963539365166, guid: c1963109e095f5c458e64850192df9be, type: 3}
   _descriptions:
-  - 1
-  - 2
+  - You tripped on a rock and found gold underneath!
+  - Someone dropped a pouch of gold... It's yours now!
   _goldAmount: 50
+  _icon: {fileID: 21300000, guid: f0f5b514f8649ed47a33512205991e32, type: 3}
