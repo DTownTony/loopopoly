@@ -36,7 +36,7 @@ public class EventUIArgsBase
     public Sprite Icon;
     public string Description;
 
-    protected EventUIArgsBase(string header, Sprite icon, string description)
+    public EventUIArgsBase(string header, Sprite icon, string description)
     {
         Header = header;
         Icon = icon;

@@ -5,6 +5,6 @@ public class TreasureEvent : BoardEvent
 {
     public override void Trigger()
     {
-        GameController.Instance.EventHandler.ShowTreasure();
+        GameController.Instance.EventHandler.EventView.ShowTreasure();
     }
 }

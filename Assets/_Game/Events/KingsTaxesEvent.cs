@@ -12,7 +12,7 @@ public class KingsTaxesEvent : BoardEvent
     {
         _ownedGoldAmount = Mathf.RoundToInt(GameController.Instance.Player.Data.Gold.Value * .5f);
         
-        GameController.Instance.EventHandler.ShowChoiceEvent(new ChoiceEventUIArgs(
+        GameController.Instance.EventHandler.EventView.ShowChoiceEvent(new ChoiceEventUIArgs(
             Name, _sprite, $"The king has demanded taxes be paid. You owe {_ownedGoldAmount} gold!", 
             UseItem, PayTax,
             $"Use {_stopEventItem.Name}!", 

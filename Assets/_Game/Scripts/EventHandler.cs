@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class EventHandler : MonoBehaviour
 {
+    public EventView EventView;
+    
     [SerializeField] private GameController _gameController;
     [SerializeField] private CombatHandler _combatHandler;
     [SerializeField] private Player _player;
-    [SerializeField] private EventView _eventView;
 
     [Header("Audio")] 
     [SerializeField] private AudioSource _audioSource;
@@ -54,25 +55,6 @@ public class EventHandler : MonoBehaviour
     {
         _combatHandler.StartCombat(GameController.Instance.LevelData.GetEnemyDifficulty(difficulty));
     }
-
-    #region UI Views
-
-    public void ShowChoiceEvent(ChoiceEventUIArgs args)
-    {
-        _eventView.ShowChoiceEvent(args);
-    }
-    
-    public void ShowTreasure()
-    {
-        _eventView.ShowTreasure();
-    }
-
-    public void ShowItemsEvent(ItemsEventUIArgs args)
-    {
-        _eventView.ShowItemsEvent(args);
-    }
-
-    #endregion
 }
 
 public enum StatType

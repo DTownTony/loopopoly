@@ -20,7 +20,7 @@ public class GrimReaperEvent : BoardEvent
         for (var i = 0; i < GameController.Instance.MaxLoops; i++)
             _currentDeathChance += Random.Range(.1f, .15f);
 
-        GameController.Instance.EventHandler.ShowChoiceEvent(new ChoiceEventUIArgs(
+        GameController.Instance.EventHandler.EventView.ShowChoiceEvent(new ChoiceEventUIArgs(
             Name, _grimReaperSprite, "The grim reaper has come to visit!", 
             UseItem, TryLuck,
             $"Use {_stopEventItem.Name}!", 

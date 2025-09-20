@@ -9,7 +9,7 @@ public class BlackSmithEvent : BoardEvent
     public override void Trigger()
     {
         //todo
-        GameController.Instance.EventHandler.ShowItemsEvent(
+        GameController.Instance.EventHandler.EventView.ShowItemsEvent(
             new ItemsEventUIArgs(Name, null, null, _items));
     }
 }

@@ -17,7 +17,7 @@ public class ShopEvent : BoardEvent
             items.Add(randomItem);
         }
         
-        GameController.Instance.EventHandler.ShowItemsEvent(new ItemsEventUIArgs(
+        GameController.Instance.EventHandler.EventView.ShowItemsEvent(new ItemsEventUIArgs(
             Name, null, null, items));
     }
 }
