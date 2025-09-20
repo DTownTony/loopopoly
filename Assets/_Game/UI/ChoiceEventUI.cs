@@ -1,6 +1,6 @@
+using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ChoiceEventUI : MonoBehaviour
@@ -36,6 +36,8 @@ public class ChoiceEventUI : MonoBehaviour
         
         _positiveText.SetText(_currentArgs.PositiveButtonString);
         _negativeText.SetText(_currentArgs.NegativeButtonString);
+        
+        _positiveButton.interactable = _currentArgs.PositiveButtonEnabled;
     }
     
     private void PositiveButtonPressed()
@@ -67,11 +69,14 @@ public class ChoiceEventUIArgs
     public string PositiveButtonString;
     public string NegativeButtonString;
     
-    public UnityAction PositiveButtonEvent;
-    public UnityAction NegativeButtonEvent;
+    public Action PositiveButtonEvent;
+    public Action NegativeButtonEvent;
+
+    public bool PositiveButtonEnabled;
 
     public ChoiceEventUIArgs(string header, Sprite icon, string description, 
-        UnityAction positiveButtonEvent, UnityAction negativeButtonEvent, string positiveButtonString, string negativeButtonString)
+        Action positiveButtonEvent, Action negativeButtonEvent, string positiveButtonString, string negativeButtonString,
+        bool positiveButtonEnabled = true)
     {
         Header = header;
         Icon = icon;
@@ -80,5 +85,7 @@ public class ChoiceEventUIArgs
         NegativeButtonEvent = negativeButtonEvent;
         PositiveButtonString = positiveButtonString;
         NegativeButtonString = negativeButtonString;
+        
+        PositiveButtonEnabled = positiveButtonEnabled;
     }
 }

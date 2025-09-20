@@ -9,8 +9,8 @@ public class EventHandler : MonoBehaviour
 
     [Header("Audio")] 
     [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private  AudioClip _goldSound;
-    [SerializeField] private  AudioClip _bonusSound;
+    [SerializeField] private AudioClip _goldSound;
+    [SerializeField] private AudioClip _bonusSound;
 
     public void AddGold(int amount)
     {
@@ -62,9 +62,9 @@ public class EventHandler : MonoBehaviour
         _eventView.ShowShop();
     }
 
-    public void ShowGrimReaper(GrimReaperUIArgs args)
+    public void ShowChoiceEvent(ChoiceEventUIArgs args)
     {
-        _eventView.ShowGrimReaper(args);
+        _eventView.ShowChoiceEvent(args);
     }
     
     public void ShowKingsTaxes(KingsTaxesUIArgs args)
