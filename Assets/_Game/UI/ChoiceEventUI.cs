@@ -17,7 +17,7 @@ public class ChoiceEventUI : EventUIBase<ChoiceEventUIArgs>
         _negativeButton.onClick.AddListener(NegativeButtonPressed);
     }
 
-    protected override void Show(ChoiceEventUIArgs args)
+    public override void Show(ChoiceEventUIArgs args)
     {
         base.Show(args);
         

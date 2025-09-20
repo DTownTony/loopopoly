@@ -57,19 +57,9 @@ public class EventHandler : MonoBehaviour
 
     #region UI Views
 
-    public void ShowShop()
-    {
-        _eventView.ShowShop();
-    }
-
     public void ShowChoiceEvent(ChoiceEventUIArgs args)
     {
         _eventView.ShowChoiceEvent(args);
-    }
-    
-    public void ShowKingsTaxes(KingsTaxesUIArgs args)
-    {
-        _eventView.ShowKingsTaxes(args);
     }
     
     public void ShowTreasure()
@@ -77,9 +67,9 @@ public class EventHandler : MonoBehaviour
         _eventView.ShowTreasure();
     }
 
-    public void ShowBasicEvent(EventUIArgs args)
+    public void ShowItemsEvent(ItemsEventUIArgs args)
     {
-        _eventView.ShowBasicEvent(args);
+        _eventView.ShowItemsEvent(args);
     }
 
     #endregion

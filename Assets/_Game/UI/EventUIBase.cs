@@ -12,7 +12,7 @@ public abstract class EventUIBase<T> : MonoBehaviour where T : EventUIArgsBase
 
     protected T _currentArgs;
 
-    protected virtual void Show(T args)
+    public virtual void Show(T args)
     {
         _currentArgs = args;
         gameObject.SetActive(true);
@@ -22,7 +22,7 @@ public abstract class EventUIBase<T> : MonoBehaviour where T : EventUIArgsBase
         _descriptionText.SetText(_currentArgs.Description);
     }
     
-    protected void Hide()
+    protected virtual void Hide()
     {
         gameObject.SetActive(false);
         _eventView.Hide();
@@ -36,7 +36,7 @@ public class EventUIArgsBase
     public Sprite Icon;
     public string Description;
 
-    public EventUIArgsBase(string header, Sprite icon, string description)
+    protected EventUIArgsBase(string header, Sprite icon, string description)
     {
         Header = header;
         Icon = icon;

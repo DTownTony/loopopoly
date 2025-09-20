@@ -7,10 +7,8 @@ public class HealingTentEvent : BoardEvent
     [SerializeField] private List<ItemData> _items = new List<ItemData>();
     public override void Trigger()
     {
-        GameController.Instance.EventHandler.ShowBasicEvent(new EventUIArgs()
-        {
-            Title = Name,
-            Items = new List<ItemData>(_items),
-        });
+        //todo
+        GameController.Instance.EventHandler.ShowItemsEvent(
+            new ItemsEventUIArgs(Name, null, null, _items));
     }
 }

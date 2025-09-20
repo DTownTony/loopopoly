@@ -1,20 +1,13 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EventUI : MonoBehaviour
+public class ItemsEventUI : EventUIBase<ItemsEventUIArgs>
 {
-    [SerializeField] private EventView _eventView;
-    [SerializeField] private TMP_Text _headerText;
     [SerializeField] private Transform _container;
     [SerializeField] private Button _skipButton;
     
     [SerializeField] private ShopItemCard _itemCardPrefab;
-    
-    [Header("Audio")] 
-    [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private AudioClip _goldSound;
     
     private readonly List<ShopItemCard> _items = new List<ShopItemCard>();
 
@@ -22,11 +15,10 @@ public class EventUI : MonoBehaviour
     {
         _skipButton.onClick.AddListener(SkipButtonPressed);
     }
-    
-    public void Show(EventUIArgs args)
+
+    public override void Show(ItemsEventUIArgs args)
     {
-        _headerText.SetText(args.Title);
-        gameObject.SetActive(true);
+        base.Show(args);
         
         for (var i = 0; i < args.Items.Count; i++)
         {
@@ -44,24 +36,26 @@ public class EventUI : MonoBehaviour
 
     private void Purchased()
     {
-        _audioSource.PlayOneShot(_goldSound, 1f);
+        //.PlayOneShot(_goldSound, 1f);
         Hide();
     }
-    
-    private void Hide()
+
+    protected override void Hide()
     {
         foreach (var item in _items)
             Destroy(item.gameObject);
         _items.Clear();
         
-        gameObject.SetActive(false);
-        _eventView.Hide();
-        GameController.Instance.ChangeCurrentState(GameState.WaitingForPlayer);
+        base.Hide();
     }
 }
 
-public class EventUIArgs
+public class ItemsEventUIArgs : EventUIArgsBase
 {
-    public string Title;
-    public List<ItemData> Items = new List<ItemData>();
+    public readonly List<ItemData> Items;
+
+    public ItemsEventUIArgs(string header, Sprite icon, string description, List<ItemData> items) : base(header, icon, description)
+    {
+        Items = items;
+    }
 }

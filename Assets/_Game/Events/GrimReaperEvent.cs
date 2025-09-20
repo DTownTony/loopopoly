@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 public class GrimReaperEvent : BoardEvent
 {
     [SerializeField] private Sprite _grimReaperSprite;
-    [SerializeField] private ItemData _itemNeededToStopEvent;
+    [SerializeField] private ItemData _stopEventItem;
     
     [Header("Audio")]
     [SerializeField] private AudioClip _skipSound;
@@ -21,16 +21,16 @@ public class GrimReaperEvent : BoardEvent
             _currentDeathChance += Random.Range(.1f, .15f);
 
         GameController.Instance.EventHandler.ShowChoiceEvent(new ChoiceEventUIArgs(
-            "Grim Reaper", _grimReaperSprite, "The grim reaper has come to visit!", 
+            Name, _grimReaperSprite, "The grim reaper has come to visit!", 
             UseItem, TryLuck,
-            "Use Guardian Angel!", 
+            $"Use {_stopEventItem.Name}!", 
             "Try My Luck: " + (_currentDeathChance * 100).ToString("F2") + "% chance of death",
-            GameController.Instance.Player.Data.HasItem(_itemNeededToStopEvent.Key)));
+            GameController.Instance.Player.Data.HasItem(_stopEventItem.Key)));
     }
 
     private void UseItem()
     {
-        GameController.Instance.Player.Data.RemoveItem(_itemNeededToStopEvent.Key);
+        GameController.Instance.Player.Data.RemoveItem(_stopEventItem.Key);
         //_audioSource.PlayOneShot(_skipSound, 1f);
     }
 

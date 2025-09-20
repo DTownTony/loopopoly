@@ -3,43 +3,22 @@ using UnityEngine;
 public class EventView : MonoBehaviour
 {
     [SerializeField] private Canvas _canvas;
-    [SerializeField] private ShopUI _shop;
+    
     [SerializeField] private TreasureUI _treasureUI;
-    [SerializeField] private KingsTaxesUI _kingsTaxesUI;
-    [SerializeField] private EventUI _basicEventUI;
-
+    
+    [SerializeField] private ItemsEventUI _itemsEventUI;
     [SerializeField] private ChoiceEventUI _choiceEventUI;
-    
-    //todo: make base class for all event views
-    
-    public void ShowShop()
-    {
-        _canvas.enabled = true;
-        _shop.Show();
-    }
     
     public void ShowTreasure()
     {
         _canvas.enabled = true;
         _treasureUI.Show();
     }
-    
-    public void ShowKingsTaxes(KingsTaxesUIArgs args)
-    {
-        _canvas.enabled = true;
-        _kingsTaxesUI.Show(args);
-    }
 
-    public void ShowHealingTent()
+    public void ShowItemsEvent(ItemsEventUIArgs args)
     {
         _canvas.enabled = true;
-        
-    }
-
-    public void ShowBasicEvent(EventUIArgs args)
-    {
-        _canvas.enabled = true;
-        _basicEventUI.Show(args);
+        _itemsEventUI.Show(args);
     }
 
     public void ShowChoiceEvent(ChoiceEventUIArgs args)

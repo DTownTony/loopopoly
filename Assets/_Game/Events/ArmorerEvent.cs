@@ -8,10 +8,8 @@ public class ArmorerEvent : BoardEvent
     
     public override void Trigger()
     {
-        GameController.Instance.EventHandler.ShowBasicEvent(new EventUIArgs()
-        {
-            Title = Name,
-            Items = new List<ItemData>(_items)
-        });
+        //todo
+        GameController.Instance.EventHandler.ShowItemsEvent(
+            new ItemsEventUIArgs(Name, null, null, _items));
     }
 }
