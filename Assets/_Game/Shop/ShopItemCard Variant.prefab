@@ -327,7 +327,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 141
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7651386973144937248, guid: 0f265d8eb775e4ff0ae43241ae77a932, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3851452007870458915, guid: 0f265d8eb775e4ff0ae43241ae77a932, type: 3}
@@ -374,7 +375,6 @@ MonoBehaviour:
   _itemIcon: {fileID: 3292516858545020348}
   _button: {fileID: 7637129184562649486}
   _costText: {fileID: 407417969297392929}
-  _buyButton: {fileID: 7637129184562649486}
 --- !u!114 &3292516858545020348 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4937168307098620912, guid: 0f265d8eb775e4ff0ae43241ae77a932, type: 3}

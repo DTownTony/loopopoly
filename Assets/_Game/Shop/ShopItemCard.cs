@@ -9,12 +9,7 @@ public class ShopItemCard : ItemCard
     [SerializeField] private TMP_Text _costText;
     
     private int _cost;
-
-    private void Awake()
-    {
-        _button.onClick.AddListener(BuyButtonPressed);
-    }
-
+    
     public override void SetItem(Item item)
     {
         base.SetItem(item);
@@ -23,14 +18,14 @@ public class ShopItemCard : ItemCard
         _costText.SetText(_cost.ToString());
     }
     
-    private void BuyButtonPressed()
+    protected override void ButtonPressed()
     {
-        if (GameController.Instance.Player.Data.Gold.Value >= _cost)
-        {
-            GameController.Instance.Player.Data.Gold.Value -= _cost;
-            GameController.Instance.Player.Data.AddItem(Item.Data);
-            OnPurchase?.Invoke();
-            Destroy(gameObject);
-        }
+        if (GameController.Instance.Player.Data.Gold.Value < _cost) 
+            return;
+        
+        GameController.Instance.Player.Data.Gold.Value -= _cost;
+        GameController.Instance.Player.Data.AddItem(Item.Data);
+        OnPurchase?.Invoke();
+        Destroy(gameObject);
     }
 }

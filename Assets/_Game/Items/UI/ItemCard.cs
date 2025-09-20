@@ -28,11 +28,11 @@ public class ItemCard : MonoBehaviour
         _button.enabled = !item.Data.DisableUse;
     }
     
-    private void ButtonPressed()
+    protected virtual void ButtonPressed()
     {
         foreach (var effect in Item.Data.Effects)
             effect.ApplyEffect();
-        
+
         GameController.Instance.Player.Data.RemoveItem(Item.Data.Key);
     }
 }
