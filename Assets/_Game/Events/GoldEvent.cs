@@ -6,6 +6,8 @@ public class GoldEvent : BoardEvent
     [SerializeField] private string[] _descriptions;
     [SerializeField] private int _goldAmount;
     [SerializeField] private Sprite _icon;
+
+    [SerializeField] private Color _textColor;
     
     public override void Trigger()
     {
@@ -16,8 +18,8 @@ public class GoldEvent : BoardEvent
         
         args.OnHide += () =>
         {
-            var col = new Color32(255, 220, 0,255);
-            GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"Gold +{_goldAmount}!", col: col);
+            GameController.Instance.GameView.EventDetailDisplay.ShowMessage(
+                _goldAmount > 0 ? $"Gold +{_goldAmount}!" : $"Gold {_goldAmount}", col: _textColor);
         };
         GameController.Instance.EventHandler.EventView.ShowInfoEvent(args);
     }
