@@ -13,7 +13,8 @@ public class GameController : MonoBehaviour
     
     public GameState CurrentGameState { get; private set; } = GameState.Bootstrap;
 
-    public int MaxLoops { get; private set; }
+    public int MaxLoops => LevelData.MaxLoops;
+    public int TotalLoopCount { get; private set; }
     
     private int _loops;
 
@@ -116,7 +117,7 @@ public class GameController : MonoBehaviour
     public void IncreaseGameLoop()
     {
         _loops++;
-        MaxLoops++;
+        TotalLoopCount++;
         OnLoopsChanged?.Invoke(_loops, LevelData.MaxLoops);
     }
     

@@ -17,7 +17,7 @@ public class GrimReaperEvent : BoardEvent
     public override void Trigger()
     {
         _currentDeathChance = .25f;
-        for (var i = 0; i < GameController.Instance.MaxLoops; i++)
+        for (var i = 0; i < GameController.Instance.TotalLoopCount; i++)
             _currentDeathChance += Random.Range(.1f, .15f);
 
         GameController.Instance.EventHandler.EventView.ShowChoiceEvent(new ChoiceEventUIArgs(
@@ -45,7 +45,7 @@ public class GrimReaperEvent : BoardEvent
         else
         {
             var player = GameController.Instance.Player;
-            var damage = Mathf.RoundToInt(player.Data.CurrentHealth.Value * .75f);
+            var damage = Mathf.RoundToInt(player.Data.CurrentHealth.Value * .9f);
             player.Data.CurrentHealth.Value -= damage;
             //_audioSource.PlayOneShot(_hurtSound, 1f);
         }

@@ -22,7 +22,7 @@ public class DeathView : MonoBehaviour
     public void Show()
     {
         gameObject.SetActive(true);
-        _statsText.SetText($"Total Loops {GameController.Instance.MaxLoops}\n" +
+        _statsText.SetText($"Total Loops {GameController.Instance.TotalLoopCount}\n" +
                            $"Bosses Defeated: {GameController.Instance.Player.Data.BossDefeated}\n" +
                            $"Total Dice Rolls: {GameController.Instance.Player.Data.TotalMoves}");
         

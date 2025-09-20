@@ -134,10 +134,10 @@ public class Player : MonoBehaviour
                 }
                 
                 //loop gold
-                var goldAmount = 100 + (50 * controller.MaxLoops);
+                var goldAmount = 100 + (50 * controller.TotalLoopCount);
                 Data.Gold.Value += goldAmount;
                 var col = new Color32(255, 220, 0,255);
-                controller.GameView.EventDetailDisplay.ShowMessage($"Loop {GameController.Instance.MaxLoops}\nGold +{goldAmount}!",col:col);
+                controller.GameView.EventDetailDisplay.ShowMessage($"Loop {GameController.Instance.TotalLoopCount}\nGold +{goldAmount}!",col:col);
                 _audioSource.PlayOneShot(_loopSound, 1f);
             }
         }

@@ -22,8 +22,10 @@ public class GameView : MonoBehaviour
     private void Start()
     {
         GameController.Instance.OnGameStateChanged += GameStateChanged;
-        GameController.Instance.OnLoopsChanged += LoopsChanged; //todo: fix race condition
+        GameController.Instance.OnLoopsChanged += LoopsChanged;
         GameController.Instance.Player.Data.Level.OnValueChanged += LevelUp;
+        
+        LoopsChanged(0, GameController.Instance.MaxLoops);
     }
     
     private void GameStateChanged(GameState newState)

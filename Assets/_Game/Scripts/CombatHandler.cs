@@ -22,7 +22,7 @@ public class CombatHandler : MonoBehaviour
     public void StartCombat(EnemyData enemyData)
     {
         GameController.Instance.ChangeCurrentState(GameState.Combat);
-        _enemy = new Enemy(enemyData, GameController.Instance.MaxLoops);
+        _enemy = new Enemy(enemyData, GameController.Instance.TotalLoopCount);
         
         var position = _player.transform.position;
         _enemy.Model = Instantiate(enemyData.Prefab, position, Quaternion.identity);
@@ -118,7 +118,7 @@ public class CombatHandler : MonoBehaviour
         //player won. Loss is handled with Player
         _player.MoveOutCombat();
         _player.Data.Experience.Value += _enemy.Experience;
-        _player.Data.Gold.Value += 25 + (25 * GameController.Instance.MaxLoops);
+        _player.Data.Gold.Value += 25 + (25 * GameController.Instance.TotalLoopCount);
 
         if (_enemy.IsBoss)
         {
