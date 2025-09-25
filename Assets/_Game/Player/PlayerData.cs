@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerData
 {
+    public int TokensEarned;
     public List<Item> Items = new List<Item>();
     
     public PlayerValue Experience;

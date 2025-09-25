@@ -15,5 +15,5 @@ MonoBehaviour:
   Name: Kings Taxes
   BoardPiece:
   - {fileID: 5349692307392679744, guid: 71ef10897b9f3f248932cd9fc1dfe47a, type: 3}
-  SpawnOneTime: 0
+  _sprite: {fileID: 21300000, guid: 4f299d5866b4f8f4aacd730b8cff89e1, type: 3}
   _stopEventItem: {fileID: 11400000, guid: 2e9ebaf3cb2ae421898854e7cb6c1690, type: 2}

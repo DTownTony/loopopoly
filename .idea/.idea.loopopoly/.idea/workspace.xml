@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee11fd1e-09a8-42fe-8861-c8038be924cc" name="Changes" comment="" />
+    <list default="true" id="ee11fd1e-09a8-42fe-8861-c8038be924cc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Events/Data/Special/KingsTaxesEvent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Events/Data/Special/KingsTaxesEvent.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/User/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/User/GameData.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,8 +24,12 @@
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.inputsystem@1.14.1/InputSystem/Plugins/XInput/XInputSupport.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.inputsystem@1.14.1/InputSystem/Plugins/iOS/IOSGameController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.inputsystem@1.14.1/InputSystem/Plugins/iOS/iOSSupport.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Events/ShopEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Gear/GearInventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Gear/GearType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Items/Effects/HealItemEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Items/Effects/ItemEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/UI/InfoEventUI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -47,7 +56,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.4f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\Nicho\Documents\GitHub\loopopoly -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Nicho\Documents\GitHub\loopopoly" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -59,7 +68,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.4f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\Nicho\Documents\GitHub\loopopoly -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Nicho\Documents\GitHub\loopopoly" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -117,6 +126,12 @@
       <workItem from="1755547648805" duration="5850000" />
       <workItem from="1755729151007" duration="4017000" />
       <workItem from="1756052569280" duration="3091000" />
+      <workItem from="1756154400676" duration="4363000" />
+      <workItem from="1758037081765" duration="8866000" />
+      <workItem from="1758382242174" duration="434000" />
+      <workItem from="1758382764354" duration="6176000" />
+      <workItem from="1758473716430" duration="604000" />
+      <workItem from="1758764636775" duration="2327000" />
     </task>
     <servers />
   </component>
