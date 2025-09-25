@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GameData
 {
+    public int TokensToUnlock;
     public int Gems;
     
     public int LevelIndex = 0;

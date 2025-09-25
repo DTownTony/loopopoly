@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee11fd1e-09a8-42fe-8861-c8038be924cc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Events/Data/Special/KingsTaxesEvent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Events/Data/Special/KingsTaxesEvent.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/User/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/User/GameData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +128,7 @@
       <workItem from="1758382242174" duration="434000" />
       <workItem from="1758382764354" duration="6176000" />
       <workItem from="1758473716430" duration="604000" />
-      <workItem from="1758764636775" duration="2327000" />
+      <workItem from="1758764636775" duration="2953000" />
     </task>
     <servers />
   </component>
