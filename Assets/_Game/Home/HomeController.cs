@@ -1,16 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HomeController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Button _startButton;
 
-    // Update is called once per frame
-    void Update()
+    [Header("Gear")]
+    [SerializeField] private Button _gearButton;
+    [SerializeField] private PlayerGearUI _playerGearUI;
+
+    private void Start()
     {
-        
+        _gearButton.onClick.AddListener(_playerGearUI.Toggle);
     }
 }

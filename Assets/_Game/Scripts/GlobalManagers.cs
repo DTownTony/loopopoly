@@ -15,8 +15,8 @@ public class GlobalManagers : MonoBehaviour
             _instance.name = "_GlobalManagers";
 
             //load slot 1
-            var gameData = SaveManager.HasSave("s1") ? SaveManager.Load("s1") : new GameData();
-            GameController.Instance.Setup(gameData);
+            //var gameData = SaveManager.HasSave("s1") ? SaveManager.Load("s1") : new GameData();
+            //GameController.Instance.Setup(gameData);
         }
     }
 #endif

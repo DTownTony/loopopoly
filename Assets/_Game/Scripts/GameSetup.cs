@@ -9,7 +9,7 @@ public class GameSetup : MonoBehaviour
     {
         _currentGameData = data;
         SceneManager.sceneLoaded += SceneLoaded;
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Home");
     }
 
     private void SceneLoaded(Scene scene, LoadSceneMode sceneMode)
