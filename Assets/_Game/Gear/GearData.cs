@@ -6,7 +6,6 @@ public class GearData : ScriptableObject
     public GearType Type;
     
     public string Name;
-    
     public Sprite Icon;
     
     //todo: gear effects
