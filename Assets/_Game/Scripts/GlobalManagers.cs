@@ -2,30 +2,33 @@ using UnityEngine;
 
 public class GlobalManagers : MonoBehaviour
 {
-    private static GlobalManagers _instance;
+    public static GlobalManagers Instance { get; private set; }
 
 #if UNITY_EDITOR
     [RuntimeInitializeOnLoadMethod]
     private static void Initialize()
     {
-        if (_instance == null && !UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Equals("Bootstrap"))
+        if (Instance == null && !UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Equals("Bootstrap"))
         {
             var prefab = Resources.Load<GlobalManagers>("_GlobalManagers");
-            _instance = Instantiate(prefab);
-            _instance.name = "_GlobalManagers";
+            Instance = Instantiate(prefab);
+            Instance.name = "_GlobalManagers";
 
             //load slot 1
-            //var gameData = SaveManager.HasSave("s1") ? SaveManager.Load("s1") : new GameData();
-            //GameController.Instance.Setup(gameData);
+            //todo: check current scene
+            var gameData = SaveManager.HasSave("s1") ? SaveManager.Load("s1") : new GameData();
+            Instance.GameSetup.SetCurrentGameData(gameData);
         }
     }
 #endif
+
+    public GameSetup GameSetup;
     
     private void Awake()
     {
-        if (_instance == null)
+        if (Instance == null)
         {
-            _instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else

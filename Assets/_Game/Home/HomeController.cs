@@ -12,5 +12,11 @@ public class HomeController : MonoBehaviour
     private void Start()
     {
         _gearButton.onClick.AddListener(_playerGearUI.Toggle);
+        _startButton.onClick.AddListener(StartButtonPressed);
+    }
+
+    private void StartButtonPressed()
+    {
+        GlobalManagers.Instance.GameSetup.LoadGameScene();
     }
 }
