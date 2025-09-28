@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -35,6 +36,8 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private AudioSource _musicSource;
     
+    private GameProfile _gameProfile;
+    
     private void Awake()
     {
         Instance = this;
@@ -42,6 +45,8 @@ public class GameController : MonoBehaviour
     
     public void Setup(GameData gameData)
     {
+        _gameProfile = GlobalManagers.Instance.GameProfile;
+        
         //load data
         _currentLevelLoop = gameData.LevelIndex;
         
@@ -154,6 +159,18 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(3.5f);
         _musicSource.Play();
     }
+
+    #region Tokens
+
+    public event Action<int> OnTokenUpdated;
+
+    public void AddToken(int amount)
+    {
+        _gameProfile.GameData.TokensToUnlock += amount;
+        OnTokenUpdated?.Invoke(_gameProfile.GameData.TokensToUnlock);
+    }
+
+    #endregion
 }
 
 public enum GameState

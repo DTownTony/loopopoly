@@ -5,7 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee11fd1e-09a8-42fe-8861-c8038be924cc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Events/Data/GoldEvent_50.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Events/Data/GoldEvent_50.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Events/Data/Robbed_Event.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Events/Data/Robbed_Event.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Events/Data/_GlobalEvents.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Events/Data/_GlobalEvents.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Gear/GearInventory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Gear/GearInventory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Home/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Home/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Menu/SaveSelector/SaveSlotButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Menu/SaveSelector/SaveSlotButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Player/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Player/PlayerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Home.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/GameSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/GameProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/GameSetup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/GameProfile.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/GlobalManagers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/GlobalManagers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Resources/_GlobalManagers.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Resources/_GlobalManagers.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/UI/DeathView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/UI/DeathView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/User/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/User/GameData.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +39,11 @@
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.inputsystem@1.14.1/InputSystem/Plugins/iOS/IOSGameController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.inputsystem@1.14.1/InputSystem/Plugins/iOS/iOSSupport.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Events/ShopEvent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Game/Gear/GearInventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Events/TokenEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Gear/GearType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Items/Effects/HealItemEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Items/Effects/ItemEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/TokenUnlockHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/UI/InfoEventUI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -128,7 +146,10 @@
       <workItem from="1758382242174" duration="434000" />
       <workItem from="1758382764354" duration="6176000" />
       <workItem from="1758473716430" duration="604000" />
-      <workItem from="1758764636775" duration="2953000" />
+      <workItem from="1758764636775" duration="3451000" />
+      <workItem from="1758991026524" duration="5396000" />
+      <workItem from="1759074340695" duration="3836000" />
+      <workItem from="1759078244521" duration="1466000" />
     </task>
     <servers />
   </component>

@@ -19,4 +19,4 @@ MonoBehaviour:
   - You have encountered a robber in the road and he steals 100 gold!
   _goldAmount: -100
   _icon: {fileID: 21300000, guid: 14da6ae33e2f5804e974a51a5fa06187, type: 3}
-  _textColor: {r: 1, g: 0.5773492, b: 0, a: 1}
+  _textColor: {r: 1, g: 0.26166108, b: 0, a: 1}

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd4f8689fb719994286fcf205302d06b, type: 3}
+  m_Name: TokenEvent
+  m_EditorClassIdentifier: Assembly-CSharp::TokenEvent
+  Name: Token
+  BoardPiece:
+  - {fileID: 5055539213916576850, guid: bb1b53139d6626e43b767c5deb4265f3, type: 3}
+  _textColor: {r: 0, g: 1, b: 0.21263742, a: 1}

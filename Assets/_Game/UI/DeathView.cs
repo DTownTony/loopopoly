@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,7 +5,7 @@ using UnityEngine.UI;
 
 public class DeathView : MonoBehaviour
 {
-    [SerializeField] private Button _menuButton;
+    [SerializeField] private Button _continueButton;
     [SerializeField] private TMP_Text _statsText;
 
     [Header("Audio")] 
@@ -16,7 +15,7 @@ public class DeathView : MonoBehaviour
     
     private void Awake()
     {
-        _menuButton.onClick.AddListener(MenuButtonPressed);
+        _continueButton.onClick.AddListener(ContinueButtonPressed);
     }
 
     public void Show()
@@ -30,8 +29,8 @@ public class DeathView : MonoBehaviour
         _audioSource.PlayOneShot(_loseSound, .5f);
     }
 
-    private void MenuButtonPressed()
+    private void ContinueButtonPressed()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Home");
     }
 }

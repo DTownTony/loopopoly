@@ -9,8 +9,6 @@ public class SaveSlotButton : MonoBehaviour
     [SerializeField] private Button _button;
     [SerializeField] private Button _deleteButton;
     
-    [SerializeField] private GameSetup _gameSetup;
-
     private void Awake()
     {
         _deleteButton.onClick.AddListener(DeleteButtonPressed);
@@ -41,14 +39,14 @@ public class SaveSlotButton : MonoBehaviour
     private void NewGame()
     {
         var newData = new GameData();
-        _gameSetup.LoadGame(newData);
+        //sceneLoader.LoadGame(newData);
         SaveManager.Save(newData, _key);
     }
 
     private void LoadGame()
     {
         var gameDataSave = SaveManager.Load(_key);
-        _gameSetup.LoadGame(gameDataSave);
+        //sceneLoader.LoadGame(gameDataSave);
     }
     
     private void DeleteButtonPressed()

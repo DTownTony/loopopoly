@@ -17,12 +17,13 @@ public class GlobalManagers : MonoBehaviour
             //load slot 1
             //todo: check current scene
             var gameData = SaveManager.HasSave("s1") ? SaveManager.Load("s1") : new GameData();
-            Instance.GameSetup.SetCurrentGameData(gameData);
+            Instance.GameProfile.SetCurrentGameData(gameData);
+            GameController.Instance?.Setup(gameData);
         }
     }
 #endif
 
-    public GameSetup GameSetup;
+    public GameProfile GameProfile;
     
     private void Awake()
     {

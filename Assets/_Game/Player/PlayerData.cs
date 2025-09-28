@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerData
 {
+    public Dictionary<GearType, Gear> Gear = new Dictionary<GearType, Gear>();
     public List<Item> Items = new List<Item>();
     
     public PlayerValue Experience;

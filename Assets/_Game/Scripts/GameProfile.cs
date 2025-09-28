@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameSetup : MonoBehaviour
+public class GameProfile : MonoBehaviour
 {
+    public GameData GameData => _currentGameData;
     private GameData _currentGameData;
 
     public void SetCurrentGameData(GameData gameData)
