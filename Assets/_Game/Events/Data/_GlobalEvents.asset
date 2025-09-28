@@ -22,3 +22,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2eeb0d98c657b402cba5c97d47ec293d, type: 2}
   - {fileID: 11400000, guid: 607d9dd98b0724a498147c02147a86c8, type: 2}
   - {fileID: 11400000, guid: ff93558b31a965b44a13bb6c90f41e27, type: 2}
+  LockedEventData:
+  - {fileID: 11400000, guid: 742bef772e94840bf827a9676916971a, type: 2}
+  - {fileID: 11400000, guid: a07807186aac4476ba06f37b79bc7489, type: 2}
