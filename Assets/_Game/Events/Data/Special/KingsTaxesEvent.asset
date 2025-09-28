@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dae8d93060bb854da34ad5f0bb9184e, type: 3}
   m_Name: KingsTaxesEvent
   m_EditorClassIdentifier: 
+  Id: kings_taxes
   Name: Kings Taxes
   BoardPiece:
   - {fileID: 5349692307392679744, guid: 71ef10897b9f3f248932cd9fc1dfe47a, type: 3}

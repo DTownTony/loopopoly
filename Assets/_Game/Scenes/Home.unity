@@ -1131,6 +1131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c2b29f00afdb50439e6b0e4af01b8ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TokenUnlockHandler
+  _gearDatabase: {fileID: 11400000, guid: 206be513c4188e440af6dc74178b3006, type: 2}
+  _globalEvents: {fileID: 11400000, guid: 6e5fea344a18fb04aa3c46052f2dafd3, type: 2}
 --- !u!4 &936822796
 Transform:
   m_ObjectHideFlags: 0
@@ -3770,6 +3772,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1870723429}
+  - {fileID: 936822796}
   - {fileID: 961739753}
   - {fileID: 203844589}
   - {fileID: 8631349607214647704}
@@ -3796,4 +3799,3 @@ SceneRoots:
   - {fileID: 855671491}
   - {fileID: 1190219809}
   - {fileID: 2106927567}
-  - {fileID: 936822796}

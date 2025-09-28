@@ -18,6 +18,12 @@ public class Board : MonoBehaviour
         }
         
         var availableEvents = new List<BoardEvent>(_globalEvents.EventData);
+        //add locked events
+        foreach (var lockedEvent in _globalEvents.LockedEventData)
+        {
+            if (GlobalManagers.Instance.GameProfile.GameData.UnlockedEvents.Contains(lockedEvent.Id))
+                availableEvents.Add(lockedEvent);
+        }
         var specialEvents = new List<BoardEvent>(_globalEvents.SpecialEventData);
         
         for (var i = 0; i < _boardPositions.Length; i++)

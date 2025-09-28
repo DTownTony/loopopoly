@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e699778644b4594b203dd88a7208b6, type: 3}
   m_Name: GrimReaperEvent
   m_EditorClassIdentifier: 
+  Id: grim_reaper
   Name: Grim Reaper
   BoardPiece:
   - {fileID: 586086506508223839, guid: 92a724d0673d719429d3299f3f98b852, type: 3}

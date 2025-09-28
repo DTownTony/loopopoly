@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEngine;
 
 public class GameData
 {
@@ -9,6 +8,6 @@ public class GameData
     public int LevelIndex = 0;
     public int BoardIndex = -1;
 
-    public List<int> UnlockedGear;
-    public List<int> UnlockedEvents;
+    public List<string> UnlockedGear;
+    public List<string> UnlockedEvents;
 }

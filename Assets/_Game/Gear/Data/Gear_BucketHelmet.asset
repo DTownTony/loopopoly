@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5bfb947d910e64da9ead9d7dc65562, type: 3}
   m_Name: Gear_BucketHelmet
   m_EditorClassIdentifier: Assembly-CSharp::GearData
+  Id: bucket_helmet
   Type: {fileID: 11400000, guid: e43453cd460011b44b1656d0f47e6059, type: 2}
   Name: Bucket Helmet
   Icon: {fileID: 21300000, guid: 2488b0befecde6f4cb43cd4fe9d0406e, type: 3}
