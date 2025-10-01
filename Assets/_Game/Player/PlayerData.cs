@@ -28,7 +28,35 @@ public class PlayerData
     {
         MaxHealth.OnValueChanged += value => { CurrentHealth.SetMaxValue(value); };
     }
+    
+    #region Gear
+    
+    public delegate void OnGearDelegate(Gear gear);
+    public event OnGearDelegate OnGearAdded;
+    public event OnGearDelegate OnGearRemoved;
 
+    private void EquipGear(GearData gearData)
+    {
+        var slotOccupied = Gear.TryGetValue(gearData.GearType, out var currentGear);
+
+        if (slotOccupied)
+        {
+            Debug.Log(currentGear.Data.Name + " already equipped");
+            //todo: trigger gear swap
+        }
+        else
+        {
+            //todo: equip animation
+                
+            var gear = new Gear(gearData);
+            Gear.Add(gearData.GearType, gear);
+            OnGearAdded?.Invoke(gear);
+        }
+        
+        //todo: calculate gear
+    }
+    
+    
     //todo change to gear
     /*
     private void ProcessItemBonuses(ItemData itemData, bool add)
@@ -62,28 +90,6 @@ public class PlayerData
         }
     }
     */
-    
-    #region Gear
-
-    private void EquipGear(GearData gearData)
-    {
-        var slotOccupied = Gear.TryGetValue(gearData.GearType, out var currentGear);
-
-        if (slotOccupied)
-        {
-            Debug.Log(currentGear.Data.Name + " already equipped");
-            //todo: trigger gear swap
-        }
-        else
-        {
-            //todo: equip animation
-                
-            var gear = new Gear(gearData);
-            Gear.Add(gearData.GearType, gear);
-            //todo: calculate gear
-        }
-    
-    }
     
     #endregion
     

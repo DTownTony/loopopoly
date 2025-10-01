@@ -12,10 +12,7 @@ public class ViewPlayerDetailsButton : MonoBehaviour
     }
 
     private void ButtonPressed()
-    {
-        if (_playerDetailsUI.gameObject.activeSelf)
-            _playerDetailsUI.Hide();
-        else
-            _playerDetailsUI.Show();
+    { 
+        _playerDetailsUI.Show();
     }
 }

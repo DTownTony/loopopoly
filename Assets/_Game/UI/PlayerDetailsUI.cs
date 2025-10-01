@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class PlayerDetailsUI : MonoBehaviour
 {
+    [SerializeField] private Canvas _canvas;
     [SerializeField] private Button _closeButton;
-    [SerializeField] private GearSlotUI[] _gearSlots;
 
     private void Start()
     {
@@ -19,11 +19,11 @@ public class PlayerDetailsUI : MonoBehaviour
 
     public void Show()
     {
-        gameObject.SetActive(true);
+        _canvas.enabled = true;
     }
     
-    public void Hide()
+    private void Hide()
     {
-        gameObject.SetActive(false);
+        _canvas.enabled = false;
     }
 }
