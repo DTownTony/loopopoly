@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2df82e042d14e3bb51989139410456, type: 3}
   m_Name: Item_SmallHealthPotion
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: 
+  Type: 1
   Name: Small Health Potion
   Description: Heals 25% of max health
   Icon: {fileID: 21300000, guid: 279d72ee9fd29bb4ea86148e9f07c12a, type: 3}

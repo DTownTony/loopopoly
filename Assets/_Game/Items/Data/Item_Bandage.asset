@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2df82e042d14e3bb51989139410456, type: 3}
   m_Name: Item_Bandage
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: 
+  Type: 1
   Name: Bandage
   Description: A roll of bandages. Heals 5 health.
   Icon: {fileID: 21300000, guid: 6aece97b0a9b27742b4f97810bde60e5, type: 3}

@@ -76,10 +76,18 @@ public class PlayerData
     
     public void AddItem(ItemData itemData)
     {
-        var item = new Item(itemData);
-        Items.Add(item);
-        //ProcessItemBonuses(itemData, true);
-        OnItemAdded?.Invoke(item);
+
+        if (itemData.Type == ItemType.Gear)
+        {
+            //todo: handle gear
+        }
+        else
+        {
+            var item = new Item(itemData);
+            Items.Add(item);
+            //ProcessItemBonuses(itemData, true);
+            OnItemAdded?.Invoke(item);
+        }
     }
     
     public void RemoveItem(string key)

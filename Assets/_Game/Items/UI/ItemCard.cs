@@ -24,8 +24,6 @@ public class ItemCard : MonoBehaviour
         _itemNameText.text = item.Data.Name;
         _itemDescriptionText.text = item.Data.Description;
         _itemIcon.sprite = item.Data.Icon;
-
-        _button.enabled = !item.Data.DisableUse;
     }
     
     protected virtual void ButtonPressed()

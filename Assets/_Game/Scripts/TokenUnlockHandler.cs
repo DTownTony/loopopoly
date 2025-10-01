@@ -20,6 +20,7 @@ public class TokenUnlockHandler : MonoBehaviour
         while (remainingTokens > 0)
         {
             var unlocks = new List<Unlock>();
+            //todo: get locked items
             
             //get all locked events that player has not unlocked
             var lockedEvents = _globalEvents.GetLockedEvents(data.UnlockedEvents);

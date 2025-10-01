@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ShopEvent", menuName = "Data/BoardEvent/ShopEvent")]
@@ -10,13 +9,7 @@ public class ShopEvent : BoardEvent
     
     public override void Trigger()
     {
-        var items = new List<ItemData>();
-        for (var i = 0; i < TOTAL_ITEMS; i++)
-        {
-            var randomItem = _itemDatabase.GetRandomItem();
-            items.Add(randomItem);
-        }
-        
+        var items = _itemDatabase.GetRandomItems(TOTAL_ITEMS, ItemType.Special);
         GameController.Instance.EventHandler.EventView.ShowItemsEvent(new ItemsEventUIArgs(
             Name, null, null, items));
     }

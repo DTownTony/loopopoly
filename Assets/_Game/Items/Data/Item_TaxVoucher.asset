@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2df82e042d14e3bb51989139410456, type: 3}
   m_Name: Item_TaxVoucher
   m_EditorClassIdentifier: 
+  Id: 
+  Type: 2
   Name: Tax Voucher
   Description: Skip paying taxes
   Icon: {fileID: 21300000, guid: dc56e2c13eeb44c4cb489f7faa8f266f, type: 3}
   Cost: 0
   Key: tax_voucher
-  DisableUse: 1
   Effects: []

@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2df82e042d14e3bb51989139410456, type: 3}
   m_Name: Item_Rewind
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: 
+  Type: 1
   Name: Move -3
   Description: 
   Icon: {fileID: 21300000, guid: 9a4d40cc281392f4a8f2033cd037d2ef, type: 3}
   Cost: 50
   Key: move
-  DisableUse: 0
   Effects:
   - {fileID: 11400000, guid: edaff7c8047f4414eb1038aa5d08fa16, type: 2}

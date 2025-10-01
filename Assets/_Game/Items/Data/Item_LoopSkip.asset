@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2df82e042d14e3bb51989139410456, type: 3}
   m_Name: Item_LoopSkip
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: 
+  Type: 1
   Name: Loop skip
   Description: go to...Go!
   Icon: {fileID: 21300000, guid: 2132958265622b445a33f9329683e43b, type: 3}
   Cost: 100
   Key: loop_skip
-  DisableUse: 0
   Effects:
   - {fileID: 11400000, guid: f904220c349081c449c5e066d0379553, type: 2}

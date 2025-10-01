@@ -1,13 +1,10 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "GearData", menuName = "Data/Gear/GearData")]
-public class GearData : ScriptableObject
+public class GearData : ItemData
 {
-    public string Id;
-    public GearType Type;
-    
-    public string Name;
-    public Sprite Icon;
-    
+    [Header("Gear")]
+    public GearType GearType;
     //todo: gear effects
+
 }

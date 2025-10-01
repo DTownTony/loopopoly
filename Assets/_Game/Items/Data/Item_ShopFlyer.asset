@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2df82e042d14e3bb51989139410456, type: 3}
   m_Name: Item_ShopFlyer
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: 
+  Type: 1
   Name: Shop Flyer
   Description: Teleport to nearest shop!
   Icon: {fileID: 21300000, guid: 70ba73222363f4d49a79b825e3e7096a, type: 3}
   Cost: 100
   Key: shop_flyer
-  DisableUse: 0
   Effects:
   - {fileID: 11400000, guid: 31b9247a890689c49bb5556c9f8f3d9d, type: 2}

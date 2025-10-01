@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2df82e042d14e3bb51989139410456, type: 3}
   m_Name: Item_Apple
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: 
+  Type: 1
   Name: Apple
   Description: A juicy apple. Heals 5 health.
   Icon: {fileID: 21300000, guid: 980a71d8a9052bf4dac4583dbc0928f6, type: 3}
