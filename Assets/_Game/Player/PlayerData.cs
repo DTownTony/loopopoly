@@ -67,10 +67,11 @@ public class PlayerData
 
     private void EquipGear(GearData gearData)
     {
-        var slotOccupied = Gear[gearData.GearType] != null;
+        var slotOccupied = Gear.TryGetValue(gearData.GearType, out var currentGear);
 
         if (slotOccupied)
         {
+            Debug.Log(currentGear.Data.Name + " already equipped");
             //todo: trigger gear swap
         }
         else
@@ -78,7 +79,7 @@ public class PlayerData
             //todo: equip animation
                 
             var gear = new Gear(gearData);
-            Gear[gearData.GearType] = gear;
+            Gear.Add(gearData.GearType, gear);
             //todo: calculate gear
         }
     
