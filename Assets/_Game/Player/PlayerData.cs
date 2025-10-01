@@ -63,6 +63,29 @@ public class PlayerData
     }
     */
     
+    #region Gear
+
+    private void EquipGear(GearData gearData)
+    {
+        var slotOccupied = Gear[gearData.GearType] != null;
+
+        if (slotOccupied)
+        {
+            //todo: trigger gear swap
+        }
+        else
+        {
+            //todo: equip animation
+                
+            var gear = new Gear(gearData);
+            Gear[gearData.GearType] = gear;
+            //todo: calculate gear
+        }
+    
+    }
+    
+    #endregion
+    
     #region Items
     
     public delegate void OnItemDelegate(Item item);
@@ -79,7 +102,7 @@ public class PlayerData
 
         if (itemData.Type == ItemType.Gear)
         {
-            //todo: handle gear
+            EquipGear(itemData as GearData);
         }
         else
         {
