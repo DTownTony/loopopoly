@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 public class TokenUnlockHandler : MonoBehaviour
 {
-    [SerializeField] private GearDatabase _gearDatabase;
+    [SerializeField] private ItemDatabase _itemDatabase;
     [SerializeField] private GlobalEvents _globalEvents;
     
     public void UnlockTokens(int amount)
@@ -27,10 +27,10 @@ public class TokenUnlockHandler : MonoBehaviour
             foreach (var lockedEvent in lockedEvents)
                 unlocks.Add(new Unlock(lockedEvent.Id, UnlockType.Event));
             
-            //get all gears that player has not unlocked
-            var lockedGears = _gearDatabase.GetLockedGear(data.UnlockedGear);
-            foreach (var lockedGear in lockedGears)
-                unlocks.Add(new Unlock(lockedGear.Id, UnlockType.Gear));
+            //get all items that player has not unlocked
+            var lockedItems = _itemDatabase.GetLockedItems();
+            foreach (var lockedItem in lockedItems)
+                unlocks.Add(new Unlock(lockedItem.Id, UnlockType.Item));
 
             if (unlocks.Count <= 0)
             {
@@ -43,8 +43,8 @@ public class TokenUnlockHandler : MonoBehaviour
 
             switch (unlock.UnlockType)
             {
-                case UnlockType.Gear:
-                    data.UnlockedGear.Add(unlock.Id);
+                case UnlockType.Item:
+                    data.UnlockedItems.Add(unlock.Id);
                     break;
                 case UnlockType.Event:
                     data.UnlockedEvents.Add(unlock.Id);
@@ -73,7 +73,7 @@ public class TokenUnlockHandler : MonoBehaviour
 
     private enum UnlockType
     {
-        Gear,
+        Item,
         Event
     }
 }

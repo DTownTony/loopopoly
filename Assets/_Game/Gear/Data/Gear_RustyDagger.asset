@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5bfb947d910e64da9ead9d7dc65562, type: 3}
+  m_Name: Gear_RustyDagger
+  m_EditorClassIdentifier: Assembly-CSharp::GearData
+  Id: rusty_dagger
+  Type: 4
+  Name: Rusty Dagger
+  Description: 
+  Icon: {fileID: 21300000, guid: 9dfc1fedb12020542b84ea3b693d9d7f, type: 3}
+  Cost: 0
+  Effects: []
+  GearType: {fileID: 11400000, guid: 9624d73ecb967d34eb5d25f078e6d389, type: 2}

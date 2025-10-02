@@ -40,11 +40,11 @@ public class CombatHandler : MonoBehaviour
         var playerTurn = false;
         var combatActive = true;
         
-        if (!_enemy.IsBoss && _player.Data.HasItem(_bombItem.Key))
+        if (!_enemy.IsBoss && _player.Data.HasItem(_bombItem.Id))
         {
             Instantiate(_bombAttackPrefab, _enemy.Model.transform.position, Quaternion.identity);
             combatActive = false;
-            _player.Data.RemoveItem(_bombItem.Key);
+            _player.Data.RemoveItem(_bombItem.Id);
         }
         
         while (combatActive)

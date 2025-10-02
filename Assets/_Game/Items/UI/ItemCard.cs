@@ -31,6 +31,6 @@ public class ItemCard : MonoBehaviour
         foreach (var effect in Item.Data.Effects)
             effect.ApplyEffect();
 
-        GameController.Instance.Player.Data.RemoveItem(Item.Data.Key);
+        GameController.Instance.Player.Data.RemoveItem(Item.Data.Id);
     }
 }

@@ -99,9 +99,9 @@ public class PlayerData
     public event OnItemDelegate OnItemAdded;
     public event OnItemDelegate OnItemRemoved;
     
-    public bool HasItem(string key)
+    public bool HasItem(string id)
     {
-        return Items.Exists(item => item.Key == key);
+        return Items.Exists(item => item.Id == id);
     }
     
     public void AddItem(ItemData itemData)
@@ -120,12 +120,12 @@ public class PlayerData
         }
     }
     
-    public void RemoveItem(string key)
+    public void RemoveItem(string id)
     {
         Item itemToRemove = null;
         foreach (var item in Items)
         {
-            if (item.Key.Equals(key))
+            if (item.Id.Equals(id))
             {
                 itemToRemove = item;
                 break;

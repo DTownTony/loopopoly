@@ -8,6 +8,6 @@ public class GameData
     public int LevelIndex = 0;
     public int BoardIndex = -1;
 
-    public List<string> UnlockedGear;
+    public List<string> UnlockedItems;
     public List<string> UnlockedEvents;
 }

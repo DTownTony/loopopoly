@@ -10,9 +10,7 @@ public class ItemData : ScriptableObject
     public string Description;
     public Sprite Icon;
     public int Cost;
-    
-    public string Key;
-    
+
     public ItemEffect[] Effects;
 }
 

@@ -25,12 +25,12 @@ public class GrimReaperEvent : BoardEvent
             UseItem, TryLuck,
             $"Use {_stopEventItem.Name}!", 
             "Try My Luck: " + (_currentDeathChance * 100).ToString("F2") + "% chance of death",
-            GameController.Instance.Player.Data.HasItem(_stopEventItem.Key)));
+            GameController.Instance.Player.Data.HasItem(_stopEventItem.Id)));
     }
 
     private void UseItem()
     {
-        GameController.Instance.Player.Data.RemoveItem(_stopEventItem.Key);
+        GameController.Instance.Player.Data.RemoveItem(_stopEventItem.Id);
         //_audioSource.PlayOneShot(_skipSound, 1f);
     }
 

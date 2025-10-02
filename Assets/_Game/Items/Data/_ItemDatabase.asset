@@ -15,11 +15,16 @@ MonoBehaviour:
   Items:
   - {fileID: 11400000, guid: 4824679077a693840aaf2b4b5c94d128, type: 2}
   - {fileID: 11400000, guid: d33aa3816ab1239419094fe615941d70, type: 2}
-  - {fileID: 11400000, guid: 845313918b5cf4cdf89054d3863ef2fe, type: 2}
-  - {fileID: 11400000, guid: 6cbc10311ab684e49af1f1434a050587, type: 2}
-  - {fileID: 11400000, guid: 28e14dfce02174f4cb0579ad195d166f, type: 2}
-  - {fileID: 11400000, guid: 0e64929889168a94c86e4f3e978703e8, type: 2}
   - {fileID: 11400000, guid: 0bdcaf8f1fd6377418f038f0259c472d, type: 2}
   - {fileID: 11400000, guid: 2e9ebaf3cb2ae421898854e7cb6c1690, type: 2}
-  - {fileID: 11400000, guid: 28e14dfce02174f4cb0579ad195d166f, type: 2}
   - {fileID: 11400000, guid: 6af6694adf6750a4794fd291ebad26c0, type: 2}
+  - {fileID: 11400000, guid: f72ae2dc5c6278e4da21cf2bb3a1b165, type: 2}
+  - {fileID: 11400000, guid: ef2dbe84d8df828419fa24e1f7a6c87c, type: 2}
+  _lockedItems:
+  - {fileID: 11400000, guid: 0e64929889168a94c86e4f3e978703e8, type: 2}
+  - {fileID: 11400000, guid: 28e14dfce02174f4cb0579ad195d166f, type: 2}
+  - {fileID: 11400000, guid: 845313918b5cf4cdf89054d3863ef2fe, type: 2}
+  - {fileID: 11400000, guid: 6cbc10311ab684e49af1f1434a050587, type: 2}
+  - {fileID: 11400000, guid: 2e9ebaf3cb2ae421898854e7cb6c1690, type: 2}
+  - {fileID: 11400000, guid: 77a33ba8fbf9fc24fbbcd2f9081df93c, type: 2}
+  - {fileID: 11400000, guid: e2a83056f81bbb740aa7a2230619c8e5, type: 2}

@@ -17,12 +17,12 @@ public class KingsTaxesEvent : BoardEvent
             UseItem, PayTax,
             $"Use {_stopEventItem.Name}!", 
             $"Pay {_ownedGoldAmount} gold!",
-            GameController.Instance.Player.Data.HasItem(_stopEventItem.Key)));
+            GameController.Instance.Player.Data.HasItem(_stopEventItem.Id)));
     }
     
     private void UseItem()
     {
-        GameController.Instance.Player.Data.RemoveItem(_stopEventItem.Key);
+        GameController.Instance.Player.Data.RemoveItem(_stopEventItem.Id);
     }
 
     private void PayTax()
