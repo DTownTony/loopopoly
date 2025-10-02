@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    
     public delegate void OnMovedSpaceDelegate(int movesLeft); //todo: use this for events 
     public event OnMovedSpaceDelegate OnMovedSpace;
     
@@ -13,11 +14,25 @@ public class Player : MonoBehaviour
     public int MovesLeft { get; private set; }
     public Transform Model;
     
+    [Header("Visuals")]
+    [SerializeField] private Material _materialBase;
+    [SerializeField] private MeshRenderer _helmetRenderer;
+    [SerializeField] private MeshRenderer _bodyRenderer;
+    [SerializeField] private MeshRenderer _weaponRenderer;
+    [SerializeField] private MeshRenderer _shieldRenderer;
+    private Dictionary<string, (MeshRenderer renderer, Material mat)> _gearMap;
+    private readonly int BaseMap = Shader.PropertyToID("_BaseMap");
+    private Material _helmetMaterialInstance;
+    private Material _bodyMaterialInstance;
+    private Material _weaponMaterialInstance;
+    private Material _shieldMaterialInstance;
+    
     [Header("Audio")]
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _moveSound;
     [SerializeField] private AudioClip _loopSound;
     [SerializeField] private AudioClip _levelUpSound;
+    
     
     public readonly PlayerData Data = new PlayerData
     {
@@ -33,12 +48,33 @@ public class Player : MonoBehaviour
         Protection = new PlayerValue(0),
         StatPoints = new PlayerValue(0)
     };
-    
+
+    private void Awake()
+    {
+        _helmetMaterialInstance = new Material(_materialBase);
+        _helmetRenderer.material = _helmetMaterialInstance;
+        _bodyMaterialInstance = new Material(_materialBase);
+        _bodyRenderer.material = _bodyMaterialInstance;
+        _weaponMaterialInstance = new Material(_materialBase);
+        _weaponRenderer.material = _weaponMaterialInstance;
+        _shieldMaterialInstance = new Material(_materialBase);
+        _shieldRenderer.material = _shieldMaterialInstance;
+        
+        _gearMap = new Dictionary<string, (MeshRenderer, Material)>
+        {
+            { "head", (_helmetRenderer, _helmetMaterialInstance) },
+            { "body", (_bodyRenderer, _bodyMaterialInstance) },
+            { "weapon", (_weaponRenderer, _weaponMaterialInstance) },
+            { "shield", (_shieldRenderer, _shieldMaterialInstance) }
+        };
+    }
+
     private void Start()
     {
         Data.Initialize();
         Data.CurrentHealth.OnValueChanged += CheckCurrentHealth;
         Data.Experience.OnValueChanged += ExperienceChanged;
+        Data.OnGearAdded += UpdateVisuals;
     }
 
     #region Level / Experience
@@ -161,5 +197,16 @@ public class Player : MonoBehaviour
             .OnComplete(()=>_audioSource.PlayOneShot(_moveSound, .35f));
         
         CurrentPositionIndex = position.Index;
+    }
+    
+    private void UpdateVisuals(Gear gear)
+    {
+        var gearType = gear.Data.GearType.Id;
+
+        if (_gearMap.TryGetValue(gearType, out var pair))
+        {
+            pair.renderer.gameObject.SetActive(true);
+            pair.mat.SetTexture(BaseMap, gear.Data.GamePieceIcon.texture);
+        }
     }
 }

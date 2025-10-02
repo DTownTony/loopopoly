@@ -17,6 +17,7 @@ MonoBehaviour:
   Name: Basic Sword
   Description: 
   Icon: {fileID: 21300000, guid: 313782ae0de4ec74fa29ffa5b4a98823, type: 3}
+  GamePieceIcon: {fileID: 21300000, guid: 313782ae0de4ec74fa29ffa5b4a98823, type: 3}
   Cost: 0
   Effects: []
   GearType: {fileID: 11400000, guid: 9624d73ecb967d34eb5d25f078e6d389, type: 2}

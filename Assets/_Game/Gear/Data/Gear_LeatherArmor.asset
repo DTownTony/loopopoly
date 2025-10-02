@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: Leather Armor
   Description: 
   Icon: {fileID: 21300000, guid: 9f00dd8019b7d6449a6e8cf37a8c8e42, type: 3}
+  GamePieceIcon: {fileID: 21300000, guid: 9f00dd8019b7d6449a6e8cf37a8c8e42, type: 3}
   Cost: 0
-  Key: 
   Effects: []
   GearType: {fileID: 11400000, guid: 5efff9eeae18eed41b59f4a8de85e572, type: 2}

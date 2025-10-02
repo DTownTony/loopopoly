@@ -17,6 +17,7 @@ MonoBehaviour:
   Name: Rusty Dagger
   Description: 
   Icon: {fileID: 21300000, guid: 9dfc1fedb12020542b84ea3b693d9d7f, type: 3}
+  GamePieceIcon: {fileID: 21300000, guid: 9dfc1fedb12020542b84ea3b693d9d7f, type: 3}
   Cost: 0
   Effects: []
   GearType: {fileID: 11400000, guid: 9624d73ecb967d34eb5d25f078e6d389, type: 2}
