@@ -6,6 +6,7 @@ public class GameView : MonoBehaviour
 {
     public EventDetailDisplay EventDetailDisplay;
     
+    [SerializeField] private PlayerDetailsUI _playerDetailsUI;
     [SerializeField] private PlayerValueUI _goldUI;
     [SerializeField] private PlayerValueUI _healthUI;
     [SerializeField] private PlayerValueUI _damageUI;
@@ -45,7 +46,7 @@ public class GameView : MonoBehaviour
             _bossLoopsText.SetText("BOSS FIGHT!");
     }
 
-    public void SetStats(PlayerData data)
+    public void SetData(PlayerData data)
     {
         _goldUI.SetPlayerValue(data.Gold);
         _healthUI.SetPlayerValue(data.CurrentHealth);
@@ -53,6 +54,8 @@ public class GameView : MonoBehaviour
         _defenseUI.SetPlayerValue(data.Protection);
         _levelUI.SetPlayerValue(data.Level);
         _experienceUI.SetPlayerValue(data.Experience);
+        
+        _playerDetailsUI.SetData(data);
     }
 
     private void LevelUp(int newLevel)

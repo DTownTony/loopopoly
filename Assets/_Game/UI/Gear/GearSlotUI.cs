@@ -10,10 +10,10 @@ public class GearSlotUI : MonoBehaviour
 
     private Gear _gear;
 
-    private void Start()
+    public void Setup(PlayerData playerData)
     {
-        GameController.Instance.Player.Data.OnGearAdded += SetGear;
-        GameController.Instance.Player.Data.OnGearRemoved += RemoveGear;
+        playerData.OnGearAdded += SetGear;
+        playerData.OnGearRemoved += RemoveGear;
     }
 
     private void SetGear(Gear gear)
