@@ -15,10 +15,12 @@ public class PlayerData
     public PlayerValue MaxHealth;
     public PlayerValue CurrentHealth;
     public PlayerValue Damage;
+    public PlayerValue Protection;
     public PlayerValue CriticalChance;
     public PlayerValue CriticalDamage;
-    public PlayerValue Protection;
     public PlayerValue Evasion;
+    public PlayerValue LifeSteal;
+    public PlayerValue Luck;
 
     //stats
     public int BossDefeated;

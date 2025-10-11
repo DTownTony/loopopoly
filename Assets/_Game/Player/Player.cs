@@ -20,8 +20,10 @@ public class Player : MonoBehaviour
     [SerializeField] private MeshRenderer _bodyRenderer;
     [SerializeField] private MeshRenderer _weaponRenderer;
     [SerializeField] private MeshRenderer _shieldRenderer;
+    
     private Dictionary<string, (MeshRenderer renderer, Material mat)> _gearMap;
     private readonly int BaseMap = Shader.PropertyToID("_BaseMap");
+    
     private Material _helmetMaterialInstance;
     private Material _bodyMaterialInstance;
     private Material _weaponMaterialInstance;
@@ -33,7 +35,6 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioClip _loopSound;
     [SerializeField] private AudioClip _levelUpSound;
     
-    
     public readonly PlayerData Data = new PlayerData
     {
         Level = new PlayerValue(0),
@@ -42,10 +43,12 @@ public class Player : MonoBehaviour
         MaxHealth = new PlayerValue(50),
         CurrentHealth = new PlayerValue(50, 0, 50),
         Damage = new PlayerValue(5, 1),
-        CriticalChance = new PlayerValue(5),
-        CriticalDamage = new PlayerValue(50),
+        CriticalChance = new PlayerValue(0),
+        CriticalDamage = new PlayerValue(150),
         Evasion = new PlayerValue(0),
         Protection = new PlayerValue(0),
+        LifeSteal = new PlayerValue(0),
+        Luck = new PlayerValue(0),
         StatPoints = new PlayerValue(0)
     };
 

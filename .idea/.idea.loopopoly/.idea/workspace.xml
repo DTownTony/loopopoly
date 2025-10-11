@@ -6,33 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ee11fd1e-09a8-42fe-8861-c8038be924cc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.loopopoly/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Enemies/GoblinLord_01.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Enemies/GoblinLord_01.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Enemies/Goblin_01.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Enemies/Goblin_01.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Enemies/Ogre_01.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Enemies/Ogre_01.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Enemies/SlimeKing_01.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Enemies/SlimeKing_01.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Enemies/Slime_01.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Enemies/Slime_01.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Enemies/Troll_01.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Enemies/Troll_01.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Hero/Hero_01.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Hero/Hero_01.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Hero/Hero_Armor.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Hero/Hero_Armor.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Hero/Hero_Helmet.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Hero/Hero_Helmet.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Hero/Hero_Shield.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Hero/Hero_Shield.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Hero/Outline.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Hero/Outline.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Hero/Pedestal_01.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Characters/Hero/Pedestal_01.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Items/ItemData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Items/ItemData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Player/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Player/PlayerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +59,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.4f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.6f2\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\Nicho\Documents\GitHub\loopopoly -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Nicho\Documents\GitHub\loopopoly" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -93,7 +71,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.4f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.6f2\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\Nicho\Documents\GitHub\loopopoly -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Nicho\Documents\GitHub\loopopoly" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -161,6 +139,7 @@
       <workItem from="1759074340695" duration="3836000" />
       <workItem from="1759078244521" duration="1966000" />
       <workItem from="1759429081870" duration="4225000" />
+      <workItem from="1759459480804" duration="3840000" />
     </task>
     <servers />
   </component>

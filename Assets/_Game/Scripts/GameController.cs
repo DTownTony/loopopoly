@@ -66,7 +66,7 @@ public class GameController : MonoBehaviour
         ChangeCurrentState(GameState.WaitingForPlayer);
         
         ResetLoops();
-        GameView.SetStats(Player.Data);
+        GameView.SetData(Player.Data);
     }
     
     private void DiceRolled(int value)
