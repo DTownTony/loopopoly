@@ -9,9 +9,7 @@ public class SelectEventUI : EventUIBase<SelectEventUIArgs>
     
     public override void Show(SelectEventUIArgs args)
     {
-        _currentArgs = args;
-        
-        gameObject.SetActive(true);
+        base.Show(args);
 
         foreach (var choice in _currentArgs.Choices)
         {
