@@ -41,6 +41,10 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+#if UNITY_EDITOR
+        if (_gameProfile == null)
+            Setup(new GameData());
+#endif
     }
     
     public void Setup(GameData gameData)

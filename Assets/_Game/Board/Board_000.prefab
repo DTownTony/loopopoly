@@ -125,7 +125,7 @@ MonoBehaviour:
   - {fileID: 6192706950693283395}
   - {fileID: 1881290859918923388}
   - {fileID: 1549355861455146637}
-  _globalEvents: {fileID: 11400000, guid: 6e5fea344a18fb04aa3c46052f2dafd3, type: 2}
+  _globalEvents: {fileID: 11400000, guid: 1bc22f4832e7cc7408d82eced4ccf3c4, type: 2}
   _corners: 0a000000140000001e000000
 --- !u!1001 &736642931493764568
 PrefabInstance:

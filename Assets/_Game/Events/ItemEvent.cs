@@ -3,13 +3,16 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ItemEvent", menuName = "Data/BoardEvent/ItemEvent")]
 public class ItemEvent : BoardEvent
 {
-    [SerializeField] private ItemData _itemToAdd;
+    [SerializeField] private ItemDatabase _itemDatabase;
+    [SerializeField] private string[] _descriptionText;
 
     public override void Trigger()
     {
-        base.Trigger();
-        GameController.Instance.EventHandler.AddItem(_itemToAdd);
-        var col1 = new Color32(52, 155, 242,255);
-        GameController.Instance.GameView.EventDetailDisplay.ShowMessage($"+{_itemToAdd.Name}", col:col1);
+        var item = _itemDatabase.GetRandomItem();
+        
+        GameController.Instance.EventHandler.AddItem(item);
+        
+        var description = string.Format(_descriptionText[Random.Range(0, _descriptionText.Length)], item.Name);
+        GameController.Instance.EventHandler.EventView.ShowInfoEvent(new EventUIArgsBase(Name, item.Icon, description));
     }
 }

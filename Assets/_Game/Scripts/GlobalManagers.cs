@@ -18,7 +18,6 @@ public class GlobalManagers : MonoBehaviour
             //todo: check current scene
             var gameData = SaveManager.HasSave("s1") ? SaveManager.Load("s1") : new GameData();
             Instance.GameProfile.SetCurrentGameData(gameData);
-            GameController.Instance?.Setup(gameData);
         }
     }
 #endif

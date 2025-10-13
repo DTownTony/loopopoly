@@ -10,9 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24d36156403b44690afd4fd0929c3b03, type: 3}
-  m_Name: BombEvent
+  m_Name: RandomItemEvent
   m_EditorClassIdentifier: 
-  Name: Bomb!
+  Id: 
+  Name: Item Found!
   BoardPiece:
   - {fileID: 5055539213916576850, guid: 153159e02b3dec348b2dda3bc3d4c1ff, type: 3}
-  _itemToAdd: {fileID: 11400000, guid: 751b1faf6f72daf41a6f04cc107ad2e3, type: 2}
+  _itemDatabase: {fileID: 11400000, guid: 681629a476a19428089a3b074c223f89, type: 2}
+  _descriptionText:
+  - A wise old man gives you a {0}!
