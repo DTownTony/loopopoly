@@ -18,6 +18,7 @@ public class GameProfile : MonoBehaviour
         SceneManager.LoadScene("Home");
     }
 
+    //todo: move to scene loader
     public void LoadGameScene()
     {
         SceneManager.sceneLoaded += GameSceneLoaded;
@@ -28,6 +29,5 @@ public class GameProfile : MonoBehaviour
     {
         SceneManager.sceneLoaded -= GameSceneLoaded;
         GameController.Instance.Setup(_currentGameData);
-        SetCurrentGameData(null);
     }
 }

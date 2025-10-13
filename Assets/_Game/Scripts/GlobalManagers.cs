@@ -5,7 +5,7 @@ public class GlobalManagers : MonoBehaviour
     public static GlobalManagers Instance { get; private set; }
 
 #if UNITY_EDITOR
-    [RuntimeInitializeOnLoadMethod]
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Initialize()
     {
         if (Instance == null && !UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Equals("Bootstrap"))
