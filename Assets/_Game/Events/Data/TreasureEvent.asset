@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea7bbf18cfec428e8e62510ae5e0d06, type: 3}
   m_Name: TreasureEvent
   m_EditorClassIdentifier: 
+  Id: 
   Name: Treasure Chest
   BoardPiece:
   - {fileID: 5055539213916576850, guid: 153159e02b3dec348b2dda3bc3d4c1ff, type: 3}
+  _description: Select one!\nChance for gold, an item or a trap!
+  _cardSprite: {fileID: 21300000, guid: 5fbc94382403185489ac43c2c2bf65de, type: 3}
+  _itemDatabase: {fileID: 11400000, guid: 681629a476a19428089a3b074c223f89, type: 2}

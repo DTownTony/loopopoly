@@ -4,16 +4,16 @@ public class EventView : MonoBehaviour
 {
     [SerializeField] private Canvas _canvas;
     
-    [SerializeField] private TreasureUI _treasureUI;
-    
+   
     [SerializeField] private InfoEventUI _infoEventUI;
     [SerializeField] private ItemsEventUI _itemsEventUI;
     [SerializeField] private ChoiceEventUI _choiceEventUI;
+    [SerializeField] private SelectEventUI _selectEventUI;
     
-    public void ShowTreasure()
+    public void ShowSelectEvent(SelectEventUIArgs args)
     {
         _canvas.enabled = true;
-        _treasureUI.Show();
+        _selectEventUI.Show(args);
     }
 
     public void ShowInfoEvent(EventUIArgsBase args)
