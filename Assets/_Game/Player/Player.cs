@@ -191,13 +191,20 @@ public class Player : MonoBehaviour
 
     public void PlacePlayer(BoardPosition position)
     {
-        var endY = Model.position.y + 5f;
-        
         transform.DOMove(position.transform.position, 0f);
-        Model.DOLocalMoveY(endY, 0.5f)
+        
+        Model.DOLocalMoveY(Model.position.y + 5f, 0.55f)
             .From()
-            .SetDelay(0.25f)
-            .OnComplete(()=>_audioSource.PlayOneShot(_moveSound, .35f));
+            .SetEase(Ease.InQuad)
+            .SetDelay(0.35f)
+            .OnComplete(() =>
+            {
+                _audioSource.PlayOneShot(_moveSound, 0.35f);
+                
+                Model.DOLocalMoveY(Model.position.y + 0.25f, 0.2f)
+                    .SetEase(Ease.OutQuad)
+                    .SetLoops(2, LoopType.Yoyo);
+            });
         
         CurrentPositionIndex = position.Index;
     }

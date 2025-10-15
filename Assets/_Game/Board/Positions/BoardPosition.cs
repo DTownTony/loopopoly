@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class BoardPosition : MonoBehaviour
@@ -23,6 +24,13 @@ public class BoardPosition : MonoBehaviour
         var position = transform.position;
         position.y += (Random.Range(0, 3) * 0.05f);
         _boardPiece = Instantiate(boardPiece, position, transform.rotation, transform);
+        
+        //AnimateIn
+        var child = _boardPiece.transform.GetChild(0);
+        var startPos = child.localPosition;
+        startPos.y -= 2;
+        child.localPosition = startPos;
+        child.DOLocalMoveY(startPos.y + 2, 0.35f).SetEase(Ease.OutBack).SetDelay(Random.Range(0.25f,0.5f));
     }
 
     public void Trigger()
